@@ -57,8 +57,12 @@ class Node:
             return [o[1] for o in self.objs]
         else:
             results = []
-            if '-' in self.children:  # include wildcards
-                results = self.children['-'].search(word, position + 1)
+
+            # include wildcards
+            if '-' in self.children:
+                results.extend(self.children['-'].search(word, position + 1))
+            if '' in self.children:
+                results.extend(self.children[''].search(word, position + 1))
 
             try:
                 c = word[position]

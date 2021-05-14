@@ -125,7 +125,4 @@ class Lexer:
 
             self.next()
 
-
-if __name__ == '__main__':
-    lexer = Lexer('A.C.S. journal of Main Stuffs of Mr. Lolipop Part 2', ['of'])
-    print(list(lexer.tokenize()))
+        yield Token(EOS, '\0')

@@ -63,7 +63,8 @@ class Pattern:
         """
 
         # that cannot be!
-        if len(self.pattern) > len(word) + 1:  # dash may be nothing
+        if (self.pattern[-1] == '-' and len(self.pattern) > len(word) + 1) or \
+                (self.pattern[-1] != '-' and len(self.pattern) > len(word)):
             return False
 
         # check if similar languages (if provided)
@@ -178,11 +179,13 @@ class Abbreviate:
 
         lexer = lx.Lexer(title, self.stopwords)
         tokens = []
+        prev_article = None
 
         # filter tokens
         for token in lexer.tokenize():
             # Remove all articles, as per Section 7.1.7
             if token.type == lx.ARTICLE:
+                prev_article = token
                 continue
             # Remove stopwords, except if it is first, as per Section 7.1.7
             elif token.type == lx.STOPWORD and not is_first:
@@ -197,11 +200,17 @@ class Abbreviate:
                     continue
 
             # remove part, as suggested per Section 7.1.11 (but keep that optional, since the rule is unclear)
-            elif token.type == lx.ORDINAL and remove_part:
+            elif token.type == lx.ORDINAL and tokens[-1].type == lx.PART and remove_part:
                 tokens = tokens[:-1]
 
+            # add previous article if followed by a symbol or nothing (was actually an lx.ORDINAL!)
+            if prev_article is not None:
+                if token.type in [lx.SYMBOLS, lx.EOS]:
+                    tokens.append(prev_article)
+                prev_article = None
+
             # keep the token only it contains something
-            if token.value != '':
+            if token.type != lx.EOS and token.value != '':
                 tokens.append(token)
 
             is_first = False
