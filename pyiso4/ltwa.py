@@ -135,8 +135,8 @@ class Abbreviate:
                 pattern = Pattern.from_line(line)
                 key = Pattern.normalize(pattern.pattern, True)
                 if pattern.start_with_dash:
-                    print('insert', key, str(reversed(key)))
-                    ltwa_suffix.insert(str(reversed(key)), pattern)
+                    print('insert', pattern, key[::-1])
+                    ltwa_suffix.insert(key[::-1], pattern)
                 else:
                     ltwa_prefix.insert(key, pattern)
 
