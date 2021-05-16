@@ -1,0 +1,4 @@
+-r requirements-base.in
+flake8
+flake8-quotes
+autopep8

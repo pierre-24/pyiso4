@@ -34,7 +34,7 @@ class TestLexer(unittest.TestCase):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.abbreviate = Abbreviate.from_files('LTWA_20170914.csv', 'stopwords.txt')
+        self.abbreviate = Abbreviate.from_files('LTWA_20170914-modified.csv', 'stopwords.txt')
 
     def test_lexer(self):
         with open('tests/tests.csv') as f:
