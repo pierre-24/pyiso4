@@ -9,6 +9,7 @@ from pyiso4 import lexer as lx
 
 # some useful regex
 BOUNDARY = re.compile(r'[-\s\u2013\u2014_.,:;!|=+*\\/"()&#%@$?]')
+INFLECTION = re.compile(r'^([iaesn\'’]{0,3})')
 
 
 class Pattern:
@@ -28,8 +29,8 @@ class Pattern:
         if len(fields) != 3:
             raise Exception('{} must contain 3 fields'.format(fields))
 
-        pattern = normalize('NFC', fields[0]).lower()
-        pattern = re.sub('\\(.*\\)', '', pattern).strip()  # remove annotations
+        pattern = re.sub('\\(.*\\)', '', fields[0]).strip()  # remove annotations
+        pattern = Pattern.normalize(pattern).lower()
 
         replacement = fields[1]
         if replacement in ['n.a.', 'n. a.', 'n.a']:
@@ -62,11 +63,6 @@ class Pattern:
         """check if word matches the pattern
         """
 
-        # that cannot be!
-        if (self.pattern[-1] == '-' and len(self.pattern) > len(word) + 1) or \
-                (self.pattern[-1] != '-' and len(self.pattern) > len(word)):
-            return False
-
         # check if similar languages (if provided)
         if langs is not None:
             similar_lang = False
@@ -81,16 +77,31 @@ class Pattern:
             if not similar_lang:
                 return False
 
+        # if there is a starting or ending dash, the pattern cannot be larger than the word
+        if self.start_with_dash or self.end_with_dash:
+            if len(self.pattern) > (len(word) + 1):
+                return False
+        # if there is no dash, the lengths should be the same
+        else:
+            if len(self.pattern) > len(word):
+                return False
+
         pattern = self.pattern
         if self.start_with_dash:
             pattern = str(reversed(pattern))
             word = str(reversed(word))
 
+        final_pos = 0
         for i, c in enumerate(pattern):
+            final_pos = i
             if c == '-':  # ok, good
                 return True
             elif c != word[i].lower():
                 return False
+
+        # does word ends with a inflection?
+        if final_pos != len(word) - 1:
+            return INFLECTION.match(word[final_pos + 1:]) is not None
 
         return True
 
@@ -106,7 +117,7 @@ class Abbreviate:
         self.stopwords = stopwords
 
     @classmethod
-    def from_files(cls, ltwa_file: str, stopwords: str):
+    def from_files(cls, ltwa_file: str, stopwords: str = None):
         """Create an object from the LTWA CSV file and a newline-separated list of stopwords"""
 
         ltwa_prefix = PrefixTree()
@@ -129,8 +140,10 @@ class Abbreviate:
                     ltwa_prefix.insert(key, pattern)
 
         # get stopwords
-        with open(stopwords) as f:
-            stopwds = [w.strip() for w in f.readlines()]
+        stopwds = []
+        if stopwords is not None:
+            with open(stopwords) as f:
+                stopwds = [w.strip() for w in f.readlines()]
 
         return cls(ltwa_prefix, ltwa_suffix, stopwds)
 
@@ -145,19 +158,24 @@ class Abbreviate:
         results += self.ltwa_suffix.search(str(reversed(n_word)))
 
         # remove everything that does not match
-        results = filter(lambda p: p.match(word, langs), results)
+        results = filter(lambda p: p.match(n_word, langs), results)
 
-        # return longer matches first, with starting dashes if possible
-        return sorted(results, key=lambda p: (100 if p.end_with_dash else 0) + len(p.pattern), reverse=True)
+        # return longer matches first, with ending dashes if possible
+        return sorted(
+            results,
+            key=lambda p: (100 if p.end_with_dash else 0) + len(p.pattern),
+            reverse=True)
 
     @staticmethod
-    def match_capitalization(abbrv: str, original: str) -> str:
-        """Matches the capitalization of the `original` word, as long as they are similar
+    def match_capitalization_and_diacritic(abbrv: str, original: str) -> str:
+        """Matches the capitalization and diacritics of the `original` word, as long as they are similar
         """
 
-        abbrv = list(abbrv)
+        abbrv = list(normalize('NFC', abbrv))
+        original = normalize('NFC', original)
         for i, c in enumerate(abbrv):
-            if c in [original[i].lower(), original.upper()]:
+            unided = unidecode(original[i])
+            if unidecode(c) in [unided.lower(), unided.upper()]:
                 abbrv[i] = original[i]
 
         return ''.join(abbrv)
@@ -171,6 +189,7 @@ class Abbreviate:
         - Section 7.1.3 (one word + supplement)
         - Section 7.1.7 (keep prepositions in expressions like "in vivo" and
           keep place/personal name intact, such as "Los Alamos")
+        - Section 7.1.8 (acronyms and initialism)
         - Section 7.1.11 is unclear on whether PART should be kept or not
         """
 
@@ -234,7 +253,7 @@ class Abbreviate:
                     if len(patterns) > 0:
                         pattern = patterns[0]
                         if pattern.replacement != '-':
-                            abbrv = Abbreviate.match_capitalization(pattern.replacement, token.value)
+                            abbrv = Abbreviate.match_capitalization_and_diacritic(pattern.replacement, token.value)
                 result += '{}{}'.format(' ' if not is_first else '', abbrv)
                 is_first = False
 

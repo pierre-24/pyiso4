@@ -6,6 +6,6 @@ if len(sys.argv) != 2:
 
 abbrv = Abbreviate.from_files('LTWA_20170914.csv', 'stopwords.txt')
 
-# print(abbrv.ltwa_prefix.search('vitro'))
+# print(abbrv._potential_matches('Militært'))
 
 print(abbrv(sys.argv[1]))
