@@ -37,7 +37,7 @@ class TestLexer(unittest.TestCase):
         self.abbreviate = Abbreviate.from_files('LTWA_20170914.csv', 'stopwords.txt')
 
     def test_lexer(self):
-        with open('tests.csv') as f:
+        with open('tests/tests.csv') as f:
             for l in f.readlines():
                 fields = l.split('\t')
                 self.assertEqual(fields[1].strip(), self.abbreviate(fields[0].strip(), remove_part=True))
