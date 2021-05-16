@@ -135,7 +135,7 @@ class Abbreviate:
                 pattern = Pattern.from_line(line)
                 key = Pattern.normalize(pattern.pattern, True)
                 if pattern.start_with_dash:
-                    ltwa_suffix.insert(str(reversed(key)), pattern)
+                    ltwa_suffix.insert(key[::-1], pattern)
                 else:
                     ltwa_prefix.insert(key, pattern)
 
@@ -254,7 +254,7 @@ class Abbreviate:
                         pattern = patterns[0]
                         if pattern.replacement != '-':
                             abbrv = Abbreviate.match_capitalization_and_diacritic(pattern.replacement, token.value)
-                result += '{}{}'.format(' ' if not is_first else '', abbrv)
+                result += '{}{}'.format(' ' if (not is_first and not token.type == lx.SYMBOLS) else '', abbrv)
                 is_first = False
 
         return result
