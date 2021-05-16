@@ -1,4 +1,5 @@
 import unittest
+import sys
 
 from pyiso4.ltwa import Pattern
 from pyiso4.ltwa import Abbreviate
@@ -34,6 +35,7 @@ class TestLexer(unittest.TestCase):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
+        sys.setrecursionlimit(250)
         self.abbreviate = Abbreviate.from_files('LTWA_20170914-modified.csv', 'stopwords.txt')
 
     def test_lexer(self):
