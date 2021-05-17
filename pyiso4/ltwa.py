@@ -172,7 +172,6 @@ class Abbreviate:
         """
 
         abbrv = list(normalize('NFC', abbrv))
-        original = normalize('NFC', original)
         for i, c in enumerate(abbrv):
             unided = unidecode(original[i])
             if unidecode(c) in [unided.lower(), unided.upper()]:
@@ -195,6 +194,8 @@ class Abbreviate:
 
         result = ''
         is_first = True
+
+        title = normalize('NFC', title)
 
         lexer = lx.Lexer(title, self.stopwords)
         tokens = []
