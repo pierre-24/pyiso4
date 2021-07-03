@@ -1,6 +1,5 @@
 import sys
-from pyiso4.ltwa import Abbreviate, Pattern
-from pyiso4.normalize_string import normalize, Level
+from pyiso4.ltwa import Abbreviate
 
 if len(sys.argv) != 2:
     raise Exception('one argument expected')

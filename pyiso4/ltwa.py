@@ -10,7 +10,7 @@ BOUNDARY = re.compile(r'[-\s\u2013\u2014_.,:;!|=+*\\/"()&#%@$?]')
 
 
 class Pattern:
-    INFLECTION = re.compile(r'^([iaesn\'’]{0,3})')
+    INFLECTION = re.compile(r'^([iaesn\'’]{1,3})')
 
     def __init__(self, pattern: str, replacement: str, langs: List[str] = ['mul']):
         self.pattern = pattern

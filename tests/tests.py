@@ -56,6 +56,40 @@ class TestLexer(unittest.TestCase):
                 self.assertEqual(text[t.position], t.value[0])
 
 
+class TestPattern(unittest.TestCase):
+    def test_pattern_match(self):
+        text = 'abc'
+
+        # no dash
+        pattern_without_dash = Pattern.from_line('{}\tx\tmul'.format(text))
+        self.assertTrue(pattern_without_dash.match(pattern_without_dash.pattern))
+        self.assertFalse(pattern_without_dash.match(text + 'x'))  # x is not an inflection!
+        self.assertFalse(pattern_without_dash.match(text[:-1]))
+        self.assertFalse(pattern_without_dash.match(text.replace('a', 'b')))
+
+        # dash in the middle (not a wildcard)
+        pattern_with_dash = Pattern.from_line('{}\tx\tmul'.format(text.replace('b', '-')))
+        self.assertTrue(pattern_with_dash.match(pattern_with_dash.pattern))
+        self.assertFalse(pattern_with_dash.match(text))
+        self.assertFalse(pattern_with_dash.match(text + 'x'))
+        self.assertFalse(pattern_with_dash.match(text[:-1]))
+        self.assertFalse(pattern_with_dash.match(text.replace('a', 'b')))
+
+        # a ending dash (is a wildcard)
+        pattern_with_ending_dash = Pattern.from_line('abc-\tx\tmul')
+        self.assertTrue(pattern_with_ending_dash.match(text))
+        self.assertTrue(pattern_with_ending_dash.match(text + 'x'))
+        self.assertFalse(pattern_with_ending_dash.match(text[:-1]))
+        self.assertFalse(pattern_with_ending_dash.match(text.replace('a', 'b')))
+
+        # check infliction
+        word = 'rabbit'
+        pattern = Pattern.from_line('{}\tn.a.\teng'.format(word))
+        self.assertTrue(pattern.match(word))
+        self.assertTrue(pattern.match(word + 's'))  # plural form
+        self.assertFalse(pattern.match(word + 'x'))  # not an inflexion
+
+
 class TestAbbreviate(unittest.TestCase):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
