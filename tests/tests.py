@@ -50,10 +50,21 @@ class TestLexer(unittest.TestCase):
             self.assertEqual(t.type, TokenType.STOPWORD)
 
     def test_token_position(self):
-        text = 'this is a test'
+        text = 'this is a test-case for you'
         for t in Lexer(text, []).tokenize():
             if t.position >= 0:
                 self.assertEqual(text[t.position], t.value[0])
+
+    def test_hyphenated_words(self):
+        cpd1 = 'état'
+        cpd2 = 'nation'
+        text = '{}-{}'.format(cpd1, cpd2)
+        tokens = list(Lexer(text, []).tokenize())
+        self.assertEqual(tokens[0].type, TokenType.WORD)
+        self.assertEqual(tokens[0].value, cpd1)
+        self.assertEqual(tokens[1].type, TokenType.HYPHEN)
+        self.assertEqual(tokens[2].type, TokenType.WORD)
+        self.assertEqual(tokens[2].value, cpd2)
 
 
 class TestPattern(unittest.TestCase):

@@ -13,6 +13,7 @@ class TokenType(Enum):
     PART = 'P'
     ORDINAL = 'ORDN'
     SYMBOLS = 'SYMB'
+    HYPHEN = 'HPHN'
     EOS = '\0'
 
 
@@ -76,6 +77,19 @@ class Lexer:
         self.count += 1
 
     def tokenize(self) -> Iterable[Token]:
+        def yield_hyphenated(word: str, base_pos: int):
+            is_first = True
+            len_ = 0
+            for w in word.split('-'):
+                if is_first:
+                    is_first = False
+                else:
+                    yield Token(TokenType.HYPHEN, '-', base_pos + len_)
+                    len_ += 1
+
+                yield Token(TokenType.WORD, w, base_pos + len_)
+                len_ += len(w)
+
         was_part = -2
 
         while self.current_word is not None:
@@ -122,17 +136,17 @@ class Lexer:
                 # check if French "l'" or "d'"
                 elif lower_word[0:2] in ["l'", "d'", 'l’', 'd’']:
                     yield Token(TokenType.ARTICLE, word[0:2], self.start_word)
-                    yield Token(TokenType.WORD, word[2:], self.start_word + 2)  # the rest is assumed to be a word
+                    yield from yield_hyphenated(word[2:], self.start_word + 2)  # the rest is assumed to be a word
                 # check if Italian "dell'" or "nell'"
                 elif lower_word[0:5] in ["dell'", "nell'", 'dell’', 'nell’']:
                     yield Token(TokenType.ARTICLE, word[0:5], self.start_word)
-                    yield Token(TokenType.WORD, word[5:], self.start_word + 5)  # the rest is assumed to be a word
+                    yield from yield_hyphenated(word[5:], self.start_word + 5)  # the rest is assumed to be a word
                 # check if stopword
                 elif lower_word in self.stopwords:
                     yield Token(TokenType.STOPWORD, word, self.start_word)
                 # otherwise ...
                 else:
-                    yield Token(TokenType.WORD, word, self.start_word)
+                    yield from yield_hyphenated(word, self.start_word)
 
             # yield the remaining symbols, if any
             if len(end_symbols) > 0:

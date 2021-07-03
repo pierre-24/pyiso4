@@ -245,10 +245,14 @@ class Abbreviate:
         # otherwise, abbreviate WORD and PART according to LTWA
         else:
             is_first = True
+            is_hyphenated = False
             next_position = 0
             for token in tokens:
                 abbrv = token.value
-                if token.type in [TokenType.WORD, TokenType.PART]:
+                if token.type == TokenType.HYPHEN:
+                    is_hyphenated = True
+
+                elif token.type in [TokenType.WORD, TokenType.PART]:
                     if token.position < next_position:  # skip token if replacement already included it
                         continue
 
@@ -259,7 +263,13 @@ class Abbreviate:
                         if pattern.replacement != '-':
                             abbrv = Abbreviate.match_capitalization_and_diacritic(
                                 pattern.replacement, title_soft_normalized[token.position:])
-                result += '{}{}'.format(' ' if not (is_first or token.type == TokenType.SYMBOLS) else '', abbrv)
+                result += '{}{}'.format(
+                    ' ' if not (is_first or is_hyphenated or token.type in [TokenType.SYMBOLS, TokenType.HYPHEN])
+                    else '',
+                    abbrv)
                 is_first = False
+
+                if token.type != TokenType.HYPHEN:
+                    is_hyphenated = False
 
         return result
