@@ -39,10 +39,9 @@ To change this behavior, use `--keep-part`.
 A list of failed tests is found [here](tests/failed_tests.csv).
 It currently fails
 
-+ to recognize an abbreviated surname from an article (such as ``A. Einstein``),
-+ on compound words (such as ``microengineering``), except if explicitly found in the LTWA,
 + to fulfil rule 7.1.7 of the manual: keep prepositions in expressions (like ``in vivo``) and place/personal name intact,
 + to fulfil rules 7.1.2, 7.1.3 and 7.1.8 of the same manual (but this is of lesser importance),
++ on compound words (such as ``microengineering``), except if explicitly found in the LTWA,
 + on double diacritics (such as ``æ``).
 
 ## Contributions
@@ -53,7 +52,7 @@ If you can to contribute, this is the usual deal:
 start by [forking](https://guides.github.com/activities/forking/), then clone your fork
 
 ```bash
-git clone ...
+git clone (...)
 cd pyiso4
 ```
 

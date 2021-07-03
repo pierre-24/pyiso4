@@ -66,6 +66,13 @@ class TestLexer(unittest.TestCase):
         self.assertEqual(tokens[2].type, TokenType.WORD)
         self.assertEqual(tokens[2].value, cpd2)
 
+    def test_surname(self):
+        text = 'Legacy of A. Einstein'
+        tokens = list(Lexer(text, ['of']).tokenize())
+
+        self.assertEqual(len(tokens), 5)  # four words + EOS
+        self.assertEqual(tokens[2].type, TokenType.ABBREVIATION)
+
 
 class TestPattern(unittest.TestCase):
     def test_pattern_match(self):

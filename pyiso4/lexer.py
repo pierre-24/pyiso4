@@ -115,6 +115,10 @@ class Lexer:
                 if ends_with_dot and (word in COMMON_ABBRV or word.count(DOT) > 0):
                     end_symbols = end_symbols[1:]
                     yield Token(TokenType.ABBREVIATION, word + DOT, self.start_word)
+                # check if single letter abbreviation (surname)
+                elif ends_with_dot and len(word) == 1 and word.upper() == word:
+                    end_symbols = end_symbols[1:]
+                    yield Token(TokenType.ABBREVIATION, word + DOT, self.start_word)
                 # check if common abbreviation anyway (without dot)
                 elif word in COMMON_ABBRV:
                     yield Token(TokenType.ABBREVIATION, word, self.start_word)
