@@ -1,8 +1,7 @@
 import unittest
-import sys
 
-from pyiso4.ltwa import Pattern
-from pyiso4.ltwa import Abbreviate
+from pyiso4.lexer import Lexer, STOPWORD, WORD
+from pyiso4.ltwa import Pattern, Abbreviate
 
 
 class TestNormalize(unittest.TestCase):
@@ -35,10 +34,33 @@ class TestLexer(unittest.TestCase):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        sys.setrecursionlimit(250)
+    def test_stopword(self):
+        stopwords = ['x', 'y']
+        text = ' '.join(stopwords)
+
+        # no stopword
+        tokens = list(Lexer(text, []).tokenize())
+        for t in tokens[:-1]:  # skip EOS
+            self.assertEqual(t.type, WORD)
+
+        # all stopwords
+        tokens = list(Lexer(text, stopwords).tokenize())
+        for t in tokens[:-1]:  # skip EOS
+            self.assertEqual(t.type, STOPWORD)
+
+    def test_token_position(self):
+        text = 'this is a test'
+        for t in Lexer(text, []).tokenize():
+            if t.position >= 0:
+                self.assertEqual(text[t.position], t.value[0])
+
+
+class TestAbbreviate(unittest.TestCase):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         self.abbreviate = Abbreviate.from_files('LTWA_20170914-modified.csv', 'stopwords.txt')
 
-    def test_lexer(self):
+    def test_abbreviations(self):
         with open('tests/tests.csv') as f:
             for l in f.readlines():
                 fields = l.split('\t')

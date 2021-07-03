@@ -23,12 +23,14 @@ IS_ORDINAL = re.compile(r'[A-Z]|[IVXivx]+')
 
 
 class Token:
-    def __init__(self, typ: str, value: str):
+    def __init__(self, typ: str, value: str, position: int = -1):
         self.type = typ
         self.value = value
+        self.position = position
 
     def __repr__(self) -> str:
-        return 'T({},{})'.format(self.type, self.value)
+        return 'T({},{}{})'.format(
+            self.type, self.value, '' if self.position < 0 else ', {}'.format(self.position))
 
 
 class Lexer:
@@ -36,6 +38,7 @@ class Lexer:
         self.input = normalize('NFC', inp)
         self.pos = 0
         self.count = -1
+        self.start_word = 0
         self.current_word = None
         self.stopwords = stopwords
 
@@ -55,6 +58,7 @@ class Lexer:
 
         if beg != self.pos:
             self.current_word = self.input[beg:self.pos]
+            self.start_word = beg
         else:
             self.current_word = None
 
@@ -85,43 +89,43 @@ class Lexer:
                 ends_with_dot = len(end_symbols) > 0 and end_symbols[0] == DOT
                 if ends_with_dot and (word in COMMON_ABBRV or word.count(DOT) > 0):
                     end_symbols = end_symbols[1:]
-                    yield Token(ABBREVIATION, word + DOT)
+                    yield Token(ABBREVIATION, word + DOT, self.start_word)
                 # check if common abbreviation anyway (without dot)
                 elif word in COMMON_ABBRV:
-                    yield Token(ABBREVIATION, word)
+                    yield Token(ABBREVIATION, word, self.start_word)
                 # check if part ending with dot
                 elif ends_with_dot and lower_word in PARTS_ABBRV:
                     end_symbols = end_symbols[1:]
-                    yield Token(PART, word + DOT)
+                    yield Token(PART, word + DOT, self.start_word)
                     was_part = self.count
                 # check if part (without dot)
                 elif lower_word in PARTS:
-                    yield Token(PART, word)
+                    yield Token(PART, word, self.start_word)
                     was_part = self.count
                 # check if ordinal (preceded by PART)
                 elif IS_ORDINAL.match(word) and self.count == was_part + 1:
-                    yield Token(ORDINAL, word)
+                    yield Token(ORDINAL, word, self.start_word)
                 # check if article (after ordinal, so "a" is detected as ordinal if preceded by PART)
                 elif lower_word in ARTICLES:
-                    yield Token(ARTICLE, word)
+                    yield Token(ARTICLE, word, self.start_word)
                 # check if French "l'" or "d'"
                 elif lower_word[0:2] in ["l'", "d'", 'l’', 'd’']:
-                    yield Token(ARTICLE, word[0:2])
-                    yield Token(WORD, word[2:])  # the rest is assumed to be a word
+                    yield Token(ARTICLE, word[0:2], self.start_word)
+                    yield Token(WORD, word[2:], self.start_word + 2)  # the rest is assumed to be a word
                 # check if Italian "dell'" or "nell'"
                 elif lower_word[0:5] in ["dell'", "nell'", 'dell’', 'nell’']:
-                    yield Token(ARTICLE, word[0:5])
-                    yield Token(WORD, word[5:])  # the rest is assumed to be a word
+                    yield Token(ARTICLE, word[0:5], self.start_word)
+                    yield Token(WORD, word[5:], self.start_word + 5)  # the rest is assumed to be a word
                 # check if stopword
                 elif lower_word in self.stopwords:
-                    yield Token(STOPWORD, word)
+                    yield Token(STOPWORD, word, self.start_word)
                 # otherwise ...
                 else:
-                    yield Token(WORD, word)
+                    yield Token(WORD, word, self.start_word)
 
             # yield the remaining symbols, if any
             if len(end_symbols) > 0:
-                yield Token(SYMBOLS, end_symbols)
+                yield Token(SYMBOLS, end_symbols, self.pos - len(end_symbols))
 
             self.next()
 
