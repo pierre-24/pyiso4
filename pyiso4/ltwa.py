@@ -1,10 +1,10 @@
 from typing import List
-from unicodedata import normalize
 from unidecode import unidecode
 import re
+from unicodedata import normalize
 
 from pyiso4.prefix_tree import PrefixTree
-from pyiso4 import lexer as lx
+from pyiso4.lexer import Lexer, TokenType
 
 
 # some useful regex
@@ -197,21 +197,21 @@ class Abbreviate:
 
         title = normalize('NFC', title)
 
-        lexer = lx.Lexer(title, self.stopwords)
+        lexer = Lexer(title, self.stopwords)
         tokens = []
         prev_article = None
 
         # filter tokens
         for token in lexer.tokenize():
             # Remove all articles, as per Section 7.1.7
-            if token.type == lx.ARTICLE:
+            if token.type == TokenType.ARTICLE:
                 prev_article = token
                 continue
             # Remove stopwords, except if it is first, as per Section 7.1.7
-            elif token.type == lx.STOPWORD and not is_first:
+            elif token.type == TokenType.STOPWORD and not is_first:
                 continue
 
-            elif token.type == lx.SYMBOLS:
+            elif token.type == TokenType.SYMBOLS:
                 # Omit comma, replace point by comma, as per Section 7.1.6 (also remove ellipsis)
                 token.value = token.value.replace(',', '').replace('.', ',').replace(',,,', '')
 
@@ -220,17 +220,17 @@ class Abbreviate:
                     continue
 
             # remove part, as suggested per Section 7.1.11 (but keep that optional, since the rule is unclear)
-            elif token.type == lx.ORDINAL and tokens[-1].type == lx.PART and remove_part:
+            elif token.type == TokenType.ORDINAL and tokens[-1].type == TokenType.PART and remove_part:
                 tokens = tokens[:-1]
 
-            # add previous article if followed by a symbol or nothing (was actually an lx.ORDINAL!)
+            # add previous article if followed by a symbol or nothing (was actually an ORDINAL!)
             if prev_article is not None:
-                if token.type in [lx.SYMBOLS, lx.EOS]:
+                if token.type in [TokenType.SYMBOLS, TokenType.EOS]:
                     tokens.append(prev_article)
                 prev_article = None
 
             # keep the token only it contains something
-            if token.type != lx.EOS and token.value != '':
+            if token.type != TokenType.EOS and token.value != '':
                 tokens.append(token)
 
             is_first = False
@@ -239,23 +239,23 @@ class Abbreviate:
         if len(tokens) == 1:
             result = tokens[0].value
         # when the title is one word with an initial preposition, it is not abbreviated (as per Section 7.1.1)
-        elif len(tokens) == 2 and tokens[0].type == lx.STOPWORD:
+        elif len(tokens) == 2 and tokens[0].type == TokenType.STOPWORD:
             result = '{} {}'.format(tokens[0].value, tokens[1].value)
         # when the title is one word and a final symbol, it is not abbreviated (as per Section 7.1.1?)
-        elif len(tokens) == 2 and tokens[1].type == lx.SYMBOLS:
+        elif len(tokens) == 2 and tokens[1].type == TokenType.SYMBOLS:
             result = '{}{}'.format(tokens[0].value, tokens[1].value)
         # otherwise, abbreviate WORD and PART according to LTWA
         else:
             is_first = True
             for token in tokens:
                 abbrv = token.value
-                if token.type in [lx.WORD, lx.PART]:
+                if token.type in [TokenType.WORD, TokenType.PART]:
                     patterns = self._potential_matches(abbrv, langs)
                     if len(patterns) > 0:
                         pattern = patterns[0]
                         if pattern.replacement != '-':
                             abbrv = Abbreviate.match_capitalization_and_diacritic(pattern.replacement, token.value)
-                result += '{}{}'.format(' ' if not (is_first or token.type == lx.SYMBOLS) else '', abbrv)
+                result += '{}{}'.format(' ' if not (is_first or token.type == TokenType.SYMBOLS) else '', abbrv)
                 is_first = False
 
         return result

@@ -1,6 +1,6 @@
 import unittest
 
-from pyiso4.lexer import Lexer, STOPWORD, WORD
+from pyiso4.lexer import Lexer, TokenType
 from pyiso4.ltwa import Pattern, Abbreviate
 
 
@@ -41,12 +41,12 @@ class TestLexer(unittest.TestCase):
         # no stopword
         tokens = list(Lexer(text, []).tokenize())
         for t in tokens[:-1]:  # skip EOS
-            self.assertEqual(t.type, WORD)
+            self.assertEqual(t.type, TokenType.WORD)
 
         # all stopwords
         tokens = list(Lexer(text, stopwords).tokenize())
         for t in tokens[:-1]:  # skip EOS
-            self.assertEqual(t.type, STOPWORD)
+            self.assertEqual(t.type, TokenType.STOPWORD)
 
     def test_token_position(self):
         text = 'this is a test'

@@ -1,9 +1,20 @@
 from typing import List, Iterable
+from enum import Enum, unique
 from unicodedata import normalize
 import re
 
-WORD, ABBREVIATION, STOPWORD, ARTICLE, PART, ORDINAL, SYMBOLS, EOS = \
-    'WORD', 'ABBREVIATION', 'STOPWORD', 'ARTICLE', 'PART', 'ORDINAL', 'SYMBOLS', 'EOS'
+
+@unique
+class TokenType(Enum):
+    WORD = 'W'
+    ABBREVIATION = 'ABBRV'
+    STOPWORD = 'STPW'
+    ARTICLE = 'ARTC'
+    PART = 'P'
+    ORDINAL = 'ORDN'
+    SYMBOLS = 'SYMB'
+    EOS = '\0'
+
 
 SPACES = ' ', '\t', '\n'
 
@@ -23,7 +34,7 @@ IS_ORDINAL = re.compile(r'[A-Z]|[IVXivx]+')
 
 
 class Token:
-    def __init__(self, typ: str, value: str, position: int = -1):
+    def __init__(self, typ: TokenType, value: str, position: int = -1):
         self.type = typ
         self.value = value
         self.position = position
@@ -89,44 +100,44 @@ class Lexer:
                 ends_with_dot = len(end_symbols) > 0 and end_symbols[0] == DOT
                 if ends_with_dot and (word in COMMON_ABBRV or word.count(DOT) > 0):
                     end_symbols = end_symbols[1:]
-                    yield Token(ABBREVIATION, word + DOT, self.start_word)
+                    yield Token(TokenType.ABBREVIATION, word + DOT, self.start_word)
                 # check if common abbreviation anyway (without dot)
                 elif word in COMMON_ABBRV:
-                    yield Token(ABBREVIATION, word, self.start_word)
+                    yield Token(TokenType.ABBREVIATION, word, self.start_word)
                 # check if part ending with dot
                 elif ends_with_dot and lower_word in PARTS_ABBRV:
                     end_symbols = end_symbols[1:]
-                    yield Token(PART, word + DOT, self.start_word)
+                    yield Token(TokenType.PART, word + DOT, self.start_word)
                     was_part = self.count
                 # check if part (without dot)
                 elif lower_word in PARTS:
-                    yield Token(PART, word, self.start_word)
+                    yield Token(TokenType.PART, word, self.start_word)
                     was_part = self.count
                 # check if ordinal (preceded by PART)
                 elif IS_ORDINAL.match(word) and self.count == was_part + 1:
-                    yield Token(ORDINAL, word, self.start_word)
+                    yield Token(TokenType.ORDINAL, word, self.start_word)
                 # check if article (after ordinal, so "a" is detected as ordinal if preceded by PART)
                 elif lower_word in ARTICLES:
-                    yield Token(ARTICLE, word, self.start_word)
+                    yield Token(TokenType.ARTICLE, word, self.start_word)
                 # check if French "l'" or "d'"
                 elif lower_word[0:2] in ["l'", "d'", 'l’', 'd’']:
-                    yield Token(ARTICLE, word[0:2], self.start_word)
-                    yield Token(WORD, word[2:], self.start_word + 2)  # the rest is assumed to be a word
+                    yield Token(TokenType.ARTICLE, word[0:2], self.start_word)
+                    yield Token(TokenType.WORD, word[2:], self.start_word + 2)  # the rest is assumed to be a word
                 # check if Italian "dell'" or "nell'"
                 elif lower_word[0:5] in ["dell'", "nell'", 'dell’', 'nell’']:
-                    yield Token(ARTICLE, word[0:5], self.start_word)
-                    yield Token(WORD, word[5:], self.start_word + 5)  # the rest is assumed to be a word
+                    yield Token(TokenType.ARTICLE, word[0:5], self.start_word)
+                    yield Token(TokenType.WORD, word[5:], self.start_word + 5)  # the rest is assumed to be a word
                 # check if stopword
                 elif lower_word in self.stopwords:
-                    yield Token(STOPWORD, word, self.start_word)
+                    yield Token(TokenType.STOPWORD, word, self.start_word)
                 # otherwise ...
                 else:
-                    yield Token(WORD, word, self.start_word)
+                    yield Token(TokenType.WORD, word, self.start_word)
 
             # yield the remaining symbols, if any
             if len(end_symbols) > 0:
-                yield Token(SYMBOLS, end_symbols, self.pos - len(end_symbols))
+                yield Token(TokenType.SYMBOLS, end_symbols, self.pos - len(end_symbols))
 
             self.next()
 
-        yield Token(EOS, '\0')
+        yield Token(TokenType.EOS, '\0')
