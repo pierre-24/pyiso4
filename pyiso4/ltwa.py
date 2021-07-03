@@ -1,18 +1,17 @@
 from typing import List
 from unidecode import unidecode
 import re
-from unicodedata import normalize
 
 from pyiso4.prefix_tree import PrefixTree
 from pyiso4.lexer import Lexer, TokenType
+from pyiso4.normalize_string import normalize, Level
 
-
-# some useful regex
 BOUNDARY = re.compile(r'[-\s\u2013\u2014_.,:;!|=+*\\/"()&#%@$?]')
-INFLECTION = re.compile(r'^([iaesn\'’]{0,3})')
 
 
 class Pattern:
+    INFLECTION = re.compile(r'^([iaesn\'’]{0,3})')
+
     def __init__(self, pattern: str, replacement: str, langs: List[str] = ['mul']):
         self.pattern = pattern
         self.replacement = replacement
@@ -20,6 +19,13 @@ class Pattern:
 
         self.start_with_dash = pattern[0] == '-'
         self.end_with_dash = pattern[-1] == '-'
+
+    @staticmethod
+    def normalize(inp: str) -> str:
+        """Normalization for the patterns (and keys): unidecode + lowering
+        """
+
+        return normalize(inp, Level.NORMAL).lower()
 
     @classmethod
     def from_line(cls, line: str):
@@ -30,7 +36,7 @@ class Pattern:
             raise Exception('{} must contain 3 fields'.format(fields))
 
         pattern = re.sub('\\(.*\\)', '', fields[0]).strip()  # remove annotations
-        pattern = Pattern.normalize(pattern).lower()
+        pattern = Pattern.normalize(pattern)
 
         replacement = fields[1]
         if replacement in ['n.a.', 'n. a.', 'n.a']:
@@ -40,24 +46,15 @@ class Pattern:
 
         return cls(pattern, replacement, langs)
 
-    @staticmethod
-    def normalize(inp: str, extra: bool = False):
-        """Remove diacritics.
+    def to_key(self) -> str:
+        """Get the key for the tree, without start or end dash"""
 
-        If `extra` is set to true, set all word boundaries to space, and strip string
-        """
-        # remove the rest of the diacritics
-        result = unidecode(inp)
-
-        if extra:
-            # normalize strange word boundaries and lower
-            result = BOUNDARY.sub(' ', result).lower()
-            # remove everything which is not [a-z ]
-            result = re.sub(r'[^a-z ]', ' ', result)
-            # clean up multi spaces
-            result = re.sub(r'\s+', ' ', result).strip()
-
-        return result
+        if self.start_with_dash:
+            return self.pattern[1:]
+        elif self.end_with_dash:
+            return self.pattern[:-1]
+        else:
+            return self.pattern
 
     def match(self, word: str, langs: List[str] = None) -> bool:
         """check if word matches the pattern
@@ -94,14 +91,14 @@ class Pattern:
         final_pos = 0
         for i, c in enumerate(pattern):
             final_pos = i
-            if c == '-':  # ok, good
+            if c == '-' and i == len(pattern) - 1:  # ok, good
                 return True
             elif c != word[i].lower():
                 return False
 
-        # does word ends with a inflection?
+        # does word ends with a inflection? (plural, femininity, ...)
         if final_pos != len(word) - 1:
-            return INFLECTION.match(word[final_pos + 1:]) is not None
+            return Pattern.INFLECTION.match(word[final_pos + 1:]) is not None
 
         return True
 
@@ -133,7 +130,7 @@ class Abbreviate:
                 if line == '\n':
                     continue
                 pattern = Pattern.from_line(line)
-                key = Pattern.normalize(pattern.pattern, True)
+                key = pattern.to_key()
                 if pattern.start_with_dash:
                     ltwa_suffix.insert(key[::-1], pattern)
                 else:
@@ -149,7 +146,7 @@ class Abbreviate:
 
     def _potential_matches(self, word: str, langs: List[str] = None) -> List[Pattern]:
         # normalize
-        n_word = Pattern.normalize(word, True)
+        n_word = Pattern.normalize(word)
 
         # look into prefix
         results = self.ltwa_prefix.search(n_word)
@@ -171,7 +168,7 @@ class Abbreviate:
         """Matches the capitalization and diacritics of the `original` word, as long as they are similar
         """
 
-        abbrv = list(normalize('NFC', abbrv))
+        abbrv = list(normalize(abbrv, Level.SOFT))
         for i, c in enumerate(abbrv):
             unided = unidecode(original[i])
             if unidecode(c) in [unided.lower(), unided.upper()]:
@@ -195,7 +192,7 @@ class Abbreviate:
         result = ''
         is_first = True
 
-        title = normalize('NFC', title)
+        title = normalize(title, Level.SOFT)
 
         lexer = Lexer(title, self.stopwords)
         tokens = []

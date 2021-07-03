@@ -49,8 +49,7 @@ class Node:
             return '{{{}}}'.format(', '.join('{}: {}'.format(k, v) for k, v in self.children.items()))
 
     def search(self, word: str, position: int = 0) -> List[Any]:
-        """Return the objects for which the key has the same prefix as `word`.
-        Also include wildcards keys (ends with '-').
+        """Return the objects for which the key has the same prefix as `word`. Also include wildcards.
         """
 
         if not self.split:
@@ -59,8 +58,6 @@ class Node:
             results = []
 
             # include wildcards
-            if '-' in self.children:
-                results.extend(self.children['-'].search(word, position + 1))
             if '' in self.children:
                 results.extend(self.children[''].search(word, position + 1))
 

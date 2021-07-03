@@ -2,6 +2,7 @@ import unittest
 
 from pyiso4.lexer import Lexer, TokenType
 from pyiso4.ltwa import Pattern, Abbreviate
+from pyiso4.normalize_string import normalize, Level
 
 
 class TestNormalize(unittest.TestCase):
@@ -18,7 +19,7 @@ class TestNormalize(unittest.TestCase):
         ]
 
         for inp, out in tests:
-            self.assertEqual(out, Pattern.normalize(inp))
+            self.assertEqual(out, normalize(inp, Level.NORMAL))
 
     def test_normalize_extra(self):
         tests = [
@@ -27,7 +28,7 @@ class TestNormalize(unittest.TestCase):
         ]
 
         for inp, out in tests:
-            self.assertEqual(out, Pattern.normalize(inp, extra=True))
+            self.assertEqual(out, normalize(inp, Level.HARD))
 
 
 class TestLexer(unittest.TestCase):
