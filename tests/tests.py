@@ -89,6 +89,23 @@ class TestPattern(unittest.TestCase):
         self.assertTrue(pattern.match(word + 's'))  # plural form
         self.assertFalse(pattern.match(word + 'x'))  # not an inflexion
 
+    def test_patter_match_on_sentence(self):
+        # no dash
+        text = 'abc'
+        pattern_without_dash = Pattern.from_line('{}\tx\tmul'.format(text))
+        self.assertTrue(pattern_without_dash.match('{} is the beginning'.format(text)))
+        self.assertTrue(pattern_without_dash.match('{}-xyz is the alphabet'.format(text)))  # `-` is a BOUNDARY
+
+        # a ending dash (is a wildcard)
+        pattern_with_ending_dash = Pattern.from_line('abc-\tx\tmul')
+        self.assertTrue(pattern_with_ending_dash.match('{} is the beginning'.format(text)))
+        self.assertTrue(pattern_with_ending_dash.match('{}ef is the beginning'.format(text)))
+
+        # pattern with space
+        text = 'united kingdom'
+        pattern_with_space = Pattern.from_line('{}\tu.k.\ten'.format(text))
+        self.assertTrue(pattern_with_space.match('{} of of Great Britain and Northern Ireland'.format(text)))
+
 
 class TestAbbreviate(unittest.TestCase):
     def __init__(self, *args, **kwargs):

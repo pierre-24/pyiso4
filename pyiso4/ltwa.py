@@ -4,9 +4,7 @@ import re
 
 from pyiso4.prefix_tree import PrefixTree
 from pyiso4.lexer import Lexer, TokenType
-from pyiso4.normalize_string import normalize, Level
-
-BOUNDARY = re.compile(r'[-\s\u2013\u2014_.,:;!|=+*\\/"()&#%@$?]')
+from pyiso4.normalize_string import normalize, Level, BOUNDARY
 
 
 class Pattern:
@@ -56,8 +54,9 @@ class Pattern:
         else:
             return self.pattern
 
-    def match(self, word: str, langs: List[str] = None) -> bool:
-        """check if word matches the pattern
+    def match(self, sentence: str, langs: List[str] = None) -> bool:
+        """Check if the pattern matches the begining of ``sentence``.
+        Assume that it has been normalized.
         """
 
         # check if similar languages (if provided)
@@ -76,31 +75,35 @@ class Pattern:
 
         # if there is a starting or ending dash, the pattern cannot be larger than the word
         if self.start_with_dash or self.end_with_dash:
-            if len(self.pattern) > (len(word) + 1):
+            if len(self.pattern) > (len(sentence) + 1):
                 return False
-        # if there is no dash, the lengths should be the same
+        # if there is no dash, the lengths should be, at most, the same
         else:
-            if len(self.pattern) > len(word):
+            if len(self.pattern) > len(sentence):
                 return False
 
         pattern = self.pattern
         if self.start_with_dash:
             pattern = str(reversed(pattern))
-            word = str(reversed(word))
+            sentence = str(reversed(sentence))
 
         final_pos = 0
         for i, c in enumerate(pattern):
             final_pos = i
             if c == '-' and i == len(pattern) - 1:  # ok, good
                 return True
-            elif c != word[i].lower():
+            elif c != sentence[i].lower():
                 return False
 
-        # does word ends with a inflection? (plural, femininity, ...)
-        if final_pos != len(word) - 1:
-            return Pattern.INFLECTION.match(word[final_pos + 1:]) is not None
+        # now, does this ends well?
+        inflection = Pattern.INFLECTION.match(sentence[final_pos + 1:])
+        if inflection is not None:
+            final_pos += inflection.span()[1]
 
-        return True
+        if final_pos == len(sentence) - 1:  # nothing else, so that's a match
+            return True
+        else:  # if that's a boundary, then its a match
+            return BOUNDARY.match(sentence[final_pos + 1:]) is not None
 
     def __repr__(self):
         return 'Pattern({}, {})'.format(self.pattern, self.replacement)
