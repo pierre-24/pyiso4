@@ -147,18 +147,15 @@ class Abbreviate:
 
         return cls(ltwa_prefix, ltwa_suffix, stopwds)
 
-    def _potential_matches(self, word: str, langs: List[str] = None) -> List[Pattern]:
-        # normalize
-        n_word = Pattern.normalize(word)
-
+    def _potential_matches(self, sentence: str, langs: List[str] = None) -> List[Pattern]:
         # look into prefix
-        results = self.ltwa_prefix.search(n_word)
+        results = self.ltwa_prefix.search(sentence)
 
         # look into suffixes
-        results += self.ltwa_suffix.search(str(reversed(n_word)))
+        results += self.ltwa_suffix.search(str(reversed(sentence)))
 
         # remove everything that does not match
-        results = filter(lambda p: p.match(n_word, langs), results)
+        results = filter(lambda p: p.match(sentence, langs), results)
 
         # return longer matches first, with ending dashes if possible
         return sorted(
@@ -195,9 +192,10 @@ class Abbreviate:
         result = ''
         is_first = True
 
-        title = normalize(title, Level.SOFT)
+        title_soft_normalized = normalize(title, Level.SOFT)
+        title_normalized = Pattern.normalize(title)
 
-        lexer = Lexer(title, self.stopwords)
+        lexer = Lexer(title_soft_normalized, self.stopwords)
         tokens = []
         prev_article = None
 
@@ -247,14 +245,20 @@ class Abbreviate:
         # otherwise, abbreviate WORD and PART according to LTWA
         else:
             is_first = True
+            next_position = 0
             for token in tokens:
                 abbrv = token.value
                 if token.type in [TokenType.WORD, TokenType.PART]:
-                    patterns = self._potential_matches(abbrv, langs)
+                    if token.position < next_position:  # skip token if replacement already included it
+                        continue
+
+                    patterns = self._potential_matches(title_normalized[token.position:], langs)
                     if len(patterns) > 0:
                         pattern = patterns[0]
+                        next_position = token.position + len(pattern.pattern)
                         if pattern.replacement != '-':
-                            abbrv = Abbreviate.match_capitalization_and_diacritic(pattern.replacement, token.value)
+                            abbrv = Abbreviate.match_capitalization_and_diacritic(
+                                pattern.replacement, title_soft_normalized[token.position:])
                 result += '{}{}'.format(' ' if not (is_first or token.type == TokenType.SYMBOLS) else '', abbrv)
                 is_first = False
 
