@@ -176,7 +176,7 @@ class Abbreviate:
 
         return ''.join(abbrv)
 
-    def __call__(self, title: str, remove_part: bool = False, langs: List[str] = None) -> str:
+    def __call__(self, title: str, remove_part: bool = True, langs: List[str] = None) -> str:
         """Abbreviate a title according to the rules of Section 7 in the ISSN manual
         (https://www.issn.org/understanding-the-issn/assignment-rules/issn-manual/)
 

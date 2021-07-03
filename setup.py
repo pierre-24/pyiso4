@@ -1,7 +1,3 @@
-"""
-AM-Nihoul-website, a small website for an association with not intent of being something else
-"""
-
 # adapted over https://github.com/pypa/sampleproject/blob/master/setup.py
 
 from setuptools import setup, find_packages
@@ -25,7 +21,7 @@ setup(
     version=pyiso4.__version__,
 
     # Description
-    description=__doc__,
+    description=pyiso4.__doc__,
     long_description=long_description,
     long_description_content_type='text/markdown',
     keywords='website',
@@ -39,26 +35,28 @@ setup(
 
     # Classifiers
     classifiers=[
-        'Topic :: Internet :: WWW/HTTP',
-        'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'License :: OSI Approved :: MIT License',
 
         # Specify the Python versions:
-        'Framework :: Flask'
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
     ],
 
     packages=find_packages(),
-    python_requires='>=3.5',
+    python_requires='>=3.7',
 
     # requirements
     install_requires=requirements,
 
     extras_require={  # Optional
         'dev': requirements_dev,
+    },
+
+    entry_points={
+        'console_scripts': [
+            'iso4abbreviate = pyiso4.script:main'
+        ]
     },
 )
