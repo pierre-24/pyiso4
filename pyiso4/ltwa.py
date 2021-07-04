@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Tuple
 from unidecode import unidecode
 import re
 
@@ -176,6 +176,22 @@ class Abbreviate:
 
         return ''.join(abbrv)
 
+    def abbreviate(self, sentence: str, fallback: str, guide: str, langs: List[str] = None) -> Tuple[str, int]:
+        """Abbreviate the beginning of ``sentence`` by looking for an appropriate pattern.
+        If not found, use ``fallback``. If found, matches the capitalization given by ``guide``.
+        Also returns the length of the sentence that was replaced.
+        """
+
+        patterns = self._potential_matches(sentence, langs)
+        if len(patterns) > 0:
+            pattern = patterns[0]
+            if pattern.replacement != '-':
+                return Abbreviate.match_capitalization_and_diacritic(pattern.replacement, guide), len(pattern.pattern)
+            else:
+                return fallback, len(fallback)
+
+        return fallback, len(fallback)
+
     def __call__(self, title: str, remove_part: bool = True, langs: List[str] = None) -> str:
         """Abbreviate a title according to the rules of Section 7 in the ISSN manual
         (https://www.issn.org/understanding-the-issn/assignment-rules/issn-manual/)
@@ -256,14 +272,12 @@ class Abbreviate:
                     is_hyphenated = True
                 elif token.type in [TokenType.WORD, TokenType.PART]:
                     if token.position >= next_position:
-                        patterns = self._potential_matches(
-                            title_normalized[token.position + ligatures_shift:], langs)
-                        if len(patterns) > 0:
-                            pattern = patterns[0]
-                            next_position = token.position + len(pattern.pattern)
-                            if pattern.replacement != '-':
-                                abbrv = Abbreviate.match_capitalization_and_diacritic(
-                                    pattern.replacement, title_soft_normalized[token.position:])
+                        abbrv, len_ = self.abbreviate(
+                            title_normalized[token.position + ligatures_shift:],
+                            token.value,
+                            title_soft_normalized[token.position:],
+                            langs)
+                        next_position = token.position + len_
                     else:
                         abbrv = ''
                         no_space = True
