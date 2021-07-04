@@ -42,7 +42,7 @@ It currently fails
 + to fulfil rule 7.1.7 of the manual: keep prepositions in expressions (like ``in vivo``) and place/personal name intact,
 + to fulfil rules 7.1.2, 7.1.3 and 7.1.8 of the same manual (but this is of lesser importance),
 + on compound words (such as ``microengineering``), except if explicitly found in the LTWA,
-+ on double diacritics (such as ``æ``).
++ on some [ligatures](https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)) (handle the common `œ` and `æ`)
 
 ## Contributions
 

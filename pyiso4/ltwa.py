@@ -4,7 +4,7 @@ import re
 
 from pyiso4.prefix_tree import PrefixTree
 from pyiso4.lexer import Lexer, TokenType
-from pyiso4.normalize_string import normalize, Level, BOUNDARY
+from pyiso4.normalize_string import normalize, Level, BOUNDARY, number_of_ligatures
 
 
 class Pattern:
@@ -244,31 +244,39 @@ class Abbreviate:
             result = '{}{}'.format(tokens[0].value, tokens[1].value)
         # otherwise, abbreviate WORD and PART according to LTWA
         else:
-            is_first = True
             is_hyphenated = False
+            no_space = False
             next_position = 0
+            ligatures_shift = 0
+
             for token in tokens:
                 abbrv = token.value
+
                 if token.type == TokenType.HYPHEN:
                     is_hyphenated = True
-
                 elif token.type in [TokenType.WORD, TokenType.PART]:
-                    if token.position < next_position:  # skip token if replacement already included it
-                        continue
+                    if token.position >= next_position:
+                        patterns = self._potential_matches(
+                            title_normalized[token.position + ligatures_shift:], langs)
+                        if len(patterns) > 0:
+                            pattern = patterns[0]
+                            next_position = token.position + len(pattern.pattern)
+                            if pattern.replacement != '-':
+                                abbrv = Abbreviate.match_capitalization_and_diacritic(
+                                    pattern.replacement, title_soft_normalized[token.position:])
+                    else:
+                        abbrv = ''
+                        no_space = True
+                elif token.type in [TokenType.SYMBOLS, TokenType.HYPHEN]:
+                    no_space = True
 
-                    patterns = self._potential_matches(title_normalized[token.position:], langs)
-                    if len(patterns) > 0:
-                        pattern = patterns[0]
-                        next_position = token.position + len(pattern.pattern)
-                        if pattern.replacement != '-':
-                            abbrv = Abbreviate.match_capitalization_and_diacritic(
-                                pattern.replacement, title_soft_normalized[token.position:])
                 result += '{}{}'.format(
-                    ' ' if not (is_first or is_hyphenated or token.type in [TokenType.SYMBOLS, TokenType.HYPHEN])
+                    ' ' if not (len(result) == 0 or is_hyphenated or no_space)
                     else '',
                     abbrv)
-                is_first = False
 
+                ligatures_shift += number_of_ligatures(token.value)
+                no_space = False
                 if token.type != TokenType.HYPHEN:
                     is_hyphenated = False
 

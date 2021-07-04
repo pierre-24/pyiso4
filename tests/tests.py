@@ -2,7 +2,7 @@ import unittest
 
 from pyiso4.lexer import Lexer, TokenType
 from pyiso4.ltwa import Pattern, Abbreviate
-from pyiso4.normalize_string import normalize, Level
+from pyiso4.normalize_string import normalize, Level, number_of_ligatures
 
 
 class TestNormalize(unittest.TestCase):
@@ -29,6 +29,11 @@ class TestNormalize(unittest.TestCase):
 
         for inp, out in tests:
             self.assertEqual(out, normalize(inp, Level.HARD))
+
+    def test_ligatures(self):
+        self.assertEqual(number_of_ligatures('test'), 0)
+        self.assertEqual(number_of_ligatures('coeur'), 0)
+        self.assertEqual(number_of_ligatures('cœur'), 1)
 
 
 class TestLexer(unittest.TestCase):
@@ -66,12 +71,14 @@ class TestLexer(unittest.TestCase):
         self.assertEqual(tokens[2].type, TokenType.WORD)
         self.assertEqual(tokens[2].value, cpd2)
 
-    def test_surname(self):
-        text = 'Legacy of A. Einstein'
+    def test_surname_as_abbreviation(self):
+        abbrv = 'A.'
+        text = 'Legacy of {} Einstein'.format(abbrv)
         tokens = list(Lexer(text, ['of']).tokenize())
 
         self.assertEqual(len(tokens), 5)  # four words + EOS
         self.assertEqual(tokens[2].type, TokenType.ABBREVIATION)
+        self.assertEqual(tokens[2].value, abbrv)
 
 
 class TestPattern(unittest.TestCase):

@@ -6,6 +6,12 @@ from unidecode import unidecode
 
 BOUNDARY = re.compile(r'[-\s\u2013\u2014_.,:;!|=+*\\/"()&#%@$?]')
 
+LIGATURES = 'ŒœÆæ'
+
+
+def number_of_ligatures(word: str):
+    return sum(1 for c in word if c in LIGATURES)
+
 
 @unique
 class Level(Enum):
