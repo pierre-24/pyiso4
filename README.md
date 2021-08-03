@@ -26,8 +26,8 @@ J. Chem. Phys.
 J. Phys. Chem. A
 ```
 
-By default, the program abbreviate using [this list of abbreviation](LTWA_20170914-modified.csv) (slightly modified version of LTWA 2017)
-and [this list of stopwords](stopwords.txt).
+By default, the program abbreviate using [this list of abbreviation](pyiso4/LTWA_20170914-modified.csv) (slightly modified version of LTWA 2017)
+and [this list of stopwords](pyiso4/stopwords.txt).
 You can change that using ``--ltwa`` and ``--stopwords`` to provide your own files (with the same syntax).
 
 As for rule 7.1.11, namely that abbreviations of generic words such as part, etc. are omitted unless they are required,

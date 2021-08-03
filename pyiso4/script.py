@@ -17,7 +17,7 @@ def get_arguments_parser():
         default=sys.stdin,
         help='titles')
 
-    here = pathlib.Path(__file__).parent.parent
+    here = pathlib.Path(__file__).parent
 
     parser.add_argument(
         '-l', '--ltwa', help='CSV of the LTWA', default=here / 'LTWA_20170914-modified.csv')
