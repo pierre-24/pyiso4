@@ -34,7 +34,7 @@ def main():
     args = get_arguments_parser().parse_args()
 
     # load LTWA
-    abbreviate = Abbreviate.from_files(args.ltwa, args.stopwords)
+    abbreviate = Abbreviate.create(args.ltwa, args.stopwords)
 
     # abbreviate
     for title in args.titles:

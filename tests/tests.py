@@ -135,7 +135,7 @@ class TestPattern(unittest.TestCase):
 class TestAbbreviate(unittest.TestCase):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.abbreviate = Abbreviate.from_files('LTWA_20170914-modified.csv', 'stopwords.txt')
+        self.abbreviate = Abbreviate.create()
 
     def test_abbreviations(self):
         with open('tests/tests.csv') as f:

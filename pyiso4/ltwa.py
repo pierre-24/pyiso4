@@ -110,6 +110,9 @@ class Pattern:
         return 'Pattern({}, {})'.format(self.pattern, self.replacement)
 
 
+_here = pathlib.Path(__file__).parent
+
+
 class Abbreviate:
     def __init__(self, ltwa_prefix: PrefixTree, ltwa_suffix: PrefixTree, stopwords: List[str]):
         self.ltwa_prefix = ltwa_prefix
@@ -118,7 +121,10 @@ class Abbreviate:
         self.stopwords = stopwords
 
     @classmethod
-    def from_files(cls, ltwa_file: str, stopwords: str = None):
+    def create(
+            cls,
+            ltwa_file: str = _here / 'LTWA_20170914-modified.csv',
+            stopwords: str = _here / 'stopwords.txt'):
         """Create an object from the LTWA CSV file and a newline-separated list of stopwords"""
 
         ltwa_prefix = PrefixTree()
@@ -296,11 +302,3 @@ class Abbreviate:
                     is_hyphenated = False
 
         return result
-
-
-def get_abbreviate() -> Abbreviate:
-    """Return an `Abbreviate` object, built from the default files
-    """
-
-    here = pathlib.Path(__file__).parent
-    return Abbreviate.from_files(here / 'LTWA_20170914-modified.csv', here / 'stopwords.txt')
