@@ -47,6 +47,8 @@ setup(
     packages=find_packages(),
     python_requires='>=3.7',
 
+    include_package_data=True,
+
     # requirements
     install_requires=requirements,
 

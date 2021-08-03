@@ -1,6 +1,7 @@
 from typing import List, Tuple
 from unidecode import unidecode
 import re
+import pathlib
 
 from pyiso4.prefix_tree import PrefixTree
 from pyiso4.lexer import Lexer, TokenType
@@ -295,3 +296,11 @@ class Abbreviate:
                     is_hyphenated = False
 
         return result
+
+
+def get_abbreviate() -> Abbreviate:
+    """Return an `Abbreviate` object, built from the default files
+    """
+
+    here = pathlib.Path(__file__).parent
+    return Abbreviate.from_files(here / 'LTWA_20170914-modified.csv', here / 'stopwords.txt')
