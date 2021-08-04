@@ -17,7 +17,7 @@ with open(path.join(here, 'requirements/requirements.in')) as f:
     requirements_dev = f.readlines()[1:]
 
 setup(
-    name='pyios4',
+    name='pyiso4',
     version=pyiso4.__version__,
 
     # Description
@@ -39,6 +39,7 @@ setup(
 
         # Specify the Python versions:
         'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
