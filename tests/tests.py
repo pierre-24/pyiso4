@@ -15,7 +15,7 @@ class TestNormalize(unittest.TestCase):
             ('ačaruli', 'acaruli'),
             ('għall', 'ghall'),
             ('chrysopœia', 'chrysopoeia'),
-            ('Côte-d\'Azur', 'Cote-d\'Azur')
+            ("Côte-d'Azur", "Cote-d'Azur")
         ]
 
         for inp, out in tests:
@@ -24,7 +24,7 @@ class TestNormalize(unittest.TestCase):
     def test_normalize_extra(self):
         tests = [
             ('TeSt', 'test'),
-            ('Côte-d\'Azur', 'cote d azur')
+            ("Côte-d'Azur", 'cote d azur')
         ]
 
         for inp, out in tests:
@@ -139,6 +139,6 @@ class TestAbbreviate(unittest.TestCase):
 
     def test_abbreviations(self):
         with open('tests/tests.tsv') as f:
-            for l in f.readlines():
-                fields = l.split('\t')
+            for line in f.readlines():
+                fields = line.split('\t')
                 self.assertEqual(fields[1].strip(), self.abbreviate(fields[0].strip(), remove_part=True))
