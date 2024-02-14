@@ -44,6 +44,19 @@ It currently fails
 + on compound words (such as ``microengineering``), except if explicitly found in the LTWA,
 + on some [ligatures](https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)) (handle the common `œ` and `æ`)
 
+
+## Python API
+
+````python
+from pyiso4.ltwa import Abbreviate
+
+# create an abbreviator (using the default LTWA)
+abbreviator = Abbreviate.create()
+
+# abbreviate something
+abbreviation = abbreviator('Journal of the American Chemical Society', remove_part=True)
+````
+
 ## Contributions
 
 Contributions, either with [issues](https://github.com/pierre-24/pyiso4/issues) or [pull requests](https://github.com/pierre-24/pyiso4/pulls) are welcomed.

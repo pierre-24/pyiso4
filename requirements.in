@@ -1,4 +1,0 @@
--e file:.#egg=pyiso4
-flake8
-flake8-quotes
-autopep8
