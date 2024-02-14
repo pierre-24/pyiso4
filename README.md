@@ -36,7 +36,7 @@ To change this behavior, use `--keep-part`.
 
 ## Known issues
 
-A list of failed tests is found [here](tests/failed_tests.csv).
+A list of failed tests is found [here](tests/failed_tests.tsv).
 It currently fails
 
 + to fulfil rule 7.1.7 of the manual: keep prepositions in expressions (like ``in vivo``) and place/personal name intact,

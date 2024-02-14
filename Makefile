@@ -11,7 +11,7 @@ install:
 	pip3 install -e .[dev]
 
 lint:
-	flake8 pyiso4 --max-line-length=120 --ignore=N802
+	flake8 pyiso4 tests --max-line-length=120 --ignore=N802
 
 test:
 	python -m unittest discover -s tests
