@@ -138,7 +138,7 @@ class TestAbbreviate(unittest.TestCase):
         self.abbreviate = Abbreviate.create()
 
     def test_abbreviations(self):
-        with open('tests/tests.csv') as f:
+        with open('tests/tests.tsv') as f:
             for l in f.readlines():
                 fields = l.split('\t')
                 self.assertEqual(fields[1].strip(), self.abbreviate(fields[0].strip(), remove_part=True))

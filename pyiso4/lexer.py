@@ -98,8 +98,8 @@ class Lexer:
 
             # remove symbols at the end
             end_symbols = ''
-            while len(lower_word) > 0 and not lower_word[-1].isalpha():
-                end_symbols += lower_word[-1]
+            while len(lower_word) > 0 and not lower_word[-1].isalnum():
+                end_symbols = lower_word[-1] + end_symbols
                 lower_word = lower_word[:-1]
                 word = word[:-1]
 
