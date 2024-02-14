@@ -1,0 +1,42 @@
+[project]
+name = "pyiso4"
+dynamic = ["version"]
+authors = [
+    {name = "Pierre Beaujean", email = "pierre.beaujean@unamur.be"},
+]
+description = "Abbreviate a title following the ISO-4 rules."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    'unidecode'
+]
+
+[project.optional-dependencies]
+dev = [
+    "flake8",
+    "flake8-quotes",
+    "autopep8",
+    "bump2version",
+]
+
+[project.scripts]
+iso4abbreviate = 'pyiso4.script:main'
+
+[tool.setuptools]
+packages = ['pyiso4']
+
+[tool.setuptools.dynamic]
+version = {attr = "pyiso4.__version__"}
