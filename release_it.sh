@@ -5,9 +5,10 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
-
 # get variables
 MAIN_BRANCH="master"
+DEV_BRANCH="dev"
+REMOTE="origin"
 RELEASE_PART=$1
 CURRENT_BRANCH=$(git branch --show-current)
 INFO=$(bump2version --list --dry-run "$RELEASE_PART")
@@ -29,14 +30,19 @@ while true; do
     esac
 done
 
-
-# go to $MAIN_BRANCH
-if [[ $CURRENT_BRANCH != "$MAIN_BRANCH" ]]; then
-  git checkout ${MAIN_BRANCH}
+# go to $DEV_BRANCH and ensure latest version
+if [[ $CURRENT_BRANCH != "$DEV_BRANCH" ]]; then
+  git checkout $DEV_BRANCH
 fi
 
-# pull latest stuffs, if any
 git pull
+
+# go to $MAIN_BRANCH, ensure latest version and merge $DEV_BRANCH in it (then push)
+git checkout ${MAIN_BRANCH}
+git pull
+
+git merge $DEV_BRANCH
+git push $REMOTE $MAIN_BRANCH
 
 # bump version
 bump2version "$RELEASE_PART" --verbose
