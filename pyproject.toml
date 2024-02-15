@@ -4,11 +4,12 @@ dynamic = ["version"]
 authors = [
     {name = "Pierre Beaujean", email = "pierre.beaujean@unamur.be"},
 ]
-description = "Abbreviate a title following the ISO-4 rules."
+description = "Abbreviate a scientific journal title following the ISO-4 rules"
 readme = "README.md"
+license = {file = "LICENSE"}
 requires-python = ">=3.8"
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "License :: OSI Approved :: MIT License",
     "Natural Language :: English",
     "Operating System :: OS Independent",

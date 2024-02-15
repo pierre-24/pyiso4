@@ -1,2 +1,2 @@
-include pyiso4/LTWA_20170914-modified.csv
+include pyiso4/LTWA_20210702.csv
 include pyiso4/stopwords.txt

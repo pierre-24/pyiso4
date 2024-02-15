@@ -2199,7 +2199,8 @@ anligg-	anligg.	dan
 anmarkning	anmarkn.	swe
 anmeld-	anmeld.	dan
 Anmerkung-	Anm.	ger
-anmut(h)ig	n.a.	ger
+anmutig	n.a.	ger
+anmuthig	n.a.	ger
 Ann Arbor	n.a.	eng
 annabergo	n.a.	lat
 annaes	ann.	roa
@@ -9282,7 +9283,6 @@ comproba	comprob.	spa
 comptab-	comptab.	fre
 compte	n.a.	fre
 compte rendu	c. r.	fre
-comptes rendus	c. r.	fre
 comptine	n.a.	fre
 comptoir	n.a.	fre
 comptrol-	comptrol.	eng
@@ -13099,7 +13099,7 @@ elektrostrojar-	elektrostroj.	hrv
 èlektrosvarka	n.a.	rus
 èlektrosvaročnogo	èlektrosvar.	rus
 èlektrosvâz-	èlektrosvâz.	rus
-elektrotech.	elektrotech.	pol, cze
+elektrotech-	elektrotech.	pol, cze
 elektrotechnologia	elektrotechnol.	pol
 èlektrotehni-	èlektroteh.	srp, rus
 èlektrotehnolog-	èlektrotehnol.	rus
@@ -24624,7 +24624,8 @@ kineziterap-	kineziter.	lit
 Kingdom	Kingd.	eng
 Kings Ripton	n.a.	eng
 Kingsburgh	Kingsbg.	afr
-Kingsto(w)n	Kingst.	eng
+Kingston	Kingst.	eng
+Kingstown	Kingst.	eng
 Kingsville	Kingsv.	eng
 Kingswood	n.a.	eng
 kinoamater	kinoamat.	cze
@@ -26631,7 +26632,6 @@ labirint-	labirint.	lit
 labirinta	n.a.	lav
 labirynt	n.a.	pol
 labor	n.a.	mul
-Labor (laboratory)	Lab.	ger
 labor (work)	n.a.	mul
 laboral	labor.	spa
 laboratoir-	lab.	fre
@@ -27729,7 +27729,7 @@ libar	n.a.	hrv
 libellenonderzoek-	libellenonderz.	dut
 libellum	n.a.	lat
 liber	n.a.	lat
-liber-	lib.	rum
+libera-	lib.	rum
 liberal-	lib.	eng
 libérat-	lib.	fre
 liberator	lib.	eng
@@ -30246,7 +30246,7 @@ metallopromyšlen-	metalloprom.	rus
 metallorezuŝij	metallorez.	rus
 metallorganic	metallorg.	eng
 metallorum	met.	lat
-metallosnabžen.	metallosnabž.	rus
+metallosnabže-	metallosnabž.	rus
 metallotermič-	metalloterm.	rus
 metallourg-	metall.	gre
 metalloveden-	metalloved.	rus
@@ -30734,7 +30734,6 @@ milieutechnologie	milieutechnol.	dut
 milieuverslag	milieuversl.	dut
 milieuzorg	n.a.	dut
 militær	mil.	dan
-militært	mil.	nor
 militair-	mil.	fre
 militancia	milit.	spa
 militant	milit.	eng
@@ -31651,7 +31650,7 @@ Mulhouse	n.a.	fre
 mulhousien	mulhous.	fre
 mulig-	mulig.	dan
 mülkiyet	mülk.	tur
-Müller	n.a.	ger, 
+Müller	n.a.	ger 
 Müllerei	Müller.	ger
 Müllforschung-	Müllforsch.	ger
 Müllheim	Müllh.	ger
@@ -36690,10 +36689,7 @@ persiska	n.a.	swe
 persjaarboek	persjaarb.	dut
 persmuseum	persmus.	dut
 person-	pers.	mul
-personalin-	personal.	lit
 personalist	pers.	eng
-personalistika	personal.	cze
-personalit-	personal.	rum
 personalo	person.	lit
 personbil	n.a.	nor
 personeel	pers.	dut
@@ -38457,7 +38453,7 @@ pozvonočnye	pozvonoč.	rus
 praaien	n.a.	dut
 prac-	pr.	pol, cze
 práci	pr.	slo
-pracov.	prac.	cze
+pracov-	prac.	cze
 pracown-	prac.	pol
 practi-	pract.	spa, eng
 praecox	n.a.	lat
@@ -45555,6 +45551,7 @@ soustav-	soust.	cze
 soutenir	n.a.	fre
 souterrain-	souterr.	fre
 south	n.a.	eng
+South Africa	S. Afr.	eng
 South Africa-	S. Afr.	eng
 South America	S. Am.	eng
 South Asia	n.a.	eng
@@ -51037,7 +51034,7 @@ Umeå	n.a.	swe
 Umedalen	n.a.	swe
 umele	n.a.	slo
 uměleck-	umel.	cze, slo
-uměleckohistor.	uměl.hist.	cze
+uměleckohistor-	uměl.hist.	cze
 umenie	n.a.	slo
 uměnovedni	uměnoved.	cze
 umetnost-	umet.	srp
@@ -53933,8 +53930,9 @@ waarvan	n.a.	dut
 wachendorffia	n.a.	dut
 Wachenheim-	Wachenh.	ger
 wachsen	wachs.	ger
-Wachst(h)um	n.a.	ger
-Wachstumsregulat-	Wachstumsregul.	ger
+Wachstum	n.a.	ger
+Wachsthum	n.a.	ger
+WWachstumsregulat-	Wachstumsregul.	ger
 Wachtelhund	n.a.	ger
 wachter	n.a.	dut
 Wächtersbach	Wächtersb.	ger
@@ -56136,3 +56134,58 @@ żywnośc-	żywn.	pol
 ģeogrāfiski	ģeogr.	lav
 ģeoloģ-	ģeol.	lav
 ģimene	ģim.	lav
+Parkinson	n.a.	mul,ext
+Huntington's	n.a.	mul,ext
+Chesterton	n.a.	mul,ext
+Antonie	n.a.	mul,ext
+Rylands	n.a.	mul,ext
+Baha'i	n.a.	mul,ext
+Dalton	n.a.	mul,ext
+bioorganic	bioorg.	eng,ext
+Netherland-	Neth.	mul,ext
+interprofession-	interprof.	mul,ext
+sociaux	soc.	fre,ext
+peacekeep-	peacekeep.	eng,ext
+aestheti-	aesthet.	mul,ext
+emergenc-	emerg.	mul,ext
+enterpr-	enterp.	mul,ext
+perianesthés-	perianesth.	eng,fre,ext
+postcoloni-	postcolon.	eng,fre,ext
+vertebra-	vertebr.	mul,ext
+legeförening-	legeforen.	dan,nor,swe,ext
+lingvist-	lingvist.	lat,ext
+tekhnika-	tekh.	rus,ext
+andranikolog-	andranikol.	eng,ext
+neurotoxicolog-	neurotoxicol.	eng,fre,ext
+militært	mil.	dan,ext
+neglect-	negl.	eng,ext
+prehospit-	prehosp.	eng,fre,ext
+information-	inf.	mul,ext
+cracoviens-	crac.	lat,ext
+neoaristotel-	neoaristot.	eng,gre,ext
+in vitro	n.a.	mul,ext
+in vivo	n.a.	mul,ext
+-psihol-	-psihol.	mul,ext
+-psikhol-	-psikhol.	mul,ext
+-psikhiatri-	-psikhiatr.	rus,ext
+-zoolog-	-zool.	mul,ext
+-forschung	-forsch.	ger,ext
+zhurnal	zh.	rus,slo,ext
+meditsin-	med.	mul,ext
+counterintelligenc-	counterintell.	eng,fre,ext
+-medic-	-med.	mul,ext
+real sociedad	r. soc.	spa,cat,ext
+comptes rendus	c. r.	fre,ext
+etholog-	ethol.	eng,ext
+real anal-	real anal.	eng,ext
+real number-	n.a.	eng,ext
+real-world	n.a.	eng,ext
+eleven	n.a.	eng,ext
+libert-	lib.	eng,ext
+latinx	lat.	eng,ext
+psikhoterap-	psikhoter.	rus,ext
+micromechani-	micromech.	eng,ext
+mikromechani-	mikromech.	pol,ext
+microengineer-	microeng.	eng,ext
+Cimmaron	n.a.	eng,ext
+PracTeX	n.a.	eng,ext
