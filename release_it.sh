@@ -39,9 +39,7 @@ git pull
 
 # bump version
 bump2version "$RELEASE_PART" --verbose
-git push --follow-tags origin $MAIN_BRANCH
-
-git push $REMOTE $DEV_BRANCH
+git push --follow-tags origin $DEV_BRANCH
 
 # go to $MAIN_BRANCH, ensure latest version and merge $DEV_BRANCH in it (then push)
 git checkout ${MAIN_BRANCH}
