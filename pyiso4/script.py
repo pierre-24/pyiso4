@@ -20,7 +20,7 @@ def get_arguments_parser():
     here = pathlib.Path(__file__).parent
 
     parser.add_argument(
-        '-l', '--ltwa', help='CSV of the LTWA', default=here / 'LTWA_20170914-modified.csv')
+        '-l', '--ltwa', help='CSV of the LTWA', default=here / 'LTWA_20210702.csv')
 
     parser.add_argument(
         '-s', '--stopwords', help='List of stopwords (one per line)', default=here / 'stopwords.txt')

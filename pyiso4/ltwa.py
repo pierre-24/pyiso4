@@ -123,7 +123,7 @@ class Abbreviate:
     @classmethod
     def create(
             cls,
-            ltwa_file: str = _here / 'LTWA_20170914-modified.csv',
+            ltwa_file: str = _here / 'LTWA_20210702.csv',
             stopwords: str = _here / 'stopwords.txt'):
         """Create an object from the LTWA CSV file and a newline-separated list of stopwords"""
 

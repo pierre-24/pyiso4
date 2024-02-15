@@ -1,4 +1,4 @@
-WORD	ABBREVIATIONS	LANGUAGE CODE
+WORD	ABBREVIATIONS	LANGUAGE CODES
 's-Graveland	n.a.	dut
 's-Gravenhage	n.a.	dut
 's-Gravenmoer	n.a.	dut
@@ -134,7 +134,7 @@ WORD	ABBREVIATIONS	LANGUAGE CODE
 -pflege	-pfl.	ger
 -pfleger	-pfl.	ger
 -pflichtig	-pflicht.	ger
--phas-	-ph.	eng, fre
+-phas-	-ph.	fre, eng
 -plads-	-pl.	dan
 -plane	-pl.	eng
 -planung	-plan.	ger
@@ -210,6 +210,7 @@ WORD	ABBREVIATIONS	LANGUAGE CODE
 -yksikkö	-yks.	fin
 -yritys	-yrit.	fin
 -znanie	-zn.	rus
+-znavstvo    	-zn.	ukr
 A Coruña	n.a.	glg
 Aabenraa	n.a.	dan
 Aachen	n.a.	ger
@@ -2034,7 +2035,7 @@ andin-	andin.	spa
 andižansk-	andiž.	rus
 andme-	andm.	est
 andmebaasi-	andmebaas.	est
-Andorr-	Andorr.	spa, fre
+Andorr-	Andorr.	fre, spa
 Andover	n.a.	eng
 andragogía	andrag.	spa
 Andragogik	Andragog.	ger
@@ -2050,6 +2051,7 @@ åndsfrihet	n.a.	nor
 åndssvag	åndssv.	dan
 anebainontas	anebain.	gre
 anecdota	n.a.	eng
+anecdotal	anecdot.	eng
 anecdotique	anecdot.	fre
 Aneignung	Aneign.	ger
 anejo	n.a.	spa
@@ -2197,7 +2199,8 @@ anligg-	anligg.	dan
 anmarkning	anmarkn.	swe
 anmeld-	anmeld.	dan
 Anmerkung-	Anm.	ger
-anmut(h)ig	n.a.	ger
+anmutig	n.a.	ger
+anmuthig	n.a.	ger
 Ann Arbor	n.a.	eng
 annabergo	n.a.	lat
 annaes	ann.	roa
@@ -2300,15 +2303,15 @@ Antananariv-	n.a.	mul
 antapokritriōn	n.a.	gre
 antar	n.a.	por
 antarbangsa	antarb.	ind
-antarcti-	antarct.	fre, eng
-antarkti-	antarkt.	rus, ger
+antarcti-	antarct.	eng, fre
+antarkti-	antarkt.	ger, rus
 antàrti-	antàrt.	ita
 antaugeies	antaug.	gre
 antecedente	anteced.	spa
 antecipação	antecip.	por
 Anteil	Antl.	ger
 antena	n.a.	spa
-antenna	n.a.	fre, ita, eng
+antenna	n.a.	ita, eng, fre
 antenne	n.a.	fre
 antenneke	n.a.	dut
 anteprima	n.a.	ita
@@ -2341,7 +2344,7 @@ antibiotherap-	antibiother.	eng
 antibioti-	antibiot.	mul
 antiblastic-	antiblast.	ita
 antibody	antib.	eng
-anticancer-	anticancer.	eng, fre
+anticancer-	anticancer.	fre, eng
 anticarcinogen-	anticarcinog.	eng
 antichit-	antich.	ita
 anticip-	anticip.	eng
@@ -2740,7 +2743,7 @@ aracı	n.a.	tur
 aracnolog-	aracnol.	spa
 arădea-	arăd.	rum
 aræologisk	aræol.	nor
-aragon-	Aragón.	spa, spa
+Aragón-	aragon.	spa, spa
 áralakulás	áralak.	hun
 aràldic-	aràld.	ita
 arama-	aram.	tur
@@ -2765,7 +2768,7 @@ arbitra-	arbitr.	mul
 arbitru	n.a.	rum
 årbog	årb.	dan
 Arboga	n.a.	swe
-årbok	árb.	nor, ice
+árbók	årb.	ice, nor
 árbol	n.a.	spa
 arboretum	arbor.	lat
 arboricol-	arboric.	fre, ita
@@ -2803,13 +2806,14 @@ archipel	n.a.	fre
 archipelago	archipel.	eng
 architect-	archit.	eng, fre
 architectoni-	architecton.	eng
-Architekt-	archit.	ger, lit
+architekt-	Archit.	lit, ger
 architekton-	archit.	gre
 architett-	archit.	ita
 archív	arch.	slo
 archiv-	arch.	mul
 archívum	arch.	hun
 archiw-	arch.	pol
+arcidiecéz-	arcidiec.	cze
 arcidiecéze	arcidiec.	cze
 arcilla	n.a.	spa
 arcispedale	arcisp.	ita
@@ -2892,7 +2896,7 @@ aristocra-	aristocr.	spa
 aristotel-	aristot.	eng, gre
 aristotelisch	aristot.	ger
 arithm-	arith.	gre
-arithmeti-	arith.	eng, fre
+arithmeti-	arith.	fre, eng
 aritmi-	n.a.	rum
 Arizona-	Ariz.	eng
 árjegyzék	árj.	hun
@@ -2993,7 +2997,7 @@ arquiv-	arq.	spa
 arrabal	n.a.	spa
 arrach-	n.a.	fre
 arragutamat	n.a.	iku
-arrangement-	arrange.	eng, fre
+arrangement-	arrange.	fre, eng
 arrantz-	arrantz.	baq
 arrear-	arrear.	eng
 arrecadação	arrecad.	por
@@ -3016,14 +3020,14 @@ arrowhead	arrowh.	eng
 arroz	n.a.	por
 årsag	års.	dan
 arsberattelse	arsberatt.	nor
-årsberetning	årsberet.	dan, nor
+årsberetning	årsberet.	nor, dan
 årsbibliografi	årsbibliogr.	swe
 årsböcker	årsb.	swe
 årsbok	årsb.	nor
 arsenaal	n.a.	dut
 arsenal	n.a.	eng, fre
 arsenic	arsen.	mul
-årsheft-	årsh.	dan, swe, nor
+årsheft-	årsh.	swe, dan, nor
 arsis	n.a.	gre
 arsitektur	arsit.	ind
 arşivi	arş.	tur
@@ -3033,10 +3037,10 @@ årskrönika	årskrön.	swe
 årsmelding-	årsmeld.	nor, dan
 årsmote	n.a.	swe
 ársping	n.a.	ice
-årsrapport	årsrapp.	swe, nor
+årsrapport	årsrapp.	nor, swe
 årsredogörelse	årsredogör.	swe
 årsredovisning	årsredovis.	swe
-årsskrift	årsskr.	nor, dan, swe
+årsskrift	årsskr.	dan, swe, nor
 ársskýrsla	árssk.	ice
 årsstatistik	årsstat.	swe
 årstid	n.a.	dan
@@ -3081,7 +3085,7 @@ arthurien	arthur.	fre
 article-	artic.	fre
 articolar-	articol.	ita
 articole	artic.	mul
-articul-	articul.	eng, fre
+articul-	articul.	fre, eng
 artículo	artíc.	spa
 artifact	n.a.	eng
 artifici-	artif.	fre, eng
@@ -3100,6 +3104,7 @@ artisan-	artis.	fre
 artist-	artist.	mul
 Artois	n.a.	fre
 artoj-	artoj.	lit
+artologie	artol.	fre
 artopoi-	artop.	gre
 artritis	n.a.	spa
 artroscop-	artrosc.	spa
@@ -3361,6 +3366,7 @@ atayurda	atay.	tur
 atbalss	n.a.	lav
 atbild-	atb.	lav
 ateistič-	ateist.	rus
+ateit-	n.a.	lit
 ateizm-	n.a.	rus
 atelier	n.a.	fre
 Atemschutz	n.a.	ger
@@ -3392,7 +3398,7 @@ athēnorama	athēnor.	gre
 Athens	n.a.	eng
 ätherisch	äther.	ger
 atherogen-	atherog.	eng
-atherosclero-	atheroscler.	fre, eng
+atherosclero-	atheroscler.	eng, fre
 atherosclerolog-	atherosclerol.	eng
 Athīn-	Athīn.	gre
 Athīna	n.a.	gre
@@ -3477,7 +3483,7 @@ attitude	n.a.	fre, eng
 attività	attiv.	ita
 ättling	ättl.	swe
 attorney-	atty.	eng
-attraction-	attract.	fre, eng
+attraction-	attract.	eng, fre
 attractive	attract.	eng
 attrait	n.a.	fre
 attraktie	attrakt.	dut
@@ -5864,7 +5870,7 @@ biokonversi-	biokonvers.	rus
 biokov-	biokov.	hrv
 biokultúra	biokult.	hun
 biokybernet-	biokybern.	ger
-biolog-	biol.	ukr, mul
+bìolog-	biol.	ukr, mul
 bíolohí-	bíol.	und
 bioloj-	biol.	tur
 biolokija	biol.	aze
@@ -6323,6 +6329,7 @@ bogosluž-	bogosluž.	hrv
 Bogotá	n.a.	spa
 bogtryk	n.a.	dan
 bohem	n.a.	bul
+bohem-	bohem.	lat
 Bohemiae	Bohem.	lat
 bohemica	bohem.	lat
 bohemoslovac-	bohemoslov.	cze
@@ -6343,6 +6350,7 @@ boiōt-	boiōt.	gre
 Bois-Francs	n.a.	fre
 boisson	n.a.	fre
 boite	n.a.	fre
+boj-	boj.	cze
 bok	n.a.	nor, swe
 bókaskrá	n.a.	ice
 bokcafe	n.a.	swe
@@ -6694,7 +6702,7 @@ božur	n.a.	bul
 Braamfontein	n.a.	afr
 brabançon	n.a.	fre
 Brabant	n.a.	fre
-brabant-	brabant.	dut, fre
+brabant-	brabant.	fre, dut
 Bracebridge	n.a.	eng
 brachycera	n.a.	eng
 brachyurus	n.a.	lat
@@ -6762,8 +6770,8 @@ bränsle	n.a.	swe
 Brantford	n.a.	eng
 branżowy	branż.	pol
 brasage	n.a.	fre
-Brasil	Bras.	por, spa
-brasil-	bras.	spa, por
+Brasil	Bras.	spa, por
+brasil-	bras.	por, spa
 Brasília	n.a.	por
 Bras̡ov-	Bras̡.	rum
 brasserie	brass.	fre
@@ -6932,6 +6940,7 @@ brodilʹn-	brodil.	rus
 brödinstitut-	brödinst.	swe
 brodogra-	brodogr.	hrv
 brodolom	n.a.	srp
+brodostrojar-	brodostroj.	hrv
 brödra	bröd.	swe
 Brodsk-	Brod.	hrv
 broederlijk	n.a.	dut
@@ -8183,7 +8192,7 @@ centrestage	n.a.	eng
 centrifugal	centrif.	eng
 centring	cent.	dan
 centrino	n.a.	ita
-centro	cent.	ita, lit, spa
+centro	cent.	spa, ita, lit
 centroamerica-	centroam.	spa
 centrobežn-	centrobežn.	rus
 centrosoûz	centrosoj.	rus
@@ -8194,12 +8203,12 @@ centurion	n.a.	fre
 century	n.a.	eng
 cenzur-	n.a.	pol
 cephalopod	cephalop.	eng
-cerami-	ceram.	fre, eng
+cerami-	ceram.	eng, fre
 ceramurgia	ceramurg.	ita
 cercet-	cercet.	rum
 cercle	n.a.	fre
 cerdo	n.a.	spa
-céréal-	n.a.	fre, rum
+cereal-	céréal.	rum, fre
 cerealicolt-	cerealic.	ita
 céréaliculture	céréalic.	fre
 cereallaborator-	cereallab.	nor
@@ -8207,6 +8216,7 @@ cerebral	cereb.	fre, eng
 cerebro	cereb.	spa
 cerebropath-	cerebropath.	ger
 cerebrovascular-	cerebrovasc.	eng
+cerebrovaskular-	cerebrovask.	hrv
 ceremon-	cerem.	eng
 cereole	n.a.	gre
 cerf-volant	n.a.	fre
@@ -8237,6 +8247,7 @@ certamen	certam.	spa
 certificación	certif.	spa
 certificat-	certif.	fre, eng
 certified	certif.	eng
+certifik-	certif.	cze
 certitude	n.a.	fre
 cervantin-	cervant.	spa
 cervantis-	cervant.	spa
@@ -8247,10 +8258,10 @@ cerveza	n.a.	spa
 cervical	cerv.	eng
 cervico-facciale	cerv.-facc.	ita
 cérvico-facial	cérv.-fac.	spa
-cervicofacial-	cervicofac.	fre, eng
+cervicofacial-	cervicofac.	eng, fre
 cervix	n.a.	eng
 cesarz	n.a.	pol
-česk-	čes.	rus, cze
+česk-	čes.	cze, rus
 českolipsko	n.a.	cze
 českomorav-	českomorav.	cze
 českoslov-	českoslov.	cze
@@ -8258,7 +8269,7 @@ cessation	cessat.	eng
 cession	cess.	fre
 češsk-	češs.	cze
 ceste	n.a.	srp
-cestov-	cest.	slo, hrv, cze
+cestov-	cest.	cze, slo, hrv
 cesty	n.a.	slo
 cetacea	n.a.	eng
 cetak	n.a.	ind
@@ -9272,7 +9283,6 @@ comproba	comprob.	spa
 comptab-	comptab.	fre
 compte	n.a.	fre
 compte rendu	c. r.	fre
-comptes rendus	c. r.	fre
 comptine	n.a.	fre
 comptoir	n.a.	fre
 comptrol-	comptrol.	eng
@@ -9864,6 +9874,7 @@ Cowichan	n.a.	eng
 coyote	n.a.	eng
 coyuntur-	coyunt.	spa
 cozinha	n.a.	por
+çözumlu	çözum.	tur
 cracked	crack.	eng
 cracking	crack.	eng
 Cracovie	Crac.	fre
@@ -10074,6 +10085,7 @@ csomagolás	csom.	hun
 csomagolástechnika	csomtech.	hun
 Csongrád	n.a.	hun
 csoport	csop.	hun
+čten-	čten.	cze
 čtenie	čten.	rus
 čtrnáct	n.a.	cze
 čtvrtletn-	n.a.	cze
@@ -10359,6 +10371,7 @@ dampkjelforening	dampkjelforen.	nor
 dampkring	dampkr.	dut
 dámsk-	dáms.	slo
 damtidning	damtidn.	swe
+daň-	daň.	cze
 daňami	daň.	slo
 danʺč-	danʺč.	bul
 dancer	danc.	eng
@@ -10540,7 +10553,7 @@ debout	n.a.	fre
 Debrecen	Debr.	hun
 debtor	debt.	eng
 début-	début.	fre
-décad-	décad.	fre, eng
+décad-	décad.	eng, fre
 decade	n.a.	eng
 decálogo	decál.	spa
 décamètr-	décamètr.	fre
@@ -10582,7 +10595,7 @@ decline	n.a.	eng
 declining	declin.	eng
 decod-	decod.	mul
 décolletage	n.a.	fre
-decomposition	decompos.	eng, fre
+decomposition	decompos.	fre, eng
 décompt-	décompt.	fre
 decontaminat-	decontam.	fre, eng
 décor	n.a.	fre
@@ -10724,7 +10737,7 @@ delničar	deln.	slv
 delov-	n.a.	rus
 delphinium	delphin.	mul
 delphinol	n.a.	fre
-delta	n.a.	fre, gre
+delta	n.a.	gre, fre
 deltagelse	deltag.	dan
 deltaplan	n.a.	mul
 deltawerken	deltaw.	dut
@@ -10750,7 +10763,7 @@ Demenz	n.a.	ger
 deminerali-	deminer.	eng
 Demmin	n.a.	ger
 demnitate	demn.	rum
-democra-	democr.	ita, eng, spa
+democra-	democr.	eng, ita, spa
 démocrat-	démocr.	fre
 democristian-	democrist.	ita
 demograf-	demogr.	spa
@@ -10761,7 +10774,7 @@ demoiselle	n.a.	fre
 demokrácia	demokr.	hun
 demokracja	demokr.	pol
 demokrasi	demokr.	ind
-demokrat-	demokr.	rus, ger, bos
+demokrat-	demokr.	ger, bos, rus
 demokršćanin	demokršć.	hrv
 demologico	demol.	ita
 dēmōn	n.a.	gre
@@ -10863,7 +10876,7 @@ depot	n.a.	nor
 dépouillé	n.a.	fre
 depozit-	depoz.	lit
 depreciation	depreciat.	eng
-dépress-	depress.	fre, eng
+depress-	dépress.	eng, fre
 depurazióne	depur.	ita
 deputac-	deput.	spa
 deputat-	deput.	mul
@@ -10883,7 +10896,7 @@ derevoobrab-	derevoobrab.	rus
 derevopererab-	derevopererab.	rus
 dergisi	derg.	tur
 deriva-	deriv.	eng, fre
-derive-	deriv.	eng, fre
+derive-	deriv.	fre, eng
 dermatitis	dermat.	eng
 dermato	derm.	mul
 Dermatocheirourgik-	Dermatocheir.	gre
@@ -10893,6 +10906,7 @@ dermatopharmacolog-	dermatopharmacol.	eng
 dermatose	n.a.	eng, fre
 dermatosifilolog-	dermatosifilol.	spa
 dermatotoxicolog-	dermatotoxic.	eng
+dermatotoxicology	dermatotoxicol.	eng
 Dermatovenerolog-	Dermatovenerol.	mul
 dermė	n.a.	lit
 dermite	n.a.	por
@@ -10988,7 +11002,7 @@ destêrro	n.a.	por
 destillat-	destill.	cat
 destin-	destin.	spa, fre
 destiny	n.a.	eng
-destructi-	destr.	fre, eng
+destructi-	destr.	eng, fre
 destructor-	destr.	eng
 destrukc-	destr.	rus
 dėstym-	dėst.	lit
@@ -11249,7 +11263,7 @@ dieetkund-	dieetkd.	afr
 dieetpreparat-	dieetprep.	dut
 Diego-Suarez	n.a.	fre, por
 dielectric-	dielectr.	eng, fre
-dielectrophore-	dielectrophor.	fre, eng
+dielectrophore-	dielectrophor.	eng, fre
 dielektri-	dielektr.	rus, ger
 dielektryczny	dielektr.	pol
 Diemen	n.a.	dut
@@ -11258,7 +11272,7 @@ dienen	dien.	ger
 dienrenrecht	dienrenr.	dut
 diens	n.a.	afr
 Dienst	n.a.	ger
-dienst-	n.a.	ger, dut
+dienst-	n.a.	dut, ger
 Dienstbereich	n.a.	ger
 Dienstbezug	n.a.	ger
 dienstenbond	n.a.	dut
@@ -11473,9 +11487,9 @@ discapacitado	discapac.	spa
 discente	n.a.	por
 discern-	discern.	eng
 discharge	disch.	eng
-discipl-	discipl.	eng, fre, ita
+discipl-	discipl.	ita, fre, eng
 discipleship	disciplesh.	eng
-disciplin-	discip.	fre, eng
+disciplin-	discip.	eng, fre
 discipulo	n.a.	spa
 discjockey	n.a.	swe
 disclosure-	discl.	eng
@@ -11495,7 +11509,7 @@ discrimin-	discrim.	mul
 discurso	n.a.	spa
 Discus	n.a.	ger
 discusión	discus.	spa
-discussi-	discuss.	eng, fre
+discussi-	discuss.	fre, eng
 disease-	dis.	eng
 disegno	n.a.	ita
 disemin-	disem.	por
@@ -11555,6 +11569,7 @@ disput-	disput.	mul
 disqu-	disq.	fre
 disquisitio	disquis.	lat
 disruption	disrupt.	eng
+Disruptive	Disrupt.	eng
 dissatisf-	n.a.	eng
 dissemination	dissem.	fre, eng
 dissent	n.a.	eng
@@ -11564,10 +11579,10 @@ disserta-	diss.	fre, eng
 dissidere	dissid.	lat
 dissimul-	dissim.	fre
 disszertáció	dissz.	hun
-distance	n.a.	fre, eng
+distance	n.a.	eng, fre
 distancia	n.a.	spa
 distante	n.a.	por
-distill-	distill.	fre, eng
+distill-	distill.	eng, fre
 distinción	distinc.	spa
 distinction	distinct.	eng, fre
 distinguido	disting.	spa
@@ -11577,13 +11592,13 @@ distopía	distop.	spa
 distress	n.a.	eng
 distribu-	distrib.	spa
 District of Columbia	D.C.	eng
-district-	dist.	fre, eng
+district-	dist.	eng, fre
 distrikt	dist.	nor
 distriktsblade	distriktsbl.	dan
 distriktshøgskole	distriktshøgsk.	nor
 distriktskontor	n.a.	nor
 distriktstall	n.a.	nor
-distrital	dist.	por, spa
+distrital	dist.	spa, por
 distrito	dist.	spa, por
 distrofi-	n.a.	ita
 disturbance	disturb.	eng
@@ -11596,6 +11611,7 @@ Ditzingen	Ditzing.	ger
 Diureseforschung	Diureseforsch.	ger
 diuretic	diuret.	eng
 diurno	n.a.	spa
+divad-	divad.	cze
 divadeln-	divad.	slo
 divadlo	divad.	cze
 divák	n.a.	cze
@@ -11616,7 +11632,7 @@ divinity	divin.	eng
 divinus	n.a.	lat
 divis-	div.	fre, eng
 divisa	n.a.	spa
-divorce	n.a.	fre, eng
+divorce	n.a.	eng, fre
 divorcio	n.a.	spa
 divorzio	n.a.	ita
 divulga-	divulg.	spa
@@ -11625,7 +11641,7 @@ dix-neuvième	dix-neuv.	fre
 dix-septièm-	dix-sept.	fre
 diyaliz	diyal.	tur
 dizain-	dizain.	lit
-dizajn-	dizajn.	rus, bul, lav
+dizajn-	dizajn.	lav, rus, bul
 dizayn	n.a.	tur
 Dizdarević	n.a.	bos
 dizelʹn-	dizelʹn.	rus
@@ -11978,7 +11994,7 @@ drakofoinik-	drakofoin.	gre
 Draloric	n.a.	ger
 Drama	n.a.	ger
 drámapedagógia	drámapedag.	hun
-dramati-	dram.	eng, fre
+dramati-	dram.	fre, eng
 dramatourg-	dramatourg.	gre
 dramaturg	n.a.	hrv
 dramaturg-	dramaturg.	eng
@@ -11999,6 +12015,7 @@ draught	n.a.	eng
 draught-	draught.	eng
 draughting	draught.	eng
 draughtsman	n.a.	eng
+draugij-                           	draug.	lit
 draugija	draug.	lit
 draugs	n.a.	lav
 draussen	n.a.	ger
@@ -13082,7 +13099,7 @@ elektrostrojar-	elektrostroj.	hrv
 èlektrosvarka	n.a.	rus
 èlektrosvaročnogo	èlektrosvar.	rus
 èlektrosvâz-	èlektrosvâz.	rus
-elektrotech.	elektrotech.	pol, cze
+elektrotech-	elektrotech.	pol, cze
 elektrotechnologia	elektrotechnol.	pol
 èlektrotehni-	èlektroteh.	srp, rus
 èlektrotehnolog-	èlektrotehnol.	rus
@@ -15543,9 +15560,10 @@ filekpaideutik-	filekpaid.	gre
 fileleuth-	fileleuth.	gre
 Filet	n.a.	ger
 filetov-	filet.	cze
+filharmon-	filharmon.	cze
 filho	n.a.	por
 filia	n.a.	mul
-filial-	fil.	fre, eng, bul
+filial-	fil.	bul, fre, eng
 filiation	filiat.	fre
 Filiatron	Filiatr.	gre
 filigrane	filigr.	fre
@@ -15635,11 +15653,11 @@ filtering	filter.	eng
 filʹtrac-	filʹtr.	rus
 filtrat-	filtr.	fre, eng
 filtrieren	filtr.	ger
-final-	final.	eng, fre
+final-	final.	fre, eng
 finanč-	financ.	slv, slo, fre
 finança-	finanç.	por
 financiewezen	financ.	dut
-finans-	finans.	swe, lav, lit
+finans-	finans.	lit, lav, swe
 finansdepartementet	finansdep.	nor
 finansforvaltning	finansforvalt.	dan
 finansieringsselskap	finansieringsselsk.	nor
@@ -15753,12 +15771,12 @@ fisic-	fis.	ita
 fisica-	fis.	ita, spa
 fìsico	fìs.	ita, spa
 fìsicomatemàt-	fìsicomat.	spa, ita
-fìsiconuclear-	fìsiconucl.	ita, spa
+fìsiconuclear-	fìsiconucl.	spa, ita
 fisicoquímica	fisicoquím.	spa
 fisies-	fis.	afr
 fisik-	fis.	ind
 fisiocrit-	fisiocrit.	ita, spa
-fisiograf-	fisiogr.	spa, ita
+fisiograf-	fisiogr.	ita, spa
 fisiolog-	fisiol.	spa, ita
 fisiopatolog-	fisiopatol.	spa, ita
 fisioterap-	fisioter.	spa, ita
@@ -15778,7 +15796,7 @@ fiskekontor	n.a.	nor
 fiskeleting	fiskelet.	nor
 fiskenytt	n.a.	nor
 fiskeoppdrett	n.a.	nor
-fiskeri	fisk.	swe, dan, nor
+fiskeri	fisk.	dan, nor, swe
 fiskerier	fisk.	dan
 fiskevård	n.a.	swe
 fiskevatten	n.a.	swe
@@ -15796,10 +15814,10 @@ fitogigien-	fitogig.	rus
 fitogormon-	fitogorm.	rus
 fitohimi-	fitohim.	rus
 fitolog-	fitol.	rus
-fitoparasitolog-	fitoparasitol.	spa, rum
+fitoparasitolog-	fitoparasitol.	rum, spa
 fitopatogen	fitopatog.	rus
 fitopatolog-	fitopatol.	rus
-fitosanitar-	fitosanit.	rum, ita, spa
+fitosanitar-	fitosanit.	ita, rum, spa
 fitosociologia	fitosociol.	ita
 fitossanitar-	fitossanit.	por
 fitotecni-	fitotec.	ita, spa
@@ -16244,7 +16262,7 @@ forbruksforskning	forbruksforsk.	nor
 forbryd-	forbryd.	dan
 forbrytelse	forbryt.	nor
 forbudt	n.a.	dan
-forbund-	förb.	nor, dan, swe
+forbund-	förb.	dan, nor, swe
 forbundsnytt	n.a.	nor
 força	n.a.	spa
 Forcalquier	n.a.	fre
@@ -16282,7 +16300,7 @@ foreldre	n.a.	nor
 forelesning	foreles.	nor
 foremat-	n.a.	gre
 forenede	foren.	dan
-förening-	foren.	swe, dan, nor
+förening-	foren.	swe, nor, dan
 forense	n.a.	spa, por
 forensic	n.a.	eng
 forensisch	forens.	ger
@@ -18382,7 +18400,7 @@ glass	n.a.	nor
 glasshouse	n.a.	eng
 glassware	n.a.	eng
 Glastechni-	Glastech.	ger
-glasteknisk-	glastek.	swe, dan
+glasteknisk-	glastek.	dan, swe
 glastuinbouw	glastuinb.	dut
 glasul	n.a.	rum
 glaszetter	glaszett.	dut
@@ -18697,7 +18715,7 @@ Grabenstett-	n.a.	ger
 Grabung	Grab.	ger
 gračančki	gračan.	hrv
 graceful-	gracef.	eng
-graci-	n.a.	spa, fre
+graci-	n.a.	fre, spa
 grada	n.a.	srp
 građanski	građan.	hrv
 građanskoprav-	građanskoprav.	hrv
@@ -18753,6 +18771,7 @@ grammofon	grammof.	dan
 Grammos	n.a.	gre
 gramofon-	gramof.	cze
 gramophone	gramoph.	eng
+gramot-	gramot.	cze
 gramotej	n.a.	rus
 Grampian	n.a.	eng
 grampositiv-	gramposit.	spa
@@ -18828,7 +18847,7 @@ Gravenhage	n.a.	dut
 Gravesend	n.a.	eng
 gravestone	n.a.	eng
 Graveur	Grav.	mul
-gravidanoterap-	gravidanoter.	cze, hrv, pol
+gravidanoterap-	gravidanoter.	cze, pol, hrv
 gravimetr-	gravim.	mul
 gravitaciâ	gravit.	rus
 gravitation	gravit.	eng
@@ -19343,7 +19362,7 @@ Hadsten	n.a.	dan
 hadtörténe-	hadtört.	hun
 hadtudomány	hadtud.	hun
 hæfte	hft.	dan
-haematolog-	haematol.	fre, eng
+haematolog-	haematol.	eng, fre
 haematológia	haematol.	hun
 haematop-	haematop.	eng
 haemic	n.a.	eng
@@ -19739,7 +19758,7 @@ Hasselt	n.a.	dut
 Hassfurt	n.a.	ger
 Hassia	Hass.	ger
 Hassle	n.a.	nor
-hast-	häst.	eng, swe
+häst-	hast.	swe, eng
 hastalık-	hastalık.	tur
 hastane-	hastan.	tur
 hästforskning	hästforsk.	swe
@@ -19854,12 +19873,13 @@ havenarbeid	havenarb.	dut
 havenbelang-	havenbelang.	dut
 havennieuws	n.a.	dut
 Haverhill	n.a.	eng
+havířov-	havířov.	cze
 Havixbeck	n.a.	ger
 Havre-Saint-Pierre	Havre-St.-Pierre	fre
 havsfiskelaborator-	havsfiskelab.	swe, nor, dan
 havsforskning	havsforsk.	swe
 havundersøg-	havunders.	dan
-havundersøk-	havunders.	nor, swe
+havundersøk-	havunders.	swe, nor
 hawaii	n.a.	eng
 Hawaiian	Hawaii.	eng
 hawaiiens-	hawaii.	lat
@@ -20149,7 +20169,8 @@ Hemmer	Hemm.	ger
 hemochromatos-	hemochromatos.	eng
 hémodialyse	hémod.	fre
 hemodialysis	hemodial.	eng
-hemodinam-	hemodin.	bul, srp, slo
+hemodinam-	hemodin.	bul, slo, srp
+hemofil-	hemof.	cze
 hemofiltrat-	hemofiltr.	eng
 hemophil-	hemoph.	mul
 hemorheolog-	hemorheol.	eng
@@ -20200,6 +20221,7 @@ hepatotoxicity	hepatotoxic.	eng
 Heraclion	n.a.	eng
 herald	her.	eng, spa
 heraldický	herald.	slo
+Héraldique	Hérald.	fre
 heraldo	her.	spa
 herança	n.a.	por
 herättäjä	n.a.	fin
@@ -20214,7 +20236,7 @@ herbalism	herbal.	eng
 herbari-	herb.	eng, fre
 herberg	n.a.	dan
 Herberge	n.a.	ger
-herbicid-	herbic.	eng, fre
+herbicid-	herbic.	fre, eng
 herbier	herb.	fre
 herbivor-	herbiv.	mul
 herbizid-	herbiz.	ger
@@ -20245,7 +20267,7 @@ herhalen	herh.	dut
 herida	n.a.	spa
 herindeling	herindel.	dut
 Heringhausen	Heringhaus.	ger
-héritage	herit.	fre, eng
+heritage	hérit.	eng, fre
 herkauwer	n.a.	dut
 herkenning	herkenn.	dut
 herkk-	n.a.	fin
@@ -20263,7 +20285,7 @@ hermetic	hermet.	eng
 hermetikindustri-	hermetikind.	swe
 hermetikkindustri-	hermetikkind.	nor
 hermétisme	hermét.	fre
-hermitage	n.a.	fre, eng
+hermitage	n.a.	eng, fre
 Hermsdorf-	Hermsd.	ger
 Herne	n.a.	ger
 hernie	n.a.	fre
@@ -20293,7 +20315,7 @@ Herrsching	n.a.	ger
 Hersbruck	Hersbr.	ger
 hersenletsel	n.a.	dut
 Hersfeld	Hersf.	ger
-hersonsk-	herson.	rus, ukr
+hersonsʹk-	herson.	ukr, rus
 Herstell-	Herstell.	ger
 herstructurering	herstruct.	dut
 Herten	n.a.	ger
@@ -20851,7 +20873,7 @@ horitzon	horitz.	cat
 horizon	horiz.	fre
 horizont	horiz.	hun
 horizontal-	horiz.	eng, fre, spa
-horizonte	horiz.	spa
+horizonte	horiz.	ger, eng
 horloger-	horlog.	fre
 hormigón	hormig.	spa
 hormon-	horm.	mul
@@ -20908,7 +20930,7 @@ hospice	hosp.	fre
 hospis	n.a.	may
 hospit-	hosp.	fre, eng
 Hospiz	Hosp.	ger
-hospodár-	hospod.	slo, cze
+hospodár-	hospod.	cze, slo
 hostel-	hostel.	mul
 høstubytte	n.a.	dan
 hotărîr-	hotăr.	rum
@@ -21729,7 +21751,7 @@ incinér-	incinér.	fre
 incitation	incitat.	fre
 incite	n.a.	eng
 inclin-	inclin.	eng
-includ-	incl.	fre, eng
+includ-	incl.	eng, fre
 inclusion	incl.	fre
 inclusive	incl.	eng
 incognit-	incogn.	lat
@@ -21867,10 +21889,10 @@ infànzia	infànz.	ita
 infarction	infarct.	eng
 infecçâo	infecç.	por
 infecci-	infecc.	spa
-infecti-	infect.	fre, eng
+infecti-	infect.	eng, fre
 infectología	infectol.	spa
 infectopatolog-	infectopatol.	spa
-infekci-	infekc.	slo, cze
+infekci-	infekc.	cze, slo
 infeksion	infeks.	tur
 infeksjonssykdom	infeksjonssykd.	nor
 infekti-	infekt.	ger
@@ -21878,13 +21900,13 @@ infektologiâ	infektol.	bul
 inference	n.a.	eng
 inferent-	inferent.	eng
 inférieur	infér.	fre
-inferior-	infer.	fre, eng
+inferior-	infer.	eng, fre
 inferm-	inferm.	ita
 infernal	infern.	fre
 inferno	n.a.	eng
 infertile	n.a.	nor
 infertilid-	infertil.	spa
-infertilit-	infertil.	fre, eng
+infertilit-	infertil.	eng, fre
 infestation	infest.	fre, eng
 infett-	infett.	ita
 infezion-	infez.	ita
@@ -21914,7 +21936,7 @@ infolisty	n.a.	slo
 inforeeks	n.a.	dut
 inform	inf.	eng
 informa	inf.	spa
-informāc-	inf.	lav, spa, lit
+informāc-	inf.	lav, lit, spa
 információ	inf.	hun
 informador	inf.	spa
 informail	n.a.	dut
@@ -21930,7 +21952,7 @@ informatica	inform.	por
 informatie	inf.	dut
 informatief	inf.	dut
 informatiikka	inform.	fin
-informatik-	inform.	ger, rus
+informatik-	inform.	rus, ger
 informatika	inform.	hun
 information	inf.	mul
 informationel	inf.	fre
@@ -21970,10 +21992,10 @@ ingatlaninfó	ingatlinfó.	hun
 ingegner-	ing.	ita
 Ingelheim-	Ingelh.	ger
 ingenier-	ing.	spa
-ingénieur	Ing.	fre, ger
+Ingenieur	ing.	ger, fre
 ingenio	n.a.	spa
 ingeniør	ing.	nor
-ingenir	ing.	nor, dan, swe
+ingenir	ing.	nor, swe, dan
 ingenjör	ing.	swe
 ingenuity	ingen.	eng
 ingevoerd	n.a.	dut
@@ -22165,6 +22187,7 @@ inspekc-	insp.	rus
 inspeksi	insp.	ind
 Inspektion	Insp.	ger
 inspektor	insp.	pol
+inspir-	inspir.	cze
 inspiración	inspir.	spa
 inspiratie	inspir.	dut
 inspiration	inspir.	fre
@@ -22238,10 +22261,10 @@ intégre-	intégr.	fre
 integrier-	integr.	ger
 integrisanog	integr.	bos
 integrity	integr.	eng
-intelectual-	intelect.	rum, spa
+intelectual-	intelect.	spa, rum
 intelektin-	intelekt.	lit
 intelektual-	intelekt.	mul
-inteligen-	intel.	cat, spa, pol, por
+inteligên-	intel.	por, cat, spa, pol
 intellectual	intellect.	eng
 intel·lectual 	intel·lect.	cat
 intellectuel-	intellect.	fre
@@ -22250,9 +22273,9 @@ intellekt	intell.	rus
 intellektualdyk	intellekt.	kir
 intellektuell	intellekt.	ger
 intellettual-	intellett.	ita
-intelligenc-	intell.	eng, fre
+intelligenc-	intell.	fre, eng
 intel·ligencia 	intel·l.	cat
-intelligens-	intell.	dan, swe, nor
+intelligens-	intell.	dan, nor, swe
 intelligent	intell.	mul
 Intelligenz-	Intell.	ger
 intemporel	n.a.	fre
@@ -22305,7 +22328,7 @@ intercanvi	n.a.	cat
 intercargo	n.a.	eng
 intercellular	intercell.	eng
 intercensal	n.a.	spa
-intercept-	intercept.	fre, eng
+intercept-	intercept.	eng, fre
 intercess-	intercess.	eng
 interchang-	interchang.	mul
 interchange	n.a.	eng
@@ -22408,7 +22431,7 @@ internamento	internam.	ita
 internasional	int.	ind
 internasjonal	int.	nor
 internat	intern.	mul
-internation-	int.	eng, fre
+internation-	int.	fre, eng
 internauta	n.a.	spa
 interne	n.a.	fre
 internet	n.a.	eng
@@ -22423,7 +22446,7 @@ internskrift	internskr.	swe
 intéron	n.a.	fre
 interoperable	interoper.	dut
 interpanorama	interpanor.	mul
-interparlement-	interparlem.	eng, fre
+interparlement-	interparlem.	fre, eng
 interpenetrat-	interpenetr.	eng
 interpersonal	interpers.	eng
 interphotorecept-	interphotorecept.	eng
@@ -22432,12 +22455,12 @@ interplanetary	interplanet.	eng
 interplastic-	interplast.	eng
 interpolation	interpolat.	eng
 interpress	n.a.	mul
-interpret-	interprèt.	mul, fre
+interprèt-	interpret.	fre, mul
 interprovinc-	interprov.	fre, eng
 interracial	n.a.	mul
 interrail	n.a.	mul
-interregion-	interreg.	eng, fre
-interrelation-	interrelat.	eng, fre
+interregion-	interreg.	fre, eng
+interrelation-	interrelat.	fre, eng
 interreligieux	interrelig.	fre
 interreligious	interrelig.	eng
 interréseaux	n.a.	fre
@@ -22457,7 +22480,7 @@ intersociety	intersoc.	eng
 interstate	n.a.	eng
 interstud-	interstud.	eng
 interstudy	n.a.	eng
-intersyndical	intersynd.	eng, fre
+intersyndical	intersynd.	fre, eng
 intertabela	n.a.	por
 Intertours	n.a.	ger
 intertrade	n.a.	eng
@@ -22499,11 +22522,12 @@ intramolecul-	intramol.	eng
 intramuraal	intramur.	dut
 intransigeant	intransig.	fre
 Intraokular-	Intraokul.	ger
+intraoperative	intraoper-	eng
 intrastate	n.a.	eng
 intrat	n.a.	rum
 intrauterine	intrauter.	eng
 intravascul-	intravasc.	fre, eng
-intraven-	intraven.	fre, eng
+intraven-	intraven.	eng, fre
 intrede	n.a.	dut
 întregul-	întreg.	rum
 intrépide	n.a.	fre
@@ -22535,7 +22559,7 @@ invencion-	invenc.	spa
 invent	n.a.	eng
 inventaire	n.a.	fre
 Inventar	n.a.	ger
-inventar-	inventar.	cat, lat, ger
+inventar-	inventar.	lat, cat, ger
 inventário	inventár.	por
 inventering	n.a.	swe
 invenţie	invenţ.	rum
@@ -22576,7 +22600,7 @@ invicta	n.a.	eng
 invierno	invier.	spa
 invincible	n.a.	mul
 invisible	invis.	eng, fre
-invit-	invit.	eng, fre
+invit-	invit.	fre, eng
 invitatio	invit.	lat
 invizibil-	inviz.	rum
 invoer	n.a.	dut
@@ -23652,7 +23676,7 @@ kaleidoscope	kaleidosc.	mul
 kaleidoskop	kaleidosk.	cze
 kaleidoszkóp	kaleidoszk.	hun
 kalejdoskop	kalejdosk.	pol
-kalend-	kal.	lav, rus, ger
+kalend-	kal.	rus, ger, lav
 kalendárium	kal.	hun
 kalenner	kal.	ger
 kalenteri	kal.	fin
@@ -23756,6 +23780,7 @@ kanat	n.a.	rus
 Kanata	n.a.	eng
 kanava	n.a.	fin
 Kanawake	n.a.	eng
+kancel-	kancel.	cze
 kancelář-	kancel.	cze
 kancelaria	kancel.	pol
 kancerogen-	kancerog.	rus
@@ -23842,11 +23867,11 @@ Kapselherstellung-	Kapselherstell.	ger
 kapucin-	kapucin.	hrv
 karacaevo-čerkesskij	karac.-čerkes.	rus
 Karachi	n.a.	eng
-karadagsʹk-	karadag.	ukr, rus
+karadagsk-	karadag.	rus, ukr
 Karadeniz	n.a.	tur
 karagandinsk-	karagand.	rus
 karakalpaksk-	karakalp.	rus
-karakter	karakter.	dut, hrv
+karakter	karakter.	hrv, dut
 karakulevodstv-	karakulevod.	rus
 karakumsk-	karakum.	rus
 karameïk-	n.a.	gre
@@ -23896,6 +23921,7 @@ Karlsøy	n.a.	nor
 Karlsruhe	Karlsr.	ger
 Karlstad	n.a.	swe
 Karlstadt	Karlst.	ger
+karmel-	karmel.	cze
 kármelita	kármel.	hun
 Karmøy	n.a.	nor
 Karmsund	n.a.	nor
@@ -24511,7 +24537,7 @@ killifish	n.a.	eng
 Kilmacduagh	n.a.	eng
 Kilmore	n.a.	eng
 kilobaud	n.a.	eng
-kilómetr-	km.	spa, fre
+kilométr-	km.	fre, spa
 kilpailu	kilp.	fin
 kilta	n.a.	fin
 Kimberley	n.a.	eng
@@ -24598,9 +24624,11 @@ kineziterap-	kineziter.	lit
 Kingdom	Kingd.	eng
 Kings Ripton	n.a.	eng
 Kingsburgh	Kingsbg.	afr
-Kingsto(w)n	Kingst.	eng
+Kingston	Kingst.	eng
+Kingstown	Kingst.	eng
 Kingsville	Kingsv.	eng
 Kingswood	n.a.	eng
+kinoamater	kinoamat.	cze
 Kinofilm-	n.a.	ger
 kinofotohim-	kinofotohim.	rus
 kinofotoinstitut-	kinofotoinst.	rus
@@ -25111,14 +25139,14 @@ kometa	n.a.	pol
 Komfort	Komf.	ger
 komik	n.a.	dan
 komikss	n.a.	lav
-komisar-	komis.	pol, cze, bul
+komisar-	komis.	pol, bul, cze
 komise	kom.	cze
 komisja	kom.	pol
 komisji	kom.	pol
 komissar-	komis.	rus
 komissi-	kom.	rus, ger
 komisyon-	kom.	tur
-komite-	kom.	rus, bos, bul, nor, srp, dan
+komite-	kom.	nor, dan, bul, bos, rus, srp
 komma	n.a.	gre
 Kommandatura	Kommand.	ger
 Kommando	n.a.	ger
@@ -25242,7 +25270,7 @@ konces-	konces.	hrv
 koncession	koncess.	dan
 konciar	n.a.	slo
 koncilsk-	koncil.	srp
-kondens-	kondens.	rus, ger
+kondens-	kondens.	ger, rus
 kondici-	kond.	hrv, rus
 konditersk-	konditer.	rus
 Kondition	Kond.	ger
@@ -25262,7 +25290,7 @@ konevodstv-	konevod.	rus
 konfeder-	konfed.	pol
 konfeksjon	konfeks.	nor
 konfektion-	konfekt.	ger
-konfer-	konf.	ger, rus
+konfer-	konf.	rus, ger
 konferenc-	konf.	lit
 Konfession	Konfess.	ger
 Konflikt	Konfl.	ger
@@ -25274,10 +25302,10 @@ kongelig-	k.	nor, dan
 kongerige	k.	dan
 Kongo	n.a.	ger
 Kongregation	Kongreg.	ger
-kongres	kongr.	dan, ind
+kongres	kongr.	ind, dan
 kongresjaar	n.a.	afr
 kongresowy	kongr.	pol
-Kongress	Kongr.	ger, rus
+Kongress	Kongr.	rus, ger
 kongresszus	kongr.	hun
 König	Kön.	ger
 königlich-	k.	ger
@@ -25360,7 +25388,7 @@ konstråd	n.a.	swe
 konstruieren	konstr.	ger
 konstruir-	konstr.	rus
 konstruisanje	konstr.	hrv
-konstruk-	konstr.	ger, rus
+konstruk-	konstr.	rus, ger
 konstsamling-	konstsaml.	swe
 konstslöjdmuseet	konstslöjdmus.	swe
 konstytuc-	konst.	pol
@@ -25500,12 +25528,12 @@ kőolajipar	kőolajip.	hun
 koondkataloog	koondkat.	est
 kooperac-	koop.	rus
 kooperasi	koop.	may
-kooperati-	koop.	rus, ger
+kooperati-	koop.	ger, rus
 koopgids	n.a.	dut
 koophandel	koophand.	dut
 koopprijs	n.a.	dut
 koopvaardijvloot	n.a.	dut
-koordina-	koord.	rus, ger
+koordina-	koord.	ger, rus
 koordináció	koord.	hun
 koordiner-	koord.	dan
 koordinier-	koord.	ger
@@ -25539,7 +25567,7 @@ Koreaforschung	Koreaforsch.	ger
 Korean	n.a.	eng
 koreanolog-	koreanol.	eng
 kórélettan	kórélett.	hun
-korešpond-	korešp.	slo, lit
+korespond-	korešp.	cze, slo, lit
 korfbalblad	korfbalbl.	dut
 kõrgema	kõrg.	est
 kórház	kórh.	hun
@@ -26604,7 +26632,6 @@ labirint-	labirint.	lit
 labirinta	n.a.	lav
 labirynt	n.a.	pol
 labor	n.a.	mul
-Labor (laboratory)	Lab.	ger
 labor (work)	n.a.	mul
 laboral	labor.	spa
 laboratoir-	lab.	fre
@@ -26645,13 +26672,13 @@ lægeforening-	lægeforen.	nor, dan
 lægegerning	lægeg.	dan
 lægekredsforening	lægekredsforen.	dan
 lægelig	lægel.	dan
-læger	læg.	swe, dan
+læger	læg.	dan, swe
 lægevidenskab	lægevidensk.	dan
 lægevidenskap-	lægevidensk.	dan
 læknablad	læknabl.	ice
 lærarhøgskule	lærarhøgsk.	nor
 Lærdal	n.a.	nor
-lærdomshistori-	lærdomshist.	dan, swe, nor
+lærdomshistori-	lærdomshist.	nor, swe, dan
 lære-	lær.	nor
 læreanstalt	læreanst.	dan
 lærebokregister	lærebokregist.	nor
@@ -27076,7 +27103,7 @@ lärdom	n.a.	swe
 larger	larg.	eng
 largest	larg.	eng
 largeur	larg.	fre
-laringoiatr-	laringoiatr.	por, ita, spa
+laringoiatr-	laringoiatr.	ita, spa, por
 laringolog-	laringol.	rus
 Larisa	n.a.	gre
 Larisaïk-	Laris.	gre
@@ -27135,7 +27162,7 @@ Latgal-	Latg.	lav
 latihan	latih.	may
 latijns	lat.	dut
 latin	lat.	fre, eng
-latina-	lat.	ita, spa
+latina-	lat.	spa, ita
 latine-	lat.	por
 latino	lat.	spa, ita
 latinoamérica	latinoam.	spa
@@ -27153,7 +27180,7 @@ latterìa	latt.	ita
 lattice	n.a.	eng
 lattièr-	latt.	ita
 lattiero	latt.	ita
-latv-	latv.	eng, lav, fre
+latv-	latv.	eng, fre, lav
 latvij-	latv.	lav, rus
 Laubgehölz	n.a.	ger
 laudatio	laud.	lat
@@ -27321,13 +27348,13 @@ Leeuwarden	Leeuward.	dut
 lefv-	n.a.	swe
 legacy	leg.	eng
 legado	n.a.	spa
-legal-	leg.	eng, fre
+legal-	leg.	fre, eng
 legalizator	legaliz.	pol
 Legasthenie	n.a.	ger
 legat	n.a.	dan
 legemiddel	legemid.	nor
 legen	n.a.	ger
-legend-	legend.	ger, eng
+legend-	legend.	eng, ger
 legeōn-	legeōn.	gre
 legere	n.a.	lat
 legesekretær	legesekr.	nor
@@ -27339,7 +27366,7 @@ légion-	legion.	fre, eng
 legirovan-	legir.	rus
 legis	n.a.	lat
 legisla-	legis.	spa
-législat-	legis.	fre, spa, ita
+législat-	légis.	spa, ita, fre
 légitime	légit.	fre
 legitimerade	legit.	swe
 legk-	legk.	rus
@@ -27445,7 +27472,7 @@ lejdi	n.a.	bul
 lejkozologia	lejkozol.	rus
 lejlighed	lejl.	dan
 lekarʹ	lek.	rus
-lekar-	lek.	bul, pol
+lekar-	lék.	pol, bul, cze
 lekárnick-	lekárn.	slo
 lékařství	lék.	cze
 lekarstvoveden-	lekarstvoved.	rus
@@ -27594,7 +27621,7 @@ leszczyńsk-	leszcz.	pol
 letal-	letal.	slv
 letatelʹnyj	letatelʹn.	rus
 Letchmore Heath	n.a.	eng
-letecký	n.a.	cze
+letec-	letec.	cze
 letectví	letec.	cze
 Lethaeus	n.a.	lat
 Lethbridge	n.a.	eng
@@ -27641,7 +27668,7 @@ levantino	levant.	spa
 levatrice	levatr.	ita
 leveår	n.a.	nor
 levegőszennyez-	levegőszenny.	hun
-levél	n.a.	hun, eng
+level	lev.	eng, hun
 levelestár	levtár.	hun
 levelez-	lev.	hun
 levéltár	lvt.	hun
@@ -27702,7 +27729,7 @@ libar	n.a.	hrv
 libellenonderzoek-	libellenonderz.	dut
 libellum	n.a.	lat
 liber	n.a.	lat
-liber-	lib.	rum
+libera-	lib.	rum
 liberal-	lib.	eng
 libérat-	lib.	fre
 liberator	lib.	eng
@@ -27725,7 +27752,7 @@ liberty	lib.	eng
 libido	n.a.	fre
 libr-	libr.	lat
 librair-	libr.	fre
-librar-	libr.	eng, ita
+librar-	libr.	ita, eng
 librarianship	librariansh.	eng
 libre	n.a.	fre
 libre-échange	n.a.	fre
@@ -27735,6 +27762,7 @@ Librije	n.a.	dut
 libris	n.a.	lat
 libro	n.a.	spa
 libur-	libur.	baq
+liburnijsk-	liburnij.	hrv
 libyan	n.a.	eng
 Libyen	n.a.	ger
 ličan	lič.	srp
@@ -27976,13 +28004,13 @@ lionismo	n.a.	ita
 lipanj-	lipanj.	hrv
 lipeck-	lipeck.	rus
 lipican-	lipican.	hrv
-lipid	n.a.	rus, ger, eng
+lipid	n.a.	eng, ger, rus
 lipidforum	n.a.	swe
 lipido	n.a.	spa
 lipidology	lipidol.	eng
 lipidomics	lipidom.	eng
 Lipizzaner	n.a.	dan
-lipochim-	lipochim.	fre, ita, rum
+lipochim-	lipochim.	ita, rum, fre
 lipovljan-	lipovljan.	hrv
 lipped	lipp.	eng
 Lippenhuizen	n.a.	dut
@@ -28026,7 +28054,7 @@ lithograph-	lithogr.	mul
 Lithoijen	n.a.	dut
 litholog-	lithol.	mul
 lithoprinter	lithopr.	eng
-Lithos	n.a.	ger, gre
+Lithos	n.a.	gre, ger
 lithostratigraph-	lithostratigr.	eng
 lithotripsy	lithotr.	eng
 lithuani-	lith.	mul
@@ -28050,7 +28078,7 @@ little	n.a.	eng
 Little-Rock	n.a.	eng
 littlefoot	n.a.	eng
 littoral	n.a.	fre
-lituan-	litu.	lit, fre, ita, spa
+lituan-	litu.	ita, fre, spa, lit
 liturg-	liturg.	pol, fre, eng
 liturgy	n.a.	eng
 litvy	n.a.	lit
@@ -28167,7 +28195,7 @@ lögfræðing-	lögfræð.	ice
 logger	n.a.	eng
 logging	n.a.	eng
 logic	log.	eng
-lógica	log.	spa, rum
+logică	lóg.	rum, spa
 logical	log.	eng
 logiciel	n.a.	fre
 logies	n.a.	dut
@@ -28180,7 +28208,7 @@ logistic-	logist.	eng
 logistiek	logist.	dut
 Logistik	Logist.	ind, ger
 logisztika	logiszt.	hun
-logopaedi-	logop.	ger, eng
+logopaedi-	logop.	eng, ger
 logoped-	logop.	mul, hun
 logos	n.a.	mul
 logotehnik-	logoteh.	gre
@@ -29648,7 +29676,7 @@ mediat-	mediat.	eng
 médiathèque	médiath.	fre
 Mediävistik	Mediäv.	ger
 medības	medīb.	lav
-médic-	méd.	cat
+mèdic	mèd.	cat
 medicaid	n.a.	eng
 medical	méd.	eng, ukr, fre
 médicament	médicam.	fre
@@ -30218,7 +30246,7 @@ metallopromyšlen-	metalloprom.	rus
 metallorezuŝij	metallorez.	rus
 metallorganic	metallorg.	eng
 metallorum	met.	lat
-metallosnabžen.	metallosnabž.	rus
+metallosnabže-	metallosnabž.	rus
 metallotermič-	metalloterm.	rus
 metallourg-	metall.	gre
 metalloveden-	metalloved.	rus
@@ -30706,7 +30734,6 @@ milieutechnologie	milieutechnol.	dut
 milieuverslag	milieuversl.	dut
 milieuzorg	n.a.	dut
 militær	mil.	dan
-militært	mil.	nor
 militair-	mil.	fre
 militancia	milit.	spa
 militant	milit.	eng
@@ -31623,7 +31650,7 @@ Mulhouse	n.a.	fre
 mulhousien	mulhous.	fre
 mulig-	mulig.	dan
 mülkiyet	mülk.	tur
-Müller	n.a.	ger, 
+Müller	n.a.	ger 
 Müllerei	Müller.	ger
 Müllforschung-	Müllforsch.	ger
 Müllheim	Müllh.	ger
@@ -32204,7 +32231,7 @@ napraforgó	n.a.	hun
 napravlenie	napravl.	fre
 napravlennostʹ	napravl.	rus
 naprâžen-	naprâž.	rus
-napredak	napred.	hrv
+napred-	napred.	hrv
 naproti	napr.	slv
 naptár	n.a.	hun
 napuspješniji	najusp.	bos
@@ -32238,9 +32265,11 @@ narodnostopanski	narodnostopan.	bul
 národohospodár-	národohospod.	slo
 národopis-	národop.	cze
 narodoznav-	narodozn.	ukr
+naroz-	naroz.	cze
+narozen-	naroz.	cze
 Narrabeen	n.a.	eng
 narrador	narrad.	spa
-narrat-	narrat.	fre, eng
+narrat-	narrat.	eng, fre
 narrow	n.a.	eng
 narušenie	naruš.	rus
 narza̢d	narz.	pol
@@ -32267,7 +32296,7 @@ nasosnyj	nasos.	rus
 nasosostroen-	nasosostr.	rus
 nasporing-	naspor.	dut
 nassauisch-	nassau.	ger
-nastava	n.a.	mac, hrv
+nastava	n.a.	hrv, mac
 nastavlenie	nastavl.	rus
 nastavnik	nastav.	srp
 nastoâš-	nast.	rus
@@ -32279,6 +32308,7 @@ natalid-	natal.	por
 natality	natal.	eng
 natat̡ie	natat̡.	rum
 natation	natat.	fre
+nátěr-	nátěr.	cze
 nátěrových	nátěr.	cze
 nåtid	n.a.	nor
 natie	n.a.	dut
@@ -32301,7 +32331,7 @@ naturais	nat.	por
 natural-	nat.	fre, eng
 naturårbog	naturårb.	dan
 naturaren	nat.	baq
-nature	nat.	eng, fre
+nature	nat.	fre, eng
 naturegraph-	naturegr.	eng
 naturel-	nat.	fre
 naturenlig	nat.	swe
@@ -32309,7 +32339,7 @@ natureopath-	natureopath.	eng
 natureza	nat.	por
 naturfredning	naturfr.	dan
 naturii	nat.	rum
-naturism-	natur.	fre, spa
+naturism-	natur.	spa, fre
 naturist	natur.	eng
 naturista	natur.	spa
 natürlich-	nat.	ger
@@ -32700,7 +32730,7 @@ neunzehnt-	neunzehn.	ger
 Neuötting	Neuött.	ger
 Neuphilolog-	Neuphilol.	ger
 neuprugostʹ	neuprug.	rus
-neural	n.a.	fre, eng
+neural	n.a.	eng, fre
 Neuraltherapie	Neuralther.	ger
 Neuried	n.a.	ger
 neuroactiv-	neuroact.	eng
@@ -32709,7 +32739,7 @@ neuroanatom-	neuroanat.	mul
 neurobehavior-	neurobehav.	eng
 neurobiolog-	neurobiol.	mul
 neurochem-	neurochem.	ger, eng
-neurochirurg-	neurochir.	eng, fre
+neurochirurg-	neurochir.	fre, eng
 neurociencia	neurocienc.	spa
 neurocirug-	neurocir.	spa
 neurocirurg-	neurocir.	spa
@@ -32796,7 +32826,7 @@ Neustrelitz	n.a.	ger
 neutestamentlich	neutest.	ger
 neutraal	neutr.	dut
 neutre	n.a.	fre
-neutron	n.a.	eng, fre
+neutron	n.a.	fre, eng
 neutrondiffrakció	neutrondiffr.	hun
 Neutronenbeugung	Neutronenbeug.	ger
 neutronendosimètrie	neutronendosim.	fre
@@ -32911,6 +32941,7 @@ nezavisan	n.a.	hrv
 nezavisim-	nezavis.	rus
 nezávisl-	nezávis.	cze
 nezinsk-	nezin.	rus
+nezisk-	nezisk.	cze
 nežym-	nežym.	lit
 Niagara Falls	Niagara F.	eng
 nicaragu-	nicar.	spa
@@ -33664,6 +33695,7 @@ občan-	občan.	slv
 občas-	občas.	slv
 obćega	obć.	hrv
 obchod	obch.	cze
+obchod-	obch.	cze
 obchodné	obchod.	slo
 občiansk-	obč.	slo
 občin-	občin.	srp
@@ -33795,7 +33827,7 @@ Obrigheim	Obrigh.	ger
 obróbka	n.a.	pol
 obroda	n.a.	slo
 obronn-	obron.	pol
-obrt-	obrt.	srp, hrv
+obrt-	obrt.	hrv, srp
 obrtna	obrt.	slv
 obŝ-	obŝ.	rus, bul
 obscura	n.a.	mul
@@ -33841,6 +33873,7 @@ obveščevalec	obvešč.	slv
 obvestil-	obv.	slv
 obvodnen-	obvodn.	rus
 obvodnitelʹn-	obvodn.	rus
+obyv-	obyv.	cze
 obywatelsk-	ob.	pol
 obžigmagnitn-	obžigmagn.	rus
 obzor-	obz.	rus
@@ -33957,6 +33990,7 @@ odontolog-	odontol.	mul
 odontostomatolog-	odontostomatol.	mul
 odontotecni-	odontotec.	spa, ita
 odontotehnik-	odontoteh.	gre
+odos	n.a.	lit
 odpad	n.a.	cze
 odpad-	odpad.	cze, pol
 odpověd-	odp.	slo, cze
@@ -34318,7 +34352,7 @@ omilos	om.	gre
 omiš-	omiš.	hrv
 omkostning-	omkost.	dan
 omkring	omkr.	nor
-omladin- 	omladin.	hrv
+omladin- 	omlad.	hrv
 omladinsk-	omlad.	hrv
 omland	n.a.	nor
 omliggend	omligg.	dut
@@ -34547,7 +34581,7 @@ opland	opl.	nor
 opleggerfabriek-	opleggerfabr.	dut
 opleggerindustrie	opleggerind.	dut
 opleggers	n.a.	dut
-opleiding	opleid.	dut, afr
+opleiding	opleid.	afr, dut
 oplevelse-	oplev.	dan
 oplysning-	oplysn.	dan
 opmaling	opmal.	dan
@@ -34580,7 +34614,7 @@ opplæring	opplær.	nor
 oppland	oppl.	nor
 oppmåling	oppmål.	nor
 opportunit-	oppor.	fre, eng
-opposition	oppos.	eng, fre
+opposition	oppos.	fre, eng
 opptak	n.a.	nor
 oppunder	n.a.	nor
 opracowanie	oprac.	pol
@@ -34606,9 +34640,9 @@ optagelse	optag.	dan
 optic-	opt.	fre, eng
 optiebeurs	n.a.	dut
 optiik-	opt.	fin
-optik-	opt.	rus, ger
+optik-	opt.	ger, rus
 optima	n.a.	ita
-optimal-	optim.	eng, fre
+optimal-	optim.	fre, eng
 Optimierung-	Optim.	ger
 optimisation	optim.	fre
 optimistic	optimist.	eng
@@ -34949,6 +34983,7 @@ ošetrovateľstvo	ošetr.	slo
 oseva	n.a.	cze
 Osgoode	n.a.	eng
 osied-	osied.	pol
+osigur-	osig.	hrv
 osiguranje	osig.	hrv
 osiguruvan̂e	osigur.	mac
 osijeka	n.a.	hrv
@@ -34970,7 +35005,7 @@ osnov-	osn.	rus
 osob-	osob.	cze
 osoba	n.a.	srp
 osobenn-	osob.	rus
-osoblje	n.a.	srp, hrv
+osoblje	n.a.	hrv, srp
 osobowy	osob.	pol
 osogovski	osog.	mac
 osoite	n.a.	fin
@@ -35456,7 +35491,7 @@ pædagog-	pædagog.	dan
 paedagogi-	paedagog.	eng
 paediatri-	paediatr.	eng
 paedolog-	paedol.	dut
-paedopsychiatri-	paedopsychiatr.	eng, fre
+paedopsychiatri-	paedopsychiatr.	fre, eng
 paesagg-	n.a.	ita
 päevaleht	päeval.	est
 pågående	n.a.	swe
@@ -35558,7 +35593,7 @@ paleoceanograph-	paleoceanogr.	eng
 paleodont-	paleodont.	mul
 paleoecolog-	paleoecol.	spa
 paleoenvironment-	paleoenviron.	eng
-paléoéthnolog-	paleoethnol.	fre, eng
+paleoethnolog-	paléoéthnol.	eng, fre
 paleogene	n.a.	eng
 paleogeograf-	paleogeogr.	ger, eng
 paleogidrogeolog-	paleogidrogeol.	rus
@@ -35567,7 +35602,7 @@ paleolimnolog-	paleolimnol.	eng
 paleolit-	paleolit.	slv
 paleomagneti-	paleomagn.	rus
 paleontograph-	paléontogr.	mul, fre
-paleontolog-	paléontol.	mul, fre, ita, spa
+paleontolog-	paléontol.	mul, spa, ita, fre
 paleopathology	paleopathol.	eng
 paleopatolog-	paleopatol.	spa
 paléopédolog-	paléopédol.	spa, ita, fre
@@ -35741,7 +35776,7 @@ papermak-	papermak.	eng
 paperprintpack	n.a.	eng
 papeterie	papet.	fre
 papetier-	papet.	fre
-papier-	pap.	pol, slo
+papier-	pap.	slo, pol
 papiernictw-	pap.	pol
 papiesk-	papies.	pol
 papilionidae	n.a.	lat
@@ -35762,7 +35797,7 @@ paprika	n.a.	hun
 paprikaipar	paprikaip.	hun
 Papst	n.a.	ger
 Papsttum	Papstt.	lat
-Papua	n.a.	eng, ind
+Papua	n.a.	ind, eng
 Papua New Guinea	P. N. G.	eng
 Papua-Neuguinea	Papua-Neuguin.	ger
 papyrolog-	papyrol.	lat
@@ -35820,7 +35855,7 @@ paralys-	paralys.	fre
 parama	n.a.	lit
 paramagn-	paramagn.	mul
 paramarta	n.a.	ind
-paramédic-	paramed.	fre, mul
+paramedic-	paraméd.	mul, fre
 paramedisch	paramed.	dut
 parameter	n.a.	eng
 parametr-	parametr.	mul
@@ -35925,7 +35960,7 @@ Parkville	n.a.	eng
 parkway	parkw.	eng
 parky	n.a.	slo
 parla	n.a.	spa
-parlament-	parlam.	por, spa
+parlament-	parlam.	spa, por
 parlement-	parlem.	fre, eng
 parler	n.a.	fre
 parliament-	parliam.	eng
@@ -35945,7 +35980,7 @@ parohie	n.a.	rum
 paroik-	paroik.	gre
 paroisse	n.a.	fre
 paroissial	paroiss.	fre
-parol-	parol.	fre, eng
+parol-	parol.	eng, fre
 parole	n.a.	fre
 paron	n.a.	gre
 paroquial	paroqu.	por
@@ -36101,7 +36136,7 @@ patente-	pat.	fre, eng
 patentn-	pat.	rus
 patento-	pat.	spa
 patentti	pat.	fin
-patenttidende	patenttid.	dan, nor
+patenttidende	patenttid.	nor, dan
 patenttidning	patenttid.	swe
 patēriņ-	patēr.	lav
 paternel	patern.	fre
@@ -36178,6 +36213,7 @@ patroonkas	n.a.	dut
 patrouille	n.a.	fre
 pattern	n.a.	eng
 Pattloch	n.a.	ger
+paukštinink-	paukšt.	lit
 paulist-	paul.	por
 pauvreté	pauvr.	fre
 pavas-	pavas.	lit
@@ -36402,7 +36438,7 @@ pensioenkamer	n.a.	dut
 pensioenrecht	pensioenr.	dut
 pensioenverzekering	pensioenverzek.	dut
 pensioenvraagstuk	pensioenvraagst.	dut
-pension-	n.a.	fre, dut, eng
+pension-	n.a.	fre, eng, dut
 pensionado	pension.	spa
 pensionär	pension.	swe
 pensionat	pension.	swe
@@ -36653,10 +36689,7 @@ persiska	n.a.	swe
 persjaarboek	persjaarb.	dut
 persmuseum	persmus.	dut
 person-	pers.	mul
-personalin-	personal.	lit
 personalist	pers.	eng
-personalistika	personal.	cze
-personalit-	personal.	rum
 personalo	person.	lit
 personbil	n.a.	nor
 personeel	pers.	dut
@@ -36672,7 +36705,7 @@ perspectiv-	perspect.	mul
 perspectus	perspect.	lat
 perspektief	perspekt.	dut
 perspektif	perspekt.	ind
-perspektiv-	perspekt.	ger, lav, rus
+perspektiv-	perspekt.	rus, lav, ger
 perspektyv-	perspekt.	lit
 perspektyw-	perspekt.	pol
 persrevue	persrev.	dut
@@ -36773,7 +36806,7 @@ Petriniōt-	Petriniōt.	gre
 petrinj-	petrinj.	hrv
 petroanaly-	petroanal.	eng
 Petrochem-	Petrochem.	eng
-pétrochim-	pétrochim.	fre, rum, ita
+pétrochim-	pétrochim.	fre, ita, rum
 pétrogène-	pétrog.	ita, fre
 petroglyph	petrogl.	eng
 petrogradsk-	petrograd.	rus
@@ -36893,7 +36926,7 @@ pharmacopeia	pharmacop.	lat
 pharmacopoea	pharmacop.	lat
 pharmacopsychiatri-	pharmacopsychiatr.	fre, eng
 pharmacopuncture	pharmacopunct.	eng
-pharmacotherap-	pharmacother.	eng, fre
+pharmacotherap-	pharmacother.	fre, eng
 pharmacovigilance	pharmacovigil.	eng
 pharmacy	pharm.	eng
 pharmakeut-	pharm.	ger
@@ -36971,7 +37004,7 @@ photoeffect-	photoeff.	eng
 photoelastic	photoelast.	eng
 photoelectric	photoelectr.	eng
 photoelectrochemi-	photoelectrochem.	eng
-photoelectroni-	photoelectron.	fre, eng
+photoelectroni-	photoelectron.	eng, fre
 photoemission-	photoemiss.	eng
 photofabricat-	photofabr.	eng
 Photofreund	n.a.	ger
@@ -36988,10 +37021,11 @@ photoimmunolog-	photoimmunol.	eng
 photoionis-	photoionis.	eng
 photojournal-	photoj.	mul
 photolaborator-	photolab.	ger
+Photolittérature	Photolitt.	fre
 photomechani-	photomech.	eng
 photomedicine	photomed.	eng
 photometr-	photom.	mul
-photomicrograph-	photomicrogr.	eng, fre
+photomicrograph-	photomicrogr.	fre, eng
 photon-	n.a.	eng
 photonews	n.a.	eng
 photoperiodi-	photoperiod.	eng
@@ -37001,8 +37035,8 @@ photoplay	n.a.	eng
 photopolymer	photopolym.	eng
 photoreact-	photoreact.	mul
 Photorundschau-	Photorundsch.	ger
-photosensiti-	photosensit.	eng, fre
-photosynth-	photosynth.	fre, eng
+photosensiti-	photosensit.	fre, eng
+photosynth-	photosynth.	eng, fre
 photosystem-	photosyst.	eng
 phototheque	phototh.	eng
 phototransformation-	phototransform.	eng
@@ -37014,7 +37048,7 @@ phrenolog-	phrenol.	eng
 phtiseolog-	phtiseol.	gre
 phtisiolog-	phtisiol.	fre
 Phulbani	n.a.	eng
-phycolog-	phycol.	fre, eng
+phycolog-	phycol.	eng, fre
 phylactère	n.a.	fre
 phylloxéra	phyllox.	fre
 physiatri-	physiatr.	mul
@@ -37023,10 +37057,10 @@ physich-	phys.	mul
 physician	n.a.	eng
 physicien	phys.	fre
 physicist-	phys.	eng
-physico	phys.	eng, fre
+physico	phys.	fre, eng
 physicochem-	physicochem.	eng
 physicochim-	physicochim.	fre
-physicomathemat-	physicomath.	eng, fre
+physicomathemat-	physicomath.	fre, eng
 physicotechni-	physicotech.	fre, eng
 physics	phys.	eng
 physicus	phys.	lat
@@ -37051,9 +37085,10 @@ phytohormone	phytohorm.	eng
 phytohygien-	phytohyg.	eng
 phytolitharien	phytolith.	eng
 phytolog-	phytol.	mul
+phytomed-	phytomed.	lat
 phytoparasit-	phytoparasit.	mul
 phytopatholog-	phytopathol.	mul
-phytopharmac-	phytopharm.	eng, fre
+phytopharmac-	phytopharm.	fre, eng
 Phytopharmaka	Phytopharm.	ger
 phytophthora	n.a.	eng
 phytophysiolog-	phytophysiol.	eng
@@ -37076,7 +37111,7 @@ pianola	n.a.	mul
 pianta	n.a.	ita
 piarista	piar.	hun
 piastowsk-	piast.	pol
-piat̡ă	n.a.	rum, gre
+piata	n.a.	gre, rum
 piazza	n.a.	ita
 picamera	n.a.	dut
 picante	n.a.	spa
@@ -37243,10 +37278,10 @@ pisarz	n.a.	pol
 pisatel-	pis.	rus
 piscatoria	piscat.	lat
 piscicol-	piscic.	fre
-piscicult-	piscic.	fre, eng
+piscicult-	piscic.	eng, fre
 piscine	n.a.	fre
 piŝekoncentrat-	piŝekonc.	rus
-pisemn-	pisem.	pol, cze
+pisemn-	pisem.	cze, pol
 piŝev-	piŝ.	rus
 pisică	n.a.	rum
 piśmienn-	piśm.	pol
@@ -37306,6 +37341,7 @@ plakāts	n.a.	lav
 Plakette	n.a.	ger
 plameň	n.a.	slo
 plamen-	plam.	mac
+plán-	plán.	cze
 planahome	n.a.	eng
 planar	n.a.	ger
 planas	plan.	lit
@@ -37324,8 +37360,8 @@ planejamento	planej.	spa
 planen	plan.	ger
 planer-	plan.	swe
 planet	n.a.	dut
-planeta	n.a.	lit, lav, spa
-planetarium	planet.	eng, hun
+planeta	n.a.	spa, lit, lav
+planetárium	planet.	hun, eng
 planetary	planet.	eng
 planète	n.a.	fre
 Planetenbeobachter	Planetenbeob.	ger
@@ -37354,7 +37390,7 @@ planolog-	planol.	dut
 planov-	plan.	rus
 planow-	plan.	pol
 Planseebericht-	Planseeber.	dut
-plant	n.a.	fre, eng
+plant	n.a.	eng, fre
 planta	n.a.	spa
 plantación	plant.	spa
 plantage	plant.	fre
@@ -37603,7 +37639,7 @@ poder	n.a.	por
 Podgorica	Podgor.	srp
 podgotov-	podgot.	rus
 podhalański	podhal.	pol
-podiatri-	podiatr.	fre, spa
+podiatri-	podiatr.	spa, fre
 podiatry	n.a.	eng
 Podium	n.a.	ger, rus
 podjetje	podjet.	slv
@@ -37741,6 +37777,7 @@ Poitiers	n.a.	fre
 Poitou	n.a.	fre
 Poitou-Charentes	n.a.	fre
 pojetí	n.a.	cze
+pojišt-	pojišt.	cze
 pojištěni	pojišt.	cze
 pojke	n.a.	fin
 pojmenn-	pojmenn.	rus
@@ -37774,7 +37811,7 @@ polaris	n.a.	lat
 polâriz-	polâriz.	rus
 polarizat-	polariz.	eng, rus
 polârn-	polârn.	rus
-polarograf-	polârogr.	rus, rus
+polârograf-	polarogr.	rus, rus
 polarograph-	polarogr.	mul
 Polarstern	n.a.	ger
 polder	n.a.	fre
@@ -37798,6 +37835,7 @@ polgármester	polgmester.	hun
 polgárőr	polgőr.	hun
 polgárőrség	polgőrs.	hun
 Polhøgda	n.a.	dan
+polic-	polic.	cze
 policajná	polic.	slo
 police	n.a.	fre
 policeman	n.a.	eng
@@ -37866,14 +37904,14 @@ politiestudie-	politiestud.	dut
 politietheorie	politietheor.	dut
 politiforening	politiforen.	nor
 politiik-	polit.	fin
-Politik-	Polit.	lav, lit, ger
+Politik-	Polit.	lit, lav, ger
 politikaelmélet	politelm.	hun
 politikatörténet	polittört.	hun
 politikatudomány	polittud.	hun
 polítiq-	polít.	cat
 politism-	politism.	gre
 politistik-	politist.	gre
-politol-	politol.	pol, dan, hrv
+politol-	politol.	hrv, dan, pol
 polityczn-	polit.	pol
 polivinilacetat-	polivinilacetat.	rus
 Polizei	Poliz.	ger
@@ -37940,13 +37978,13 @@ polycopie	polycop.	fre
 polycrystalli-	polycryst.	eng
 polycultur-	polycult.	eng
 polycyclic	polycycl.	eng
-polyester	polyest.	fre, eng
+polyester	polyest.	eng, fre
 polyethylene	polyethyl.	eng
 polyglott-	polygl.	dan
 polygon-	polyg.	fre
 polygrafia	polygr.	slo
 polygrafick-	polygr.	cze
-polygraph-	polygr.	eng, fre
+polygraph-	polygr.	fre, eng
 polyimide	polyim.	eng
 polymathique	polymath.	fre
 polymedia	n.a.	dut
@@ -38043,7 +38081,7 @@ population	popul.	eng, fre
 populer	pop.	ind
 populiste	popul.	fre
 popull-	pop.	alb
-popullor-	pop.	ger, alb
+popullor-	pop.	alb, ger
 poputn-	poput.	rus
 porad-	porad.	slo, pol
 porann-	poran.	pol
@@ -38070,12 +38108,12 @@ pornograph-	pornogr.	mul
 poročeval-	poročev.	slv
 poročilo	poroč.	slv
 porodic-	porodic.	hrv
-porodn-	pôrod.	cze, slo
+pôrodn-	porod.	slo, cze
 porolissensis	n.a.	lat
 porosimetr-	porosim.	eng
 poroškov-	porošk.	rus
 porous	n.a.	eng
-porovnání	porovn.	slo, cze
+porovnání	porovn.	cze, slo
 porozimetr-	porozim.	cze
 porozumienie	porozum.	pol
 porphyrin	porphyr.	eng
@@ -38124,7 +38162,7 @@ Porto Velho	n.a.	por
 portofino	n.a.	ita
 portoghés-	port.	ita
 portræt	n.a.	dan
-portrait-	n.a.	fre, eng, gre
+portrait-	n.a.	gre, fre, eng
 Porträts	n.a.	ger
 Portsmouth	Portsm.	eng
 portuaire	n.a.	fre
@@ -38158,7 +38196,7 @@ posiedzenie	posiedz.	pol
 posim-	n.a.	gre
 positie	n.a.	dut
 positief	posit.	dut
-position	n.a.	eng, ger
+position	n.a.	ger, eng
 Positionierung	Position.	ger
 positioning	position.	eng
 positiv-	posit.	spa
@@ -38188,7 +38226,7 @@ pospeševalni	pospeš.	slv
 posséd-	n.a.	fre
 possedimento	possedim.	ita
 possess-	possess.	eng
-possib-	n.a.	eng, fre
+possib-	n.a.	fre, eng
 post-scriptum	post-scr.	lat
 posta	n.a.	hun
 postage	post.	eng
@@ -38267,7 +38305,7 @@ Poststempelgilde	n.a.	ger
 postul-	postul.	fre
 postup-	postup.	rus
 postural	n.a.	fre
-posture	n.a.	fre, eng
+posture	n.a.	eng, fre
 postvæsen	postvæs.	nor
 postventa	n.a.	spa
 postverk	postv.	nor
@@ -38405,7 +38443,7 @@ poziv	n.a.	hrv
 poživati	poživ.	cze
 poznań-	pozn.	pol
 Poznańan	Pozn.	pol
-poznanie	n.a.	rus
+poznanie	pozn.	rus
 poznánsk-	pozn.	pol
 poznavatelʹnyj	poznavatelʹn.	rus
 pozoriš-	pozor.	srp
@@ -38415,7 +38453,7 @@ pozvonočnye	pozvonoč.	rus
 praaien	n.a.	dut
 prac-	pr.	pol, cze
 práci	pr.	slo
-pracov.	prac.	cze
+pracov-	prac.	cze
 pracown-	prac.	pol
 practi-	pract.	spa, eng
 praecox	n.a.	lat
@@ -38587,11 +38625,12 @@ préfectoral	préfect.	fre
 prefectur-	prefect.	fre, eng
 préfér-	prefer.	fre, eng
 pregeriatric	pregeriatr.	eng
-pregled-	pregl.	slv, bul
+pregled-	pregl.	bul, slv
 pregnancy	n.a.	eng
 pregón	n.a.	spa
 pregonero	n.a.	ita
 pregrad-	pregr.	slv
+pregramot-	pregramot.	cze
 pregunta	n.a.	cat, spa
 prehispánico	prehisp.	spa
 prehistori-	prehist.	fre, eng
@@ -38686,16 +38725,16 @@ presente	n.a.	spa
 présenter	présent.	fre
 presenza	n.a.	ita
 Prešernov	Prešern.	srp
-preserv-	preserv.	eng, fre
+preserv-	preserv.	fre, eng
 presiden-	pres.	fre, eng
 presiding	pres.	eng
 presión	n.a.	spa
 presnyj	n.a.	rus
-prešov-	n.a.	slo, cze
+prešov-	n.a.	cze, slo
 prespansk-	presp.	mac
 presqu'île	n.a.	fre
 press	n.a.	eng
-press-	press.	eng, rus
+press-	press.	rus, eng
 pressclip	n.a.	eng
 presse	n.a.	fre
 Presseartikel	Presseart.	ger
@@ -38838,6 +38877,7 @@ prijsverandering	prijsverander.	dut
 prijz-	prijz.	dut
 Prikaspie	n.a.	rus
 prikaz	n.a.	rus
+příklad-	příkl.	cze
 prikladn-	prikl.	rus
 priklûčen-	priklûč.	bul
 priladobuduv-	priladobuduv.	ukr
@@ -38881,7 +38921,7 @@ primorsk-	primorsk.	rus
 primošten-	primošten.	hrv
 primulus	n.a.	lat
 prinât-	prinât.	rus
-prince	n.a.	eng, fre
+prince	n.a.	fre, eng
 Prince Edward Island	P. E. I.	eng
 Prince-George	n.a.	eng
 Princes Risborough	Princes Risb.	eng
@@ -38892,7 +38932,7 @@ Princessehof	n.a.	dut
 Princeton	Princet.	eng
 principado	n.a.	spa
 principais	princ.	por
-principal-	princ.	fre, eng
+principal-	princ.	eng, fre
 principat	n.a.	cat
 principauté	n.a.	fre
 príncipe	prínc.	spa
@@ -38937,6 +38977,7 @@ prirodoved-	prirodoved.	rus
 prirodoznav-	prirodozn.	ukr
 příručka	n.a.	cze
 priručn-	priruč.	hrv
+přírůst-	přírůst.	cze
 přírůstky	přírůst.	cze
 prisadk-	prisad.	rus
 priser	n.a.	swe
@@ -39007,7 +39048,7 @@ procescoördinat-	procescoörd.	dut
 proceso	n.a.	spa
 procesow-	proces.	pol
 procesrechtelijk-	procesrechtel.	dut
-process-	process.	ita, eng
+process-	process.	eng, ita
 processi verbali	p. v.	ita
 processkombin-	processkomb.	ger
 processtekniska	processtek.	fin
@@ -39017,9 +39058,9 @@ proche	n.a.	fre
 Proche-Orient	P.-O.	fre
 pročie	n.a.	rus
 procjenit-	procjen.	hrv
-proclamation	proclam.	fre, eng
+proclamation	proclam.	eng, fre
 pročn-	pročn.	rus
-proctolog-	proctol.	fre, eng
+proctolog-	proctol.	eng, fre
 procura-	procur.	spa
 procurement	procure.	eng
 prodaj-	prodaj.	hrv
@@ -39029,7 +39070,7 @@ pródigo	n.a.	spa
 prodolž-	prodolž.	rus
 prodótto	prod.	ita
 prodovolʹstv-	prodovol.	rus
-produc-	prod.	fre, eng
+produc-	prod.	eng, fre
 productiv-	product.	fre
 productronic	productron.	eng
 produit-	prod.	fre
@@ -39068,12 +39109,12 @@ profecia	n.a.	por
 profeet	n.a.	dut
 profesij-	prof.	lit, lav
 profesin-	prof.	lit
-profesion-	prof.	lit, spa, rum
+profesion-	prof.	spa, rum, lit
 profesjonell	prof.	nor
 profesor	profr.	spa
 profesorado	profr.	spa
 professeur	profr.	fre
-profession-	prof.	ita, fre, eng
+profession-	prof.	eng, ita, fre
 professor-	profr.	mul
 professzionális	prof.	hun
 professzor	profr.	hun
@@ -39083,13 +39124,13 @@ proficiency	profic.	eng
 profiel	n.a.	dut
 profijt	n.a.	dut
 profil	n.a.	mul
-profilact-	profil.	eng, fre
+profilact-	profil.	fre, eng
 profilakt-	profil.	rus
 profilassi	profil.	ita
 profile	n.a.	eng
 profissão	prof.	por
 profissional-	prof.	por
-profit	n.a.	fre, eng
+profit	n.a.	eng, fre
 profitab-	profitab.	mul
 profiting	profit.	eng
 Profitips	n.a.	ger
@@ -39131,7 +39172,7 @@ programmazione	program.	ita
 Programmbudget	Programmbudg.	ger
 Programmdienst	Programmd.	ger
 Programmdiskussion	Programmdiskuss.	ger
-programme	n.a.	eng, fre
+programme	n.a.	fre, eng
 programmed	program.	eng
 programmer	program.	eng
 Programmforschung	Programmforsch.	ger
@@ -39151,7 +39192,7 @@ progresa	prog.	lav
 progresista	progres.	spa
 progresiv-	progres.	spa
 progreso	prog.	spa
-progress	prog.	eng, fre
+progress	prog.	fre, eng
 progressi-	progress.	fre
 progresso	prog.	por
 Progressus	Progress.	ger
@@ -39230,7 +39271,7 @@ proofreader	proofread.	eng
 prooptikē	proopt.	gre
 propagación	propag.	spa
 propagalum	n.a.	lat
-propagand-	propag.	fre, eng
+propagand-	propag.	ger, fre, eng
 propagation	propag.	fre, eng
 Propan	n.a.	ger
 propas	n.a.	ind
@@ -39242,9 +39283,9 @@ Propeller	n.a.	ger
 propeny	n.a.	eng
 propert-	prop.	eng
 prophecy	n.a.	eng
-prophet-	prophet.	eng, fre
+prophet-	prophet.	fre, eng
 prophéti-	prophét.	fre
-prophylact-	prophyl.	fre, eng
+prophylact-	prophyl.	eng, fre
 prophylakt-	prophyl.	ger
 prophylax-	prophyl.	mul
 propiedad	prop.	spa
@@ -39254,7 +39295,7 @@ propinsi	n.a.	ind
 propis-	n.a.	hrv
 proporama	n.a.	gre
 proporcionalʹn-	propor.	rus
-propos-	propos.	eng, fre
+propos-	propos.	fre, eng
 propósta	propós.	ita
 propoz-	propoz.	pol
 propre	n.a.	fre
@@ -39289,7 +39330,7 @@ prosopographi-	prosopogr.	fre
 prosōpon	prosōp.	gre
 prosound	n.a.	eng
 prospección	prospecc.	spa
-prospect-	prospect.	eng, fre
+prospect-	prospect.	fre, eng
 prospecţiun-	prospecţ.	rum
 prospectus	n.a.	eng
 prospek	n.a.	ind
@@ -39300,7 +39341,7 @@ prosperit-	prosper.	eng
 prospettiv-	prospett.	ita
 prospezión-	prospez.	ita
 prossimiori	pross.	ita
-prostaglandin	n.a.	ger, rus, eng
+prostaglandin	n.a.	rus, ger, eng
 prostas-	n.a.	gre
 Prostata	n.a.	ger
 prostate	n.a.	mul
@@ -39333,10 +39374,10 @@ protease	n.a.	eng
 proteção	prot.	por
 protecção	prot.	por
 proteccion-	prot.	spa
-protect-	prot.	fre, eng
+protect-	prot.	eng, fre
 protéger	prot.	fre
 protegido	prot.	spa
-protein	n.a.	eng, rus, ger
+protein	n.a.	rus, ger, eng
 proteksi	prot.	ind
 Protekt-	Prot.	ger
 proteomics	proteom.	eng
@@ -39694,6 +39735,7 @@ publish-	publ.	eng
 Publizistik	Publiz.	ger
 Pucarevo	Pucar.	srp
 Puchheim	Puchh.	ger
+pučkoškol-	pučkošk.	hrv
 Pudel	n.a.	ger
 půdn-	půd.	cze
 půdoznal-	půdozn.	cze
@@ -40042,7 +40084,7 @@ radioaktif	radioakt.	ind
 radioaktiv-	radioakt.	ger, rus
 radioaktyv-	radioakt.	lit
 Radioaktyw-	Radioakt.	pol
-rádióamat-	radioamat.	hun, mul
+radioamat-	rádióamat.	mul, hun
 radioanaly-	radioanal.	mul
 radioassay	n.a.	eng
 radioastronom-	radioastron.	mul
@@ -40125,7 +40167,7 @@ radiosterilization	radiosteril.	eng
 radiosvâz-	radiosvâz.	rus
 radiotech-	radiotech.	fre
 rádiótechnika	rádiótech.	hun
-radiotecni-	radiotec.	spa, ita
+radiotecni-	radiotec.	ita, spa
 radiotehni-	radioteh.	rus
 radiotelemetr-	radiotelem.	mul
 radiotēleorasē	radiotēleor.	gre
@@ -40449,6 +40491,7 @@ Ravensburg	Ravensbg.	ger
 ravijn	n.a.	dut
 ravintolaneuvosto	ravintolaneuv.	fin
 ravnanje	n.a.	slv
+ravnatelj-	ravnatelj.	hrv
 ravnica	ravn.	hrv
 ravnina	ravn.	rus
 ravnovesie	ravnoves.	rus
@@ -40482,13 +40525,13 @@ razmyt-	razmyt.	rus
 razn-	razn.	rus
 raznovrsnih	raznovrs.	hrv
 razón	n.a.	spa
-razon-	razon.	hrv, spa
+razon-	razon.	spa, hrv
 razoruž-	razoruž.	rus
 ražošan-	ražoš.	lav
 ražot-	ražot.	lav
 razpis-	razp.	bul
 razpotja	n.a.	slv
-razprave	razpr.	slv, bul
+razprave	razpr.	bul, slv
 razprostranenie	razprostr.	bul
 razrabot-	razrab.	rus
 razred	n.a.	slv
@@ -40531,7 +40574,7 @@ Reaktion-	Reakt.	ger
 reaktiv-	reakt.	rus, ger
 reaktor-	reakt.	ger, rus
 reaktywn-	reakt.	pol
-real (actual)	n.a.	fre, eng
+real (actual)	n.a.	eng, fre
 real (royal)	r.	spa
 reale	r.	ita
 realfagsundervisning	realfagsundervis.	nor
@@ -40621,7 +40664,7 @@ Rechenwert	n.a.	ger
 Rechenzentrum	Rechenzent.	ger
 recherche-	rech.	fre
 Rechgesch-	Rechgesch.	ger
-rechn-	rechn.	ger, rus
+rechn-	rechn.	rus, ger
 Recht	n.a.	ger
 rechtelijk	rechtel.	dut
 rechtenstudie	rechtenstud.	dut
@@ -40682,7 +40725,7 @@ recibi-	recib.	spa
 récidiv-	recidiv.	fre, eng
 reciente	n.a.	spa
 Recife	n.a.	por
-recifens-	recif.	por, lat
+recifens-	recif.	lat, por
 recipe	n.a.	eng
 récipien-	recip.	fre, eng
 reciprocal	recipr.	eng
@@ -40704,7 +40747,7 @@ recognize	recogn.	eng
 recognosco	n.a.	lat
 recollect-	recollect.	eng
 récolte	n.a.	fre
-recombin-	recomb.	fre, eng
+recombin-	recomb.	eng, fre
 recomend-	recom.	spa
 recommandation	recomm.	fre
 recommend-	recomm.	eng
@@ -40716,7 +40759,7 @@ reconnection-	reconnect.	eng
 reconocimiento	reconoc.	spa
 reconquista	reconqu.	spa
 reconstitut-	reconst.	eng
-reconstruct-	reconstr.	fre, spa, eng
+reconstruct-	reconstr.	eng, spa, fre
 reconversion	reconvers.	fre
 recopilació	recopil.	spa
 recopilación	recopil.	spa
@@ -40760,6 +40803,7 @@ rédaction	réd.	fre
 rédactionnel	réd.	fre
 redakc-	red.	rus
 Redaktion	Red.	ger
+redar-	redar.	hrv
 redare	n.a.	swe
 redbook	redb.	eng
 redder	n.a.	dut
@@ -40878,7 +40922,7 @@ refrattàrio	refratt.	ita
 refresc-	refresc.	spa
 refresher	refresh.	eng
 refreshment	refresh.	eng
-refrig-	refrig.	fre, eng
+refrig-	refrig.	eng, fre
 refug-	refug.	eng, fre
 réfugié	réfug.	fre
 refund-	refund.	eng
@@ -40899,7 +40943,7 @@ regenboog	n.a.	dut
 régence	n.a.	fre
 regencia	n.a.	spa
 regency	n.a.	eng
-regener-	regen.	eng, rus, fre
+regener-	regen.	eng, fre, rus
 Regensburg	Regensbg.	ger
 Regensburger	Regensbg.	ger
 Regenschreiber	Regenschreib.	ger
@@ -40973,7 +41017,7 @@ regulador	regul.	spa
 regulaer-	regul.	dan
 regulament-	regulam.	mul
 regulamentação	regulam.	por
-regular-	regul.	fre, eng
+regular-	regul.	eng, fre
 regulat-	regul.	fre, eng
 regulâtor-	regul.	rus
 reguleringsteam	n.a.	nor
@@ -41097,13 +41141,13 @@ Rekonstruk-	Rekonstr.	rus, ger
 re̢kopis	rps.	pol
 Rekord	n.a.	ger
 rekords	n.a.	lav
-rekreac-	rekreac.	hrv, rus, pol
+rekreac-	rekreac.	pol, rus, hrv
 rekreatie	rekreat.	dut
 rekreatief	rekreat.	dut
 rekreatiekrant	rekreatiekr.	dut
 rekreation	rekreat.	swe
 Rekristalli-	Rekrist.	ger
-rekrut-	rekrut.	pol, dut
+rekrut-	rekrut.	dut, pol
 Rektor-	Rekt.	ger
 rektum	n.a.	tur
 rekulʹtiv-	rekulʹtiv.	rus
@@ -41115,13 +41159,13 @@ relámpago	relámp.	spa
 relance	n.a.	fre
 relatado-	relat.	spa
 related	relat.	eng
-relatie	relat̡.	dut, rum
+relat̡ie	relat.	rum, dut
 relatif	relat.	fre
 relating	relat.	eng
 relation	relat.	fre, eng
 relationiste	relat.	fre
 relationship	relatsh.	eng
-relative-	relat.	fre, eng
+relative-	relat.	eng, fre
 relâtivi-	relâtiv.	rus
 relativit-	relativ.	fre, eng
 relativo	relat.	spa
@@ -41167,7 +41211,7 @@ remarqu-	remarq.	fre
 remat-	n.a.	eng
 rembours-	rembours.	fre
 Rembrandthuis	n.a.	dut
-remede-	rem.	eng, fre
+remede-	rem.	fre, eng
 remedial	n.a.	eng
 remediat-	remediat.	eng
 remedio	rem.	spa
@@ -41186,7 +41230,7 @@ Reminiszenz	Reminisz.	ger
 remit-	remit.	eng
 remnant	remn.	eng
 remoção	remoç.	por
-remodel-	remodel.	eng, fre
+remodel-	remodel.	fre, eng
 remonstr-	remonstr.	dut
 remont	n.a.	lav
 remote-	remote.	eng
@@ -41329,7 +41373,7 @@ reposter-	repost.	spa
 reppu	n.a.	fin
 Repräsentation	Repräsent.	ger
 represent-	represent.	fre, eng
-repression	repress.	eng, fre
+repression	repress.	fre, eng
 reprint-	repr.	eng
 reprocessing	reprocess.	eng
 reproduc-	reprod.	spa
@@ -41341,12 +41385,12 @@ reprograf-	reprogr.	cze
 reprograph-	reprogr.	fre, eng
 reptiel-	reptiel.	dut
 reptil-	reptil.	mul
-reptile	n.a.	eng, fre
+reptile	n.a.	fre, eng
 repùbblica	repùbb.	ita
 republic	repub.	eng
 república	repúb.	spa
 republican-	repub.	spa
-republication	republ.	fre, eng
+republication	republ.	eng, fre
 republiek	repub.	dut
 Republik-	Repub.	mul
 république	répub.	fre
@@ -41374,7 +41418,7 @@ rešenie	rešen.	rus
 rešeršný	reš.	slo
 reserv-	reserv.	mul
 reserva	n.a.	spa
-reserve	n.a.	eng, fre
+reserve	n.a.	fre, eng
 reservi	n.a.	fin
 reservist	n.a.	eng
 Reservist-	Reservist.	eng, ger
@@ -41392,7 +41436,7 @@ resimli	resim.	tur
 resin	n.a.	eng
 resina	n.a.	spa, ita
 resinos-	resin.	por
-resist-	resist.	fre, eng
+resist-	resist.	eng, fre
 resnič-	resnič.	slv
 resocjaliz-	resocjal.	pol
 resocónto	resoc.	ita
@@ -41400,7 +41444,7 @@ resolução	resoluç.	por
 resolucij-	resoluc.	slv
 resolución	resoluc.	spa
 resolutie	resolut.	dut
-resolution-	resolut.	fre, eng
+resolution-	resolut.	eng, fre
 resolv-	resolv.	eng
 reson-	reson.	eng
 résonn-	réson.	fre
@@ -41466,7 +41510,7 @@ restyling	n.a.	eng
 resucitación	resuc.	spa
 result	n.a.	eng
 resultad-	result.	spa
-resultat-	result.	fre, eng
+resultat-	result.	eng, fre
 resulting	n.a.	eng
 resum	n.a.	cat
 resume	n.a.	fre, eng
@@ -41491,11 +41535,11 @@ řetěz-	řetěz.	cze
 rethink-	rethink.	eng
 Rethumno	Rethum.	gre
 reticulat-	reticul.	eng
-reticuloendothelial	reticuloendothel.	fre, eng
+reticuloendothelial	reticuloendothel.	eng, fre
 retin-	retin.	eng
 rétino-vitr-	rétino-vitr.	fre
 retire	n.a.	eng
-retirement	retire.	eng, fre
+retirement	retire.	fre, eng
 retkeilijä	n.a.	fin
 retkeilymajamatkailu	retkeilymajamatk.	fin
 retki	n.a.	fin
@@ -41513,7 +41557,7 @@ retribución	retrib.	spa
 retrieval	retr.	eng
 retriever	retriev.	eng
 retrofitt-	retrofit.	eng
-retrospect-	retrosp.	eng, fre
+retrospect-	retrosp.	fre, eng
 Retrospekt-	Retrosp.	ger
 retrouv-	n.a.	fre
 retrovirus	retrovir.	mul
@@ -41576,7 +41620,7 @@ revision-	revis.	eng
 revisited	revisit.	eng
 revisor	revis.	dan
 revisoraat	revis.	dut
-revist-	rev.	rum, spa
+revist-	rev.	spa, rum
 revitalisasi	revital.	ind
 revitaliz-	revital.	eng
 revival	n.a.	eng
@@ -42069,7 +42113,7 @@ romand	n.a.	fre
 romanesc	n.a.	rum
 romanesque	roman.	fre
 romanes̡te	roman.	rum
-Románia	Rom.	hun, ger
+Romania	Rom.	ger, hun
 romanic-	n.a.	lat, eng
 romanisti-	rom.	ger
 Romanistik	Rom.	ger
@@ -42239,6 +42283,7 @@ rozváděč-	rozvád.	cze
 rozvìdk-	rozvìd.	ukr
 rozvit-	rozvit.	ukr
 rozvoj	rozv.	cze
+rozvoj-	rozv.	cze
 rozvyt-	rozvyt.	bel
 rozw-	rozw.	pol
 Ruanda	n.a.	ger
@@ -43569,6 +43614,7 @@ sʺdebna	sʺdeb.	bul
 sdělení	sděl.	cze
 sdělovaci	n.a.	cze
 sdruženi	sdruž.	cze
+sea	n.a.	eng
 seabird	seab.	eng
 seaboard	seabd.	eng
 seaborne	n.a.	eng
@@ -43623,7 +43669,7 @@ secretito	n.a.	spa
 secreto	n.a.	spa
 secretory	secret.	eng
 secteur	sect.	fre
-secti-	sect.	eng, fre
+secti-	sect.	fre, eng
 sector-	sect.	spa, eng
 secul-	secul.	eng, fre
 séculier	n.a.	fre
@@ -43731,7 +43777,7 @@ Seine-Saint-Denis	Seine-St.-Denis	fre
 seira	n.a.	gre
 seism-	seism.	mul
 seismograph	seismogr.	eng
-seismolog-	seismol.	ger, eng
+seismolog-	seismol.	eng, ger
 seismomedegoba	seismomed.	geo
 seismostojkostʹ	seismostoj.	rus
 Seite	n.a.	ger
@@ -43758,7 +43804,7 @@ sekeliling	sekelil.	may
 šekern-	šeker.	mac
 sekola	sek.	ind
 sekolah	sekol.	ind
-sekretär-	sekr.	rus, pol, ger, nor
+sekretar-	sekr.	nor, ger, rus, pol
 Sekretariat	Sekr.	ger
 sekreter-	sekr.	rus
 Sekretion	Sekret.	ger
@@ -43793,8 +43839,8 @@ selçuk-	selçuk.	tur
 selecção-	sel.	por
 selecció	sel.	cat
 seleccion-	sel.	spa
-select-	sel.	fre, eng
-selek-	sel.	ger, rus
+select-	sel.	eng, fre
+selek-	sel.	rus, ger
 selekc-	sel.	ukr
 selenium	n.a.	lat
 Sélestat	n.a.	fre
@@ -43866,13 +43912,13 @@ semesta	n.a.	ind
 Semesterbericht-	Semesterber.	ger
 Semesterblatt	Semesterbl.	ger
 semesterguide	n.a.	swe
-semestr-	semest.	eng, fre
+semestr-	semest.	fre, eng
 sēmeta	n.a.	gre
 semeur	n.a.	fre
 semi-custom	semi-cust.	eng
 semi-officiële	semi-off.	dut
 semiannual	semiannu.	eng
-semiconduct-	semicond.	fre, eng
+semiconduct-	semicond.	eng, fre
 semilla	n.a.	spa
 semillero	n.a.	spa
 semilsk-	semil.	cze
@@ -43998,7 +44044,7 @@ seriâ	ser.	bul, rus
 seria-	ser.	fre, eng
 serialini-	ser.	lit
 seriāls	ser.	lav
-sericicult-	sericic.	eng, fre
+sericicult-	sericic.	fre, eng
 sericulture	seric.	eng
 sericum	ser.	lat
 serie	ser.	mul
@@ -44343,8 +44389,10 @@ signáln-	signál.	cze
 signaltechnisch-	signaltech.	ger
 signature	signat.	fre
 signe	n.a.	fre
-significant	signif.	eng, fre
+Signifiance	Signif.	fre
+significant	signif.	fre, eng
 significato	signif.	ita
+Signifying	Signif.	eng
 signo	n.a.	spa
 signora	n.a.	ita
 signpost	n.a.	eng
@@ -44499,7 +44547,7 @@ sintagma	sintag.	lit, spa
 sintax-	sintax.	spa
 sintering	sinter.	eng
 sintese	sint.	por
-síntesis	sint.	ita, spa, ind
+síntesis	sint.	spa, ita, ind
 sintet-	sint.	rus
 sintez-	sint.	rus
 Sintikēs	n.a.	gre
@@ -44942,6 +44990,8 @@ slektshistori-	slektshist.	nor
 slep-	slep.	dut
 slėpin-	slėp.	lit
 slesvigsk-	slesv.	dan
+slet-	slet.	hrv
+sléváren-	sléváren.	cze
 slévárenský	n.a.	cze
 Slezsk-	Slez.	cze
 sliced	n.a.	eng
@@ -44980,7 +45030,7 @@ slovarn-	slovar.	rus
 sloven-	slov.	slv, slo
 slovesnost	slovesn.	cze
 slovník	n.a.	slo
-slovo	n.a.	slo, cze
+slovo	n.a.	cze, slo
 slovoobrazovan-	slovoobraz.	rus
 slovstvo	slovs.	slv
 slowak-	slowak.	ger
@@ -45002,7 +45052,7 @@ Slušovice	n.a.	cze
 slutförvaring	slutförvar.	swe
 slutsteg	n.a.	swe
 sluttrapport	sluttrapp.	nor
-služ-	služ.	slo, hrv, cze
+služ-	služ.	slo, cze, hrv
 służba	służ.	pol
 služben-	služ.	hrv
 smaabruk	smaabr.	nor
@@ -45501,6 +45551,7 @@ soustav-	soust.	cze
 soutenir	n.a.	fre
 souterrain-	souterr.	fre
 south	n.a.	eng
+South Africa	S. Afr.	eng
 South Africa-	S. Afr.	eng
 South America	S. Am.	eng
 South Asia	n.a.	eng
@@ -49855,6 +49906,7 @@ toxicant	toxic.	eng
 toxicity	toxic.	eng
 toxicokineti-	toxicokinet.	eng
 toxicolog-	toxicol.	fre, eng
+toxicology	toxicol.	eng
 toxicom-	toxicom.	mul
 toxicomanie	toxicom.	fre
 Toxikolog-	Toxikol.	ger
@@ -50617,6 +50669,7 @@ twist-	twist.	eng
 Twistringen	n.a.	ger
 twórcz-	twór	pol
 tworzywo	tworz.	pol
+týden-	týd.	cze
 týdeník-	týd.	cze
 tydperk	n.a.	afr
 tydskrif	tydskr.	ice, afr
@@ -50669,7 +50722,7 @@ typist	n.a.	eng
 typiz-	typ.	cze
 typizačn-	typiz.	slo
 typograf-	typogr.	swe, nor
-typograph-	typogr.	fre, eng
+typograph-	typogr.	eng, fre
 typological	typol.	eng
 Typologie	Typol.	ger
 tyréns	n.a.	swe
@@ -50731,6 +50784,7 @@ ućcell-	n.a.	ita
 učebn-	učebn.	rus
 účeln-	účel.	cze
 učen-	uč.	rus, mac
+účet-	účet.	cze
 účetnictví	účet.	cze
 uchodźc-	uchod.	pol
 učiliŝ-	učil.	rus
@@ -50783,6 +50837,7 @@ udredningsserie	udredningsser.	dan
 udrobiol-	udrobiol.	gre
 udruže	udruž.	hrv
 údržbu	údrž.	cze
+udržitel-	udržit.	cze
 udsendelse	udsend.	dan
 udsigt	n.a.	dan
 udstilling	udstill.	dan
@@ -50979,7 +51034,7 @@ Umeå	n.a.	swe
 Umedalen	n.a.	swe
 umele	n.a.	slo
 uměleck-	umel.	cze, slo
-uměleckohistor.	uměl.hist.	cze
+uměleckohistor-	uměl.hist.	cze
 umenie	n.a.	slo
 uměnovedni	uměnoved.	cze
 umetnost-	umet.	srp
@@ -51171,7 +51226,7 @@ universe	n.a.	eng
 universel-	univers.	fre
 universidad	univ.	spa
 universidade	univ.	
-universit-	univ.	lit, lat, fre, eng
+universit-	univ.	fre, lat, lit, eng
 universo	n.a.	spa
 Universum	Univers.	ger
 univerzitet-	univ.	slv
@@ -53013,13 +53068,13 @@ vinific-	vinif.	rum
 vinipeg-	vinip.	lav
 Vinkeveen	n.a.	dut
 vinkov-	vinkov.	hrv
-vinnicʹk-	vinnick.	ukr, rus
+vinnick-	vinnicʹk.	rus, ukr
 Vinnipeg-	Vinn.	ukr
 vinnuvernd	n.a.	ice
 vinodel-	vinodel.	rus
 vinodolsk-	vinod.	hrv
 vinograd-	vinograd.	rus
-vinohrad-	vinohrad.	cze, slo
+vinohrad-	vinohrad.	slo, cze
 vínom	n.a.	slo
 vinorobstvo	vinorob.	ukr
 vinothèque	vinoth.	fre
@@ -53041,7 +53096,7 @@ violoneux	n.a.	fre
 viomēhanike	viomēh.	gre
 vipera	n.a.	ita
 virágtalan	virágtl.	hun
-viral	n.a.	fre, eng
+viral	n.a.	eng, fre
 virallinen	vir.	fin
 viranhaltija	viranhalt.	fin
 virgen	n.a.	spa
@@ -53129,13 +53184,14 @@ viszeral-	visz.	ger
 viszony	n.a.	hun
 viszonyít-	viszony.	hun
 viszonyl-	viszony.	hun
+vita	n.a.	lit
 vitaal	n.a.	dut
 vital-	n.a.	spa
 vitalia	vital.	ind
 vitaliteit	n.a.	dut
 Vitalstoff-	Vitalst.	ger
-vitamin	vitam.	eng, rus, ger
-vitamina	vitam.	rum, spa, ita
+vitamin	vitam.	ger, rus, eng
+vitamina	vitam.	ita, spa, rum
 vitamine	vitam.	fre
 vitamini-	vitam.	mul
 vitaminn-	vitam.	rus
@@ -53874,8 +53930,9 @@ waarvan	n.a.	dut
 wachendorffia	n.a.	dut
 Wachenheim-	Wachenh.	ger
 wachsen	wachs.	ger
-Wachst(h)um	n.a.	ger
-Wachstumsregulat-	Wachstumsregul.	ger
+Wachstum	n.a.	ger
+Wachsthum	n.a.	ger
+WWachstumsregulat-	Wachstumsregul.	ger
 Wachtelhund	n.a.	ger
 wachter	n.a.	dut
 Wächtersbach	Wächtersb.	ger
@@ -55207,6 +55264,7 @@ zabav-	zabav.	cze, rus, srp
 zábava	n.a.	slo
 zabavnik	zabav.	srp
 zabawkarstwo	zabaw.	pol
+zabezpeč-	zabezp.	cze
 zabezpiecz-	zabezp.	pol
 zabolevan-	zabol.	rus
 zaboljavan-	zabol.	bul
@@ -55579,7 +55637,7 @@ zemlja	n.a.	hrv
 zemljište	zemlj.	hrv
 zemljopis	n.a.	hrv
 zemmé	n.a.	slo
-zemn-	zemn.	lav, rus
+zemn-	zemn.	rus, lav
 zemnog	n.a.	hrv
 zemplínsk-	zemplín.	slo
 zemský	n.a.	cze
@@ -55788,7 +55846,7 @@ znalectvo	znalec.	slo
 znamen-	znam.	rus
 znamenatelʹnyj	znam.	rus
 známk-	znám.	cze
-znanie	n.a.	rus
+znanie	zn.	rus
 znann-	n.a.	ukr
 znanost-	znan.	slv
 znanstv-	znan.	slv
@@ -56076,4 +56134,58 @@ żywnośc-	żywn.	pol
 ģeogrāfiski	ģeogr.	lav
 ģeoloģ-	ģeol.	lav
 ģimene	ģim.	lav
-
+Parkinson	n.a.	mul,ext
+Huntington's	n.a.	mul,ext
+Chesterton	n.a.	mul,ext
+Antonie	n.a.	mul,ext
+Rylands	n.a.	mul,ext
+Baha'i	n.a.	mul,ext
+Dalton	n.a.	mul,ext
+bioorganic	bioorg.	eng,ext
+Netherland-	Neth.	mul,ext
+interprofession-	interprof.	mul,ext
+sociaux	soc.	fre,ext
+peacekeep-	peacekeep.	eng,ext
+aestheti-	aesthet.	mul,ext
+emergenc-	emerg.	mul,ext
+enterpr-	enterp.	mul,ext
+perianesthés-	perianesth.	eng,fre,ext
+postcoloni-	postcolon.	eng,fre,ext
+vertebra-	vertebr.	mul,ext
+legeförening-	legeforen.	dan,nor,swe,ext
+lingvist-	lingvist.	lat,ext
+tekhnika-	tekh.	rus,ext
+andranikolog-	andranikol.	eng,ext
+neurotoxicolog-	neurotoxicol.	eng,fre,ext
+militært	mil.	dan,ext
+neglect-	negl.	eng,ext
+prehospit-	prehosp.	eng,fre,ext
+information-	inf.	mul,ext
+cracoviens-	crac.	lat,ext
+neoaristotel-	neoaristot.	eng,gre,ext
+in vitro	n.a.	mul,ext
+in vivo	n.a.	mul,ext
+-psihol-	-psihol.	mul,ext
+-psikhol-	-psikhol.	mul,ext
+-psikhiatri-	-psikhiatr.	rus,ext
+-zoolog-	-zool.	mul,ext
+-forschung	-forsch.	ger,ext
+zhurnal	zh.	rus,slo,ext
+meditsin-	med.	mul,ext
+counterintelligenc-	counterintell.	eng,fre,ext
+-medic-	-med.	mul,ext
+real sociedad	r. soc.	spa,cat,ext
+comptes rendus	c. r.	fre,ext
+etholog-	ethol.	eng,ext
+real anal-	real anal.	eng,ext
+real number-	n.a.	eng,ext
+real-world	n.a.	eng,ext
+eleven	n.a.	eng,ext
+libert-	lib.	eng,ext
+latinx	lat.	eng,ext
+psikhoterap-	psikhoter.	rus,ext
+micromechani-	micromech.	eng,ext
+mikromechani-	mikromech.	pol,ext
+microengineer-	microeng.	eng,ext
+Cimmaron	n.a.	eng,ext
+PracTeX	n.a.	eng,ext
