@@ -6,7 +6,7 @@ import pyiso4
 from pyiso4.ltwa import Abbreviate
 
 
-def get_arguments_parser():
+def get_arguments_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=pyiso4.__doc__)
     parser.add_argument('-v', '--version', action='version', version='%(prog)s ' + pyiso4.__version__)
 
@@ -30,7 +30,7 @@ def get_arguments_parser():
     return parser
 
 
-def main():
+def main() -> None:
     args = get_arguments_parser().parse_args()
 
     # load LTWA

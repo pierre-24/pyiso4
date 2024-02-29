@@ -1,10 +1,10 @@
-from typing import List, Tuple
+from typing import List, Tuple, Optional, Union
 from unidecode import unidecode
 import re
 import pathlib
 
 from pyiso4.prefix_tree import PrefixTree
-from pyiso4.lexer import Lexer, TokenType
+from pyiso4.lexer import Lexer, Token, TokenType
 from pyiso4.normalize_string import normalize, Level, BOUNDARY, number_of_ligatures
 
 
@@ -27,7 +27,7 @@ class Pattern:
         return normalize(inp, Level.NORMAL).lower()
 
     @classmethod
-    def from_line(cls, line: str):
+    def from_line(cls, line: str) -> 'Pattern':
         """Constructed from a LTWA csv line"""
 
         fields = line.split('\t')
@@ -55,7 +55,7 @@ class Pattern:
         else:
             return self.pattern
 
-    def match(self, sentence: str, langs: List[str] = None) -> bool:
+    def match(self, sentence: str, langs: Optional[List[str]] = None) -> bool:
         """Check if the pattern matches the begining of ``sentence``.
         Assume that it has been normalized.
         """
@@ -106,7 +106,7 @@ class Pattern:
         else:  # if that's a boundary, then its a match
             return BOUNDARY.match(sentence[final_pos + 1:]) is not None
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return 'Pattern({}, {})'.format(self.pattern, self.replacement)
 
 
@@ -121,10 +121,10 @@ class Abbreviate:
         self.stopwords = stopwords
 
     @classmethod
-    def create(
-            cls,
-            ltwa_file: str = _here / 'LTWA_20210702.csv',
-            stopwords: str = _here / 'stopwords.txt'):
+    def create(cls,
+               ltwa_file: Union[str, pathlib.Path] = _here / 'LTWA_20210702.csv',
+               stopwords: Union[str, pathlib.Path] = _here / 'stopwords.txt',
+               ) -> 'Abbreviate':
         """Create an object from the LTWA CSV file and a newline-separated list of stopwords"""
 
         ltwa_prefix = PrefixTree()
@@ -154,7 +154,9 @@ class Abbreviate:
 
         return cls(ltwa_prefix, ltwa_suffix, stopwds)
 
-    def _potential_matches(self, sentence: str, langs: List[str] = None) -> List[Pattern]:
+    def _potential_matches(self,
+                           sentence: str,
+                           langs: Optional[List[str]] = None) -> List[Pattern]:
         # look into prefix
         results = self.ltwa_prefix.search(sentence)
 
@@ -162,7 +164,7 @@ class Abbreviate:
         results += self.ltwa_suffix.search(str(reversed(sentence)))
 
         # remove everything that does not match
-        results = filter(lambda p: p.match(sentence, langs), results)
+        results = list(filter(lambda p: p.match(sentence, langs), results))
 
         # return longer matches first, with ending dashes if possible
         return sorted(
@@ -175,15 +177,19 @@ class Abbreviate:
         """Matches the capitalization and diacritics of the `original` word, as long as they are similar
         """
 
-        abbrv = list(normalize(abbrv, Level.SOFT))
-        for i, c in enumerate(abbrv):
+        normalized_abbrv = list(normalize(abbrv, Level.SOFT))
+        for i, c in enumerate(normalized_abbrv):
             unided = unidecode(original[i])
             if unidecode(c) in [unided.lower(), unided.upper()]:
-                abbrv[i] = original[i]
+                normalized_abbrv[i] = original[i]
 
-        return ''.join(abbrv)
+        return ''.join(normalized_abbrv)
 
-    def abbreviate(self, sentence: str, fallback: str, guide: str, langs: List[str] = None) -> Tuple[str, int]:
+    def abbreviate(self,
+                   sentence: str,
+                   fallback: str,
+                   guide: str,
+                   langs: Optional[List[str]] = None) -> Tuple[str, int]:
         """Abbreviate the beginning of ``sentence`` by looking for an appropriate pattern.
         If not found, use ``fallback``. If found, matches the capitalization given by ``guide``.
         Also returns the length of the sentence that was replaced.
@@ -199,7 +205,10 @@ class Abbreviate:
 
         return fallback, len(fallback)
 
-    def __call__(self, title: str, remove_part: bool = True, langs: List[str] = None) -> str:
+    def __call__(self,
+                 title: str,
+                 remove_part: bool = True,
+                 langs: Optional[List[str]] = None) -> str:
         """Abbreviate a title according to the rules of Section 7 in the ISSN manual
         (https://www.issn.org/understanding-the-issn/assignment-rules/issn-manual/)
 
@@ -219,7 +228,7 @@ class Abbreviate:
         title_normalized = Pattern.normalize(title)
 
         lexer = Lexer(title_soft_normalized, self.stopwords)
-        tokens = []
+        tokens: List[Token] = []
         prev_article = None
 
         # filter tokens
