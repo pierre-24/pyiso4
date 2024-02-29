@@ -1,12 +1,14 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=62"]
+
 [project]
 name = "pyiso4"
 dynamic = ["version"]
-authors = [
-    {name = "Pierre Beaujean", email = "pierre.beaujean@unamur.be"},
-]
 description = "Abbreviate a scientific journal title following the ISO-4 rules"
 readme = "README.md"
 license = {file = "LICENSE"}
+authors = [{name = "Pierre Beaujean", email = "pierre.beaujean@unamur.be"}]
 requires-python = ">=3.8"
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -14,30 +16,39 @@ classifiers = [
     "Natural Language :: English",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
 ]
-
 dependencies = [
-    'unidecode'
+    "unidecode",
 ]
 
 [project.optional-dependencies]
 dev = [
-    "flake8",
-    "flake8-quotes",
     "autopep8",
     "bump2version",
+    "flake8",
+    "flake8-quotes",
+    "mypy",
 ]
 
 [project.scripts]
-iso4abbreviate = 'pyiso4.script:main'
+iso4abbreviate = "pyiso4.script:main"
 
 [tool.setuptools]
-packages = ['pyiso4']
+packages = ["pyiso4"]
+
+[tool.setuptools.package-data]
+pyiso4 = ["py.typed"]
 
 [tool.setuptools.dynamic]
 version = {attr = "pyiso4.__version__"}
+
+[tool.mypy]
+strict = true
+hide_error_codes = false
+warn_unused_ignores = true

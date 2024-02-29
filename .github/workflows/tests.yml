@@ -30,6 +30,9 @@ jobs:
     - name: Lint
       run: |
         make lint
+    - name: Typing
+      run: |
+        make mypy
     - name: Test
       run: |
         make test

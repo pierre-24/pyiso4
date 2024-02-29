@@ -8,10 +8,13 @@ help:
 
 
 install:
-	pip3 install -e .[dev]
+	python -m pip install --editable '.[dev]'
 
 lint:
-	flake8 pyiso4 tests --max-line-length=120 --ignore=N802
+	python -m flake8 pyiso4 tests --max-line-length=120 --ignore=N802
+
+mypy:
+	python -m mypy pyiso4 tests
 
 test:
 	python -m unittest discover -s tests
