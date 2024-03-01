@@ -1,4 +1,4 @@
-from typing import List, Iterable
+from typing import List, Iterable, Optional
 from enum import Enum, unique
 from unicodedata import normalize
 import re
@@ -46,17 +46,17 @@ class Token:
 
 
 class Lexer:
-    def __init__(self, inp, stopwords: List[str]):
+    def __init__(self, inp: str, stopwords: List[str]) -> None:
         self.input = normalize('NFC', inp)
         self.pos = 0
         self.count = -1
         self.start_word = 0
-        self.current_word = None
+        self.current_word: Optional[str] = None
         self.stopwords = stopwords
 
         self.next()
 
-    def _skip_space(self):
+    def _skip_space(self) -> None:
         while self.pos < len(self.input) and self.input[self.pos] in SPACES:
             self.pos += 1
 
@@ -77,7 +77,7 @@ class Lexer:
         self.count += 1
 
     def tokenize(self) -> Iterable[Token]:
-        def yield_hyphenated(word: str, base_pos: int):
+        def yield_hyphenated(word: str, base_pos: int) -> Iterable[Token]:
             is_first = True
             len_ = 0
             for w in word.split('-'):

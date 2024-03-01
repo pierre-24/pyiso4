@@ -1,4 +1,5 @@
 import unittest
+from typing import Any
 
 from pyiso4.lexer import Lexer, TokenType
 from pyiso4.ltwa import Pattern, Abbreviate
@@ -8,7 +9,7 @@ from pyiso4.normalize_string import normalize, Level, number_of_ligatures
 class TestNormalize(unittest.TestCase):
     """Test the unicode normalization"""
 
-    def test_normalize(self):
+    def test_normalize(self) -> None:
         tests = [
             ('test', 'test'),
             ('abbréviation', 'abbreviation'),
@@ -21,7 +22,7 @@ class TestNormalize(unittest.TestCase):
         for inp, out in tests:
             self.assertEqual(out, normalize(inp, Level.NORMAL))
 
-    def test_normalize_extra(self):
+    def test_normalize_extra(self) -> None:
         tests = [
             ('TeSt', 'test'),
             ("Côte-d'Azur", 'cote d azur')
@@ -30,17 +31,14 @@ class TestNormalize(unittest.TestCase):
         for inp, out in tests:
             self.assertEqual(out, normalize(inp, Level.HARD))
 
-    def test_ligatures(self):
+    def test_ligatures(self) -> None:
         self.assertEqual(number_of_ligatures('test'), 0)
         self.assertEqual(number_of_ligatures('coeur'), 0)
         self.assertEqual(number_of_ligatures('cœur'), 1)
 
 
 class TestLexer(unittest.TestCase):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-    def test_stopword(self):
+    def test_stopword(self) -> None:
         stopwords = ['x', 'y']
         text = ' '.join(stopwords)
 
@@ -54,13 +52,13 @@ class TestLexer(unittest.TestCase):
         for t in tokens[:-1]:  # skip EOS
             self.assertEqual(t.type, TokenType.STOPWORD)
 
-    def test_token_position(self):
+    def test_token_position(self) -> None:
         text = 'this is a test-case for you'
         for t in Lexer(text, []).tokenize():
             if t.position >= 0:
                 self.assertEqual(text[t.position], t.value[0])
 
-    def test_hyphenated_words(self):
+    def test_hyphenated_words(self) -> None:
         cpd1 = 'état'
         cpd2 = 'nation'
         text = '{}-{}'.format(cpd1, cpd2)
@@ -71,7 +69,7 @@ class TestLexer(unittest.TestCase):
         self.assertEqual(tokens[2].type, TokenType.WORD)
         self.assertEqual(tokens[2].value, cpd2)
 
-    def test_surname_as_abbreviation(self):
+    def test_surname_as_abbreviation(self) -> None:
         abbrv = 'A.'
         text = 'Legacy of {} Einstein'.format(abbrv)
         tokens = list(Lexer(text, ['of']).tokenize())
@@ -82,7 +80,7 @@ class TestLexer(unittest.TestCase):
 
 
 class TestPattern(unittest.TestCase):
-    def test_pattern_match(self):
+    def test_pattern_match(self) -> None:
         text = 'abc'
 
         # no dash
@@ -114,7 +112,7 @@ class TestPattern(unittest.TestCase):
         self.assertTrue(pattern.match(word + 's'))  # plural form
         self.assertFalse(pattern.match(word + 'x'))  # not an inflexion
 
-    def test_patter_match_on_sentence(self):
+    def test_patter_match_on_sentence(self) -> None:
         # no dash
         text = 'abc'
         pattern_without_dash = Pattern.from_line('{}\tx\tmul'.format(text))
@@ -133,11 +131,11 @@ class TestPattern(unittest.TestCase):
 
 
 class TestAbbreviate(unittest.TestCase):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args: Any, **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)
         self.abbreviate = Abbreviate.create()
 
-    def test_abbreviations(self):
+    def test_abbreviations(self) -> None:
         with open('tests/tests.tsv') as f:
             for line in f.readlines():
                 fields = line.split('\t')

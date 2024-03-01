@@ -32,7 +32,7 @@ class Node:
             self.objs.append((key, obj))
             self._split(position)
 
-    def _split(self, position) -> None:
+    def _split(self, position: int) -> None:
         """Split the node if it contains too much objects"""
 
         if not self.split and self.char is not None and len(self.objs) > self.MAX_OBJS:
@@ -76,7 +76,7 @@ class PrefixTree:
     """Prefix tree that return correct results up to a certain point (depending on `Node.MAX_OBJS`).
     """
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.root = Node('')
 
     def insert(self, key: str, obj: Any) -> None:

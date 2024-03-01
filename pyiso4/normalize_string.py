@@ -9,7 +9,7 @@ BOUNDARY = re.compile(r'[-\s\u2013\u2014_.,:;!|=+*\\/"()&#%@$?]')
 LIGATURES = 'ŒœÆæ'
 
 
-def number_of_ligatures(word: str):
+def number_of_ligatures(word: str) -> int:
     return sum(1 for c in word if c in LIGATURES)
 
 
