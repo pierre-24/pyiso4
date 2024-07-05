@@ -132,7 +132,7 @@ class Lexer:
                     yield Token(TokenType.PART, word, self.start_word)
                     was_part = self.count
                 # check if ordinal (preceded by PART)
-                elif IS_ORDINAL.match(word) and self.count == was_part + 1:
+                elif IS_ORDINAL.fullmatch(word) and self.count == was_part + 1:
                     yield Token(TokenType.ORDINAL, word, self.start_word)
                 # check if article (after ordinal, so "a" is detected as ordinal if preceded by PART)
                 elif lower_word in ARTICLES:
@@ -155,6 +155,7 @@ class Lexer:
             # yield the remaining symbols, if any
             if len(end_symbols) > 0:
                 yield Token(TokenType.SYMBOLS, end_symbols, self.pos - len(end_symbols))
+                was_part = self.count
 
             self.next()
 
