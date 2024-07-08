@@ -177,6 +177,9 @@ class Abbreviate:
         """Matches the capitalization and diacritics of the `original` word, as long as they are similar
         """
 
+        if len(abbrv) > len(original):
+            abbrv = abbrv[:len(original)]
+
         normalized_abbrv = list(normalize(abbrv, Level.SOFT))
         for i, c in enumerate(normalized_abbrv):
             unided = unidecode(original[i])
