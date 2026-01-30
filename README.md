@@ -9,7 +9,7 @@ Inspired by the NPM package [abbrevIso](https://github.com/marcinwrochna/abbrevI
 From [PyPI](https://pypi.org/project/pyiso4/):
 
 ```bash
-pip install pysiso4
+pip install pyiso4
 ```
 
 Usage:
