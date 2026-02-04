@@ -57,6 +57,10 @@ It currently fails:
 + on compound words (such as *microengineering*), except if explicitly found in the LTWA,
 + on some [ligatures](https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)) (but it handles the most common ones, such as `œ` and `æ`)
 
+Furthermore, this package does not handle LaTeX-specific accentuation and special characters (such as `\'e` or `\&`).
+When dealing with BibTeX files (e.g., to transform journal in their abbreviation), it is recommended to decode these with [pybtex](https://pybtex.org/) or [bibtexparser](https://github.com/sciunto-org/python-bibtexparser). 
+Directly converting LaTeX strings to unicode and back is also possible with [pylatexenc](https://github.com/phfaist/pylatexenc).
+
 ## Difference with the `iso4` package
 
 A previous implementation of the ISO4 rules in Python is done in [`adlpr/iso4`](https://github.com/adlpr/iso4).
