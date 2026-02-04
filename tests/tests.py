@@ -1,5 +1,6 @@
 import unittest
 from typing import Any
+import pathlib
 
 from pyiso4.lexer import Lexer, TokenType
 from pyiso4.ltwa import Pattern, Abbreviate
@@ -136,7 +137,7 @@ class TestAbbreviate(unittest.TestCase):
         self.abbreviate = Abbreviate.create()
 
     def test_abbreviations(self) -> None:
-        with open('tests/tests.tsv') as f:
+        with open(pathlib.Path(__file__).parent / 'tests.tsv') as f:
             for line in f.readlines():
                 fields = line.split('\t')
                 self.assertEqual(fields[1].strip(), self.abbreviate(fields[0].strip(), remove_part=True))
