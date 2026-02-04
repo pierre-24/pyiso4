@@ -57,6 +57,15 @@ It currently fails:
 + on compound words (such as *microengineering*), except if explicitly found in the LTWA,
 + on some [ligatures](https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)) (but it handles the most common ones, such as `œ` and `æ`)
 
+## Difference with the `iso4` package
+
+A previous implementation of the ISO4 rules in Python is done in [`adlpr/iso4`](https://github.com/adlpr/iso4).
+The differences are the following:
+
++ The database of this package is more up to date (2021 vs 2017), although this shouldn't make much of a difference in practice. 
++ The `iso4` package relies on [NLTK](https://www.nltk.org/), which is a heavy dependency, while this package rely on a custom, faster, lexer. It might however be that NLTK is more accurate.
++ An interesting feature of `iso4` that is not (yet?) implemented here (see #6) is that it is capable of correctly handling the language information.
+
 
 ## Contributions
 
