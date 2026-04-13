@@ -38,7 +38,7 @@ class Pattern:
         pattern = Pattern.normalize(pattern)
 
         replacement = fields[1]
-        if replacement in ['n.a.', 'n. a.', 'n.a']:
+        if replacement in ['n.a.', 'n. a.', 'n.a', '']:
             replacement = '-'
 
         langs = [lg.strip() for lg in fields[2].split()]
@@ -122,7 +122,7 @@ class Abbreviate:
 
     @classmethod
     def create(cls,
-               ltwa_file: Union[str, pathlib.Path] = _here / 'LTWA_20210702.csv',
+               ltwa_file: Union[str, pathlib.Path] = _here / 'LTWA_20240226.csv',
                stopwords: Union[str, pathlib.Path] = _here / 'stopwords.txt',
                ) -> 'Abbreviate':
         """Create an object from the LTWA CSV file and a newline-separated list of stopwords"""
